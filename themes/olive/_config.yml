@@ -42,10 +42,7 @@ widgets:
 # 显示左侧需要展示的目录，建议使用三到五个目录 ，如果不设置的话当然也没有问题
 
 category: 
-- Java
-- C/C++
-- Python
-- 大学
+- 技术
 - 生活
 
 
@@ -56,19 +53,15 @@ friendsCall: 友情链接
 # 建议填入几个friens，否则主题会很丑。
 
 friends:
-  - 奥巴马的博客: http://localhost:4000/
-  - 卡卡的美丽传说: http://localhost:4000/
-  - 本泽马的博客: http://localhost:4000/
-  - 吉格斯的博客: http://localhost:4000/
-  - 习大大大不同: http://localhost:4000/
-  - 托蒂的博客: http://localhost:4000/
-
-
+  - 谷歌: http://www.google.com
+  - 在线工具: http://tool.oschina.net/
+  - 爱酷学习: http://www.icoolxue.com/
+  - 我的CSDN: http://blog.csdn.net/u012195214
 
 
 # 右侧边栏网站slogan自定义
 
-slogan: "联系我的方式"
+slogan: "喜欢我，就联系我呀[哈哈]"
 
 # 网站favicon 自定义
 favicon: "/favicon.png"
@@ -77,8 +70,9 @@ favicon: "/favicon.png"
 
 twitter: 'strivebo'
 github: 'strivebo'
-weixin: 'http://7ktu2f.com1.z0.glb.clouddn.com/wechatopen.jpg'
-email: 'ishuzb@foxmail.com'
+email: 'ishuzb@foxmail.com' 
+weixin: "/img/myWeixin.jpg"
+
 
 # disqus ID，不要搞错了。
 # disqus ID ，如果不设置的话，则为无评论状态
@@ -121,4 +115,4 @@ iewarn: true
 # 标明博客的起始时间，对我们这种已经几年的博客，还是很有必要的。
 
 
-since: 2017
+since: 2016
