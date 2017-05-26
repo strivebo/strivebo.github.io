@@ -3,7 +3,6 @@ menu:
   Home: /
 Archives: /archives
 rss: /atom.xml
-轻松一下: /2048
 feed:
   type: atom
   path: atom.xml
@@ -18,6 +17,7 @@ headerpic: "/img/logo.jpg"
 #  顶部导航栏的「个人介绍」界面设置，数组中第一项为显示的文字，第二项为跳转的相对路径  
 
 aboutme : ["关于","/about"]
+
 
 # 是否在导航栏上显示订阅博客更新功能，如果设置的话，则请填入相应的提示文本，如“订阅我”，否则请置空本项目
 
@@ -85,8 +85,7 @@ disqus:
 
 # 如果不需要网易云跟贴，请留空该字段
 
-cloudtie: "d9ac9785903fd" 
-
+cloudtie: 
 
 # 在引号内填入你的谷歌分析id。
 google_analytics: ''
