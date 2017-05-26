@@ -6,7 +6,7 @@
 title: 个人主页
 subtitle: 编程|剪辑|摄影|读书|锻炼
 description: code,develop,program,Jaybo,strivebo
-author: 胡支波
+author: strivebo
 language: zh-CN
 timezone:
 
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: yilia
+theme: olive
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
