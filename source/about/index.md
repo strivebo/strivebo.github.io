@@ -14,6 +14,7 @@ date: 2017-05-26 23:56:22
 > [知乎](https://www.zhihu.com/people/jaybo-52)
 > [GitHub](https://github.com/strivebo)
 > [个人公众号](http://mp.weixin.qq.com/s/RYoVrQfw54Gn65LAbhReuA) 
+> [简书](http://www.jianshu.com/users/fb94103a46a1/timeline)
 > [QQ群]() : 34642903
 
 学习历程：
