@@ -87,6 +87,9 @@ disqus:
 
 cloudtie: 
 
+comments: 
+  yungentie: http://www.strivebo.me
+
 # 在引号内填入你的谷歌分析id。
 google_analytics: ''
 
