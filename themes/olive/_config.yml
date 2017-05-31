@@ -21,7 +21,7 @@ aboutme : ["关于","/about"]
 
 # 是否在导航栏上显示订阅博客更新功能，如果设置的话，则请填入相应的提示文本，如“订阅我”，否则请置空本项目
 
-headerfeed: "订阅"
+headerfeed: ""
 
 # 夜间模式设置，如果想要设置夜间模式，则置为true，否则false或不填置空
 # 推荐设置夜间模式，这也是本主题一个特色
@@ -87,8 +87,6 @@ disqus:
 
 cloudtie: 
 
-comments: 
-  yungentie: http://www.strivebo.me
 
 # 在引号内填入你的谷歌分析id。
 google_analytics: ''
