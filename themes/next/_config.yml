@@ -93,23 +93,14 @@ index_with_subtitle: false
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  home: /
-  archives: /archives
-  about: /about
-  categories: /categories
-  tags: /tags
-  #commonweal: /404.html
-
-# Enable/Disable menu icons. 
-   
+  home: / || home
+  archives: /archives || archive
+  categories: /categories || th
+  tags: /tags || tags
+  about: /about || user
+  
 menu_icons:
   enable: true
-  # Icon Mapping.
-  home: home
-  about: user
-  categories: th
-  tags: tags
-  archives: archive
 
 # ---------------------------------------------------------------
 # Scheme Settings 借助于 Scheme，NexT 为你提供多种不同的外观
@@ -132,8 +123,8 @@ scheme: Pisces
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-  GitHub: https://github.com/strivebo
-  邮箱: mailto:ishuzb@foxmail.com
+  GitHub: https://github.com/strivebo || github-alt
+  邮箱: mailto:ishuzb@foxmail.com || envelope
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
@@ -147,14 +138,12 @@ social_icons:
   enable: true
   icons_only: false
   transition: false
-  GitHub: github-alt
-  邮箱: envelope
 
 # Blog rolls
 links_icon: link
 links_title: 友情链接
-links_layout: block  #设置图标 比如 link
-#links_layout: inline
+#links_layout: block  
+links_layout: inline
 links:
   stormzhang: http://stormzhang.com/
   阮一峰: http://www.ruanyifeng.com/home.html
@@ -239,8 +228,8 @@ post_meta:
 # Dependencies: https://github.com/willin/hexo-wordcount
 post_wordcount:
   item_text: true
-  wordcount: false
-  min2read: false
+  wordcount: true
+  min2read: true
   totalcount: false
   separated_meta: true
 
