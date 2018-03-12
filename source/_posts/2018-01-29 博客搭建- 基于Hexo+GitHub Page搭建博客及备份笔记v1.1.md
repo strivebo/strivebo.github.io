@@ -26,6 +26,8 @@ tags: [Hexo,Git,GitHub]
 - [hexo从零开始到搭建完整](https://www.cnblogs.com/visugar/p/6821777.html)
 - [利用GitHub Pages建立项目或个人网站](https://github.com/uolcano/blog/issues/11) 
 - [在win7中一步一步安装Hexo搭建个人博客](http://www.lzblog.cn/2016/04/06/%E5%9C%A8win7%E4%B8%AD%E4%B8%80%E6%AD%A5%E4%B8%80%E6%AD%A5%E5%AE%89%E8%A3%85Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/) 
+- [了解githubPages+hexo搭建博客的原理](http://blog.csdn.net/sunshine940326/article/details/57413678)
+- [利用GitHub Pages建立项目或个人网站](https://github.com/uolcano/blog/issues/11)
 - ......
 
 或者博文中列的参考资料。
@@ -320,7 +322,7 @@ git push origin backup:backup
    package-lock.json 
    ```
 
-3. 使用`hexo install -g hexo`或者`hexo install -g hexo-cli`安装 hexo，完毕之后未在博客根目录生成`node_modules`文件夹，并且继续敲`hexo init`提示：
+3. 使用`npm install -g hexo`或者`npm install -g hexo-cli`安装 hexo，完毕之后未在博客根目录生成`node_modules`文件夹，并且继续敲`hexo init`提示：
 
    ```
    ERROR Local hexo not found in G:\strivebo.github.io
@@ -331,6 +333,6 @@ git push origin backup:backup
 
 4. 然后`hexo g`编译 source 中的博客文章，生成 public 文件夹，编译后的 html/css/js 等文件也存于此，`hexo s`本地预览，可以看到，ok 了；
 
-5. 然后本地在 source 新增博客文章，以及文章修改，`hexo g`、`hexo g`即可，最后 `hexo d`发布部署至 GitHub（其实 `hexo d`会自动生成一个`.deploy_git`文件夹，并且实质是把 public 文件夹内容复制于该文件夹进行发布的，该文件夹下有个隐藏文件夹`.git`维护着版本控制信息。）
+5. 然后本地在 source 新增博客文章，以及文章修改，`hexo g`、`hexo g`即可，最后 `hexo d`发布部署至 GitHub（其实 `hexo d`会自动生成一个`.deploy_git`文件夹，并且实质是把 public 文件夹内容复制于该文件夹进行发布的，该文件夹下有个隐藏文件夹`.git`维护着 ***发布部署***  这个过程的版本控制信息。）
 
 
