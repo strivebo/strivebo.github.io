@@ -5,7 +5,7 @@
 # Site
 title: Jaybo's Blog
 subtitle: 斜杠青年
-description: 我的个人博客，记录学习过程、成长历程
+description: 我的个人博客,记录学习过程、成长历程.
 author: Jaybo
 language: zh-Hans
 timezone:
@@ -34,7 +34,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -64,6 +64,12 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: next
+
+# add post views
+leancloud_visitors:
+  enable: true
+  app_id: MhbxUrTu9FJ0T1iq1HupHO29-gzGzoHsz
+  app_key: PMMgr6Xmfk6n1aKfuKzLwe5p
 
 # 搜索
 search:

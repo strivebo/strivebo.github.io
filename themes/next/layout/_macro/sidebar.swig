@@ -7,10 +7,19 @@
     </div>
   </div>
 
+		
+
   <aside id="sidebar" class="sidebar">
     {% if theme.sidebar.onmobile %}
       <div id="sidebar-dimmer"></div>
     {% endif %}
+	
+	<div>
+		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" 
+					width=320 height=86 src="//music.163.com/outchain/player?type=2&id=34200868&auto=0&height=66">
+		</iframe>
+	</div>
+	
     <div class="sidebar-inner">
 
       {% set display_toc = is_post and theme.toc.enable or is_page and theme.toc.enable %}
@@ -25,7 +34,7 @@
           </li>
         </ul>
       {% endif %}
-
+		
       <section class="site-overview-wrap sidebar-panel{% if not display_toc or toc(page.content).length <= 1 %} sidebar-panel-active{% endif %}">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -134,7 +143,7 @@
               </ul>
             </div>
           {% endif %}
-
+		
           {% include '../_custom/sidebar.swig' %}
         </div>
       </section>
