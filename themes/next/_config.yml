@@ -200,8 +200,8 @@ sidebar:
   # Back to top in sidebar (only for Pisces | Gemini).
   b2t: false
 
-  # Scroll percent label in b2t button.
-  scrollpercent: false
+  # Scroll percent label in b2t button. 设置滚动按钮显示数字进度
+  scrollpercent: true
 
   # Enable sidebar on narrow view (only for Muse | Mist).
   onmobile: false
@@ -246,7 +246,7 @@ post_wordcount:
 wechat_subscriber:
   enabled: false
   qcode: /uploads/wechat-qcode.jpg
-  description: 欢迎扫描二维码关注公众号一起成长！
+  description: 欢迎扫描二维码关注公众号一起成长~
 
 # Reward  赞赏  
 reward_comment: 觉得文章对您有帮助请我喝杯咖啡吧^_^ 
@@ -706,7 +706,7 @@ pace_theme: pace-theme-minimal
 canvas_nest: false
 
 # three_waves
-three_waves: false
+three_waves: true
 
 # canvas_lines
 canvas_lines: false
@@ -819,3 +819,8 @@ images: images
 
 # Theme version
 version: 5.1.4
+
+# Online contact
+# 我添加的 DaoVoice 
+daovoice: true
+daovoice_app_id: a597e548  # 这里填你刚才获得的 app_id
