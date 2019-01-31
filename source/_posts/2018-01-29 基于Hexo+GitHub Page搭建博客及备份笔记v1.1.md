@@ -1,7 +1,7 @@
 ---
 title: 基于Hexo+GitHub搭建博客及备份笔记
 date: 2018-01-29 21:08:54
-categories: 博客搭建
+categories: Blog
 tags: [Hexo,Git,GitHub]
 ---
 
@@ -130,6 +130,7 @@ hexo d -g  #生成并上传
     备注：public 文件夹为 `hexo generate`或`hexo g`（其实是这个「编译过程」）生成静态页面才会生成的文件夹。
 
 4. 然后 `hexo generate`或`hexo g`生成 `public` 文件夹（该文件夹下为 `.md` 文件编译后生成的静态文件，包括html/css/js/图片等等）和`db.json`文件
+
     > `public`文件夹下为`.md`文件编译后形成的文件，也正是被 `hexo deploy`部署到 github 上的文件。
 
 5. 可以`hexo s`开启本地预览端口，输入 http://localhost:4000/ 进行预览，可以看到默认主题下的博客，如果遇到4000端口被占用的问题，可以使用比如`hexo s -p 8080`指定8080端口预览。**好了！ 本地搭建的活干完了！** 现在可以试试写文章了实践了，执行`hexo new "第一篇博客.md"`，这样就在 source 目录下生成该博客文章了，然后可以进行写作了，再去执行`hexo g`编译和`hexo s`预览了，另外如果文章写错了需修改，可以重新生成；网站显示异常时，可以先使用`hexo clean`清除缓存文件 db.json 和已生成的静态文件目录 public，再`hexo g`重新生成。

@@ -35,7 +35,7 @@ favicon:
   #ms_browserconfig: /images/browserconfig.xml
 
 # Set default keywords (Use a comma to separate)
-keywords: "java, c/c++，python，前端，后端，全栈程序员"
+keywords: "Java,C,C++,python,前端,后端,FullStack"
 description: 记录敲过的代码，走过的人生
 
 # Set rss to false to disable feed link.
@@ -46,7 +46,7 @@ rss:
 footer:
   # Specify the date when the site was setup.
   # If not defined, current year will be used.
-  since: 2018
+  since: 2019
 
   # Icon between year and copyright info.
   icon: user
@@ -150,13 +150,11 @@ links_title: 友情链接
 #links_layout: block  
 links_layout: inline
 links:
-  建站日志: http://strivebo.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/
-  学习计划: 
-  优秀博客: 
-  善用谷歌: https://www.google.com/
-  #stormzhang: https://www.zhihu.com/people/stormzhang/posts
-  #阮一峰: http://www.ruanyifeng.com/home.html
-  #池建强: http://macshuo.com/
+  阮一峰: http://www.ruanyifeng.com/home.html
+  廖雪峰: https://www.liaoxuefeng.com/
+  MacTalk: http://macshuo.com/
+  建站日志: https://strivebo.com/categories/Blog
+  
 
 # Sidebar Avatar    头像设置
 # in theme directory(source/images): /images/avatar.gif
@@ -245,12 +243,12 @@ post_wordcount:
 # Wechat Subscriber 订阅微信公众号
 wechat_subscriber:
   enabled: false
-  qcode: /uploads/wechat-qcode.jpg
+  qcode: /uploads/wechat.jpg
   description: 欢迎扫描二维码关注公众号一起成长~
 
 # Reward  赞赏  
 reward_comment: 觉得文章对您有帮助请我喝杯咖啡吧^_^ 
-wechatpay: /uploads/wechatpay.png
+wechatpay: /uploads/wechatpay.jpg
 alipay: /uploads/alipay.jpg
 #bitcoin: /images/bitcoin.png
 
@@ -368,7 +366,7 @@ baidu_analytics: bdca14b99b0b7f832576340bab4558d8
 # Disqus
 disqus:
   enable: true
-  shortname: strivebo
+  shortname: Jaybo
   count: true
 
 
@@ -706,7 +704,7 @@ pace_theme: pace-theme-minimal
 canvas_nest: false
 
 # three_waves
-three_waves: true
+three_waves: false
 
 # canvas_lines
 canvas_lines: false

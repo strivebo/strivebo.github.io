@@ -15,11 +15,8 @@
     {% endif %}
 	
 	<div>
-		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" 
-					width=320 height=86 src="//music.163.com/outchain/player?type=2&id=34200868&auto=0&height=66">
-		</iframe>
+		<!-- 左侧菜单与头像之间插入音乐播放 -->
 	</div>
-	
     <div class="sidebar-inner">
 
       {% set display_toc = is_post and theme.toc.enable or is_page and theme.toc.enable %}
