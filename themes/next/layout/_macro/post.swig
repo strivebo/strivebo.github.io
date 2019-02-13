@@ -246,7 +246,7 @@
                   <i class="fa fa-clock-o"></i>
                 </span>
                 {% if theme.post_wordcount.item_text %}
-                  <span class="post-meta-item-text">{{ __('post.min2read') }}: </span>
+                  <span class="post-meta-item-text">{{ __('post.min2read') }}≈ </span>
                 {% endif %}
                 <span title="{{ __('post.min2read') }}">
                   {{ min2read(post.content) }} 分钟

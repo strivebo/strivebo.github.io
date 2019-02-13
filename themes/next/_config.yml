@@ -35,7 +35,7 @@ favicon:
   #ms_browserconfig: /images/browserconfig.xml
 
 # Set default keywords (Use a comma to separate)
-keywords: "Java,C,C++,python,前端,后端,FullStack"
+keywords: "Java,C,C++,Python,DeepLearning,前端,后端,FullStack"
 description: 记录敲过的代码，走过的人生
 
 # Set rss to false to disable feed link.
@@ -97,8 +97,9 @@ menu:
   archives: /archives || archive
   categories: /categories || th
   tags: /tags || tags
-  #我自定义添加了一个「相册」和「留言」菜单
+  #添加了「相册」、「音影」和「留言」菜单
   相册: /photo || camera
+  音影: /video || video-camera
   留言: /message || comments
   about: /about || user
    
@@ -126,7 +127,7 @@ scheme: Pisces
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-  GitHub: https://github.com/strivebo || github-alt
+  GitHub: https://github.com/strivebo || github-square
   CSDN: https://blog.csdn.net/u012195214 || pinterest
   掘金: https://juejin.im/user/59efef14f265da431a426511 || bandcamp
   邮箱: mailto:ishuzb@foxmail.com || envelope
@@ -384,9 +385,11 @@ changyan:
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://valine.js.org
 valine:
-  enable: false
-  appid:  # your leancloud application appid
-  appkey:  # your leancloud application appkey
+  enable: true
+  # your leancloud application appid
+  appid: MhbxUrTu9FJ0T1iq1HupHO29-gzGzoHsz   
+  # your leancloud application appkey  
+  appkey: PMMgr6Xmfk6n1aKfuKzLwe5p 
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
   placeholder: Just go go # comment box placeholder
@@ -431,7 +434,7 @@ gitment:
 # This plugin is more useful in China, make sure you known how to use it.
 # And you can find the use guide at official webiste: http://www.jiathis.com/.
 # Warning: JiaThis does not support https.
-#jiathis:
+#jiathis: true
   ##uid: Get this uid from http://www.jiathis.com/
 #add_this_id:
 
