@@ -1,6 +1,6 @@
 ---
 title: NexT主题的配置修改指南及添加第三方服务
-date: 2019-02-13 20:01:08
+date: 2019-02-14 20:01:08
 categories: Blog
 tags: [blog]
 ---
@@ -17,8 +17,7 @@ tags: [blog]
 - GitHub：[Themes · hexojs](https://github.com/hexojs/hexo/wiki/Themes )
 - 知乎：[有哪些好看的 Hexo 主题？](https://www.zhihu.com/question/24422335)
 
-
-
+<!-- more -->
 
 ## 1. NexT主题的配置修改
 
@@ -47,7 +46,47 @@ tags: [blog]
 - [hexo的next主题个性化教程:打造炫酷网站](http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html) 
 - [浅谈tag标签分类和目录分类的区别以及如何SEO优化妙用！](http://www.brightmoonseo.com/basic/link/1187.html) 
 
+### (0) 主题设置/动态背景/显示当前浏览进度
 
+(1) 主题设置
+
+主题设定：打开主题配置文件，搜索 scheme 关键字。 你会看到有四行 scheme 的配置。我选择了 scheme: Pisces，下面是我的设置：
+
+``` 
+# Schemes
+#scheme: Muse
+#scheme: Mist
+scheme: Pisces
+#scheme: Gemini
+```
+
+- Muse：默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白
+- Mist：Muse 的紧凑版本，整洁有序的单栏外观
+
+- Pisces：双栏 Scheme，小家碧玉似的清新
+- Gemini：左侧网站信息及目录，块+片段结构布局 
+
+(2) 动态背景
+
+目前 NexT 主题有 4 种动态背景：
+
+``` 
+Canvas-nest
+three_waves
+canvas_lines
+canvas_sphere
+```
+
+设置方法很简单，直接设置里需要的动态背景为`true`。
+
+(3) 显示当前浏览进度
+
+修改`themes/next/_config.yml`， scrollpercent 值由 `false` 改为 `true`：
+
+``` 
+# Scroll percent label in b2t button
+scrollpercent: true
+```
 
 ### (1) 关于文章所属「分类」和「标签」的设置
 
@@ -186,6 +225,8 @@ local_search:
 
 另外，如侧边栏友情链接小图标，可以到 [图标库](https://fontawesome.com/icons?from=io) 找到自己喜欢的图标然后复制到相应代码中，也可以到这里找：[Font Awesome，一套绝佳的图标字体库和CSS框架](http://fontawesome.dashgame.com/)。
 
+注：如果想要在文章中使用，可以这样插入 `<i class="fa fa-smile-o" style="font-size:28px;color:#FF8247;"></i>` 即可使用。
+
 参考：[Hexo添加字数统计、阅读时长、友情链接](http://www.crocutax.com/2017/05/11/Hexo%E6%B7%BB%E5%8A%A0%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1%E3%80%81%E9%98%85%E8%AF%BB%E6%97%B6%E9%95%BF%E3%80%81%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/)
 
 ### (4) 设置友情链接
@@ -248,7 +289,7 @@ alipay: /uploads/alipay.jpg
 
 我在配置过程中有被官方文档坑了，目前猜测是官方文档没及时更新原因。在此，我记录下遇到的坑：
 
-#### 1）菜单图标问题
+#### 1）菜单图标显示异常
 
 问题：「首页」、「分类」、「标签」等这些菜单旁边的图标都显示是问号，未显示正常图标，我按照官方示例配置是这样的：
 
@@ -288,7 +329,7 @@ menu_icons:
 
 原来 NexT 这个主题中的「菜单设置」被注释掉的那些配置样例，才是正确的配置。OS：官方文档真是坑人啊。
 
-#### 2）友情链接图标设置问题
+#### 2）友情链接图标显示异常
 
 问题：「友情链接」图标未正常显示。
 
@@ -332,7 +373,7 @@ social_icons:
 
 ### (1) 在线联系（DaoVoice）★
 
-非常全面的一个 NexT 主题优化指南：  [hexo的next主题个性化教程:打造炫酷网站](http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html)（含全站总字数、DaoVoice 在线联系等等）。
+参考：  [hexo的next主题个性化教程:打造炫酷网站](http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html)（含全站总字数、DaoVoice 在线联系等等）。
 
 首先在 [DaoVoice](https://account.daocloud.io/signin) 注册账号，注册完成后会得到一个 app_id，记下这个 app_id 的值，然后打开 `/themes/next/layout/_partials/head.swig`，写下如下代码：
 
@@ -437,21 +478,102 @@ leancloud_visitors:
 
 ### (4 动态背景、点击出现桃心效果、去除文章底部带#号的标签
 
+修改模板 `/themes/next/layout/_macro/post.swig`，搜索 `rel="tag">#`，将`#`换成：
+
+``` 
+<i class="fa fa-tag"></i>
+```
+
 参考：[2018最新版Hexo博客Next主题6.0配置优化](https://blog.csdn.net/qq_32454537/article/details/79482896)
 
-### (5) 如何更改标题和文章等字体
+### (5) 更改字体/更改内容区域的宽度
 
-参考：[常见问题 - NexT 使用文档](https://theme-next.iissnan.com/faqs.html)
+(1) 更改字体
+
+NexT 从 5.0.1 版本开始提供一个字体定制特性。以下的修改将覆盖`source/css/_variables/base.styl`「字体定制」的特性。 编辑主题下的 `source/css/_variables/custom.styl` 文件，新增两个变量：
+
+``` 
+// 标题，修改成你期望的字体族
+$font-family-headings = Georgia, sans
+
+// 修改成你期望的字体族
+$font-family-base = "Microsoft YaHei", Verdana, sans-serif
+
+// 代码字体
+$code-font-family = "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace
+
+// 正文字体的大小
+$font-size-base = 16px
+
+// 代码字体的大小
+$code-font-size = 13px
+```
+
+注：代码字体我设置的为 14px，正文字体设置的为 16px，字体族设置的为 `$font-family-base = Lato,"PingFang SC","Microsoft YaHei",sans-serif`。
+
+(2) 更改内容区域的宽度
+
+NexT 对于内容的宽度的设定如下：
+
+- 700px，当屏幕宽度 < 1600px
+- 900px，当屏幕宽度 >= 1600px
+- 移动设备下，宽度自适应
+
+如果你需要修改内容的宽度，同样需要编辑样式文件。 编辑主题的 `source/css/_variables/custom.styl` 文件，新增变量：
+
+``` 
+// 修改成你期望的宽度
+$content-desktop = 700px
+
+// 当视窗超过 1600px 后的宽度
+$content-desktop-large = 900px
+```
+
+注，当你使用 Pisces 风格时可以用下面的方法，我即采用的如下设置：
+
+``` 
+//当你使用 Pisces 风格时可以用下面的方法，在 source/css/_variables/custom.styl 中添加
+$main-desktop = 1200px
+$content-desktop = 950px
+```
+
+参考官网文档：[常见问题 - NexT 使用文档](https://theme-next.iissnan.com/faqs.html)
 
 ### (6) 添加自定义菜单  
+
+以新建「相册」菜单为例：在博客目录下的 source 文件夹下新建名为 photo 文件夹，然后在 photo 文件夹下新建一个 index.md 文件，然后在该文件填写：
+
+``` 
+---
+title: 相册
+date: 2018-04-16 22:14:07
+type: "photo"
+---
+```
+
+然后打开主题配置文件 `_config.yml`，在 menu 中添加：
+
+```
+menu:
+  home: / || home
+  archives: /archives || archive
+  categories: /categories || th
+  tags: /tags || tags
+  #添加了「相册」菜单
+  相册: /photo || camera
+```
+
+> *解释下：这里的「相册」是博客中显示的菜单名称，紧跟的 photo 要和前面 index.md 文件的 type 值一致，|| 后面的菜单的图标，图标名称来自于 [FontAwesome icon](http://fontawesome.io/icons/)，若没有配置图标，默认会使用问号图标。*
 
 参考：[hexo高阶教程：next主题优化之加入网易云音乐、网易云跟帖、炫酷动态背景、自定义样式，打造属于你自己的定制化博客](https://juejin.im/post/58eb2fd2a0bb9f006928f8c7)
 
 ### (7) 添加音乐/视频
 
-**1）添加音乐**
+**1）添加单曲音乐**
 
-可以进入 [网易云音乐](https://music.163.com/) 的官网，打开需要的音乐，点击「生成外链播放器」生成外链，直接拿来用就行。iframe 插件可以在代码中设置宽高等参数，auto 为自动播放。flash 不可以自己设置参数。示例：
+进入 [网易云音乐](https://music.163.com/) 的官网，搜索歌曲，点开歌曲，点击「生成外链播放器」生成外链，直接拿来用就行。iframe 插件可以在代码中设置宽高等参数，auto 为设置是否自动播放。flash 不可以自己设置参数。
+
+自动播放示例：
 
 ``` html
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=350 height=86 src="//music.163.com/outchain/player?type=2&id=185678&auto=1&height=66"></iframe>
@@ -459,7 +581,19 @@ leancloud_visitors:
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=350 height=86 src="//music.163.com/outchain/player?type=2&id=185678&auto=1&height=66"></iframe>
 
-**2）添加视频**
+嵌入不自动播放只需要把以上代码中的 auto 改为 =0 即可。
+
+**2）添加歌单**
+
+如果想要加入歌单，就需要找到歌单或者自己创建歌单，热后点击歌单，找到并点击进去「生成外链播放器」，其余操作就和上面一样了。不过，若歌单有变化的话，这个外链的歌曲同样跟着变。示例：
+
+``` html
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=450 src="//music.163.com/outchain/player?type=0&id=2637966813&auto=1&height=430"></iframe>
+```
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=450 src="//music.163.com/outchain/player?type=0&id=2637966813&auto=1&height=430"></iframe>
+
+**3）添加视频**
 
 打开视频网站，比如优酷、YouTube 等。以优酷为例，打开某个视频后，点击「分享」，再复制 iframe 代码粘贴到 Markdown 文章即可。示例：
 
@@ -467,12 +601,37 @@ leancloud_visitors:
 <iframe height=498 width=510 src='http://player.youku.com/embed/XMTU0ODEwMzM3Ng==' frameborder=0 'allowfullscreen'></iframe>
 ```
 
-### (8) 页面宽度/标题样式等设置
+### (8) 设置标题样式（为浅蓝色）
 
-参考：
+进入主题目录 `hexo\themes\next\source\css\_common\components\post\` 修改 `post.sty` 文件，在配置的后面添加下面的代码。该文件是博文的样式表。
 
-- [Hexo--Next主题优化](http://www.heqiangfly.com/2016/01/12/blog-optimize-next-theme/)
-- [hexo框架基于next主题定制](http://www.aisun.org/2017/10/hexo-next+dingzhi/)（这篇文章把 NexT 主题各种配置讲解的很全面。）
+``` 
+/*添加下面的CSS代码来修改博客标题样式*/
+.page-post-detail .post-title {
+  font-size: 26px;
+  text-align: center;
+  word-break: break-word;
+  font-weight: $posts-expand-title-font-weight
+  background-color: #b9d3ee;
+  border-radius:.3em;
+  line-height:1em;
+  padding-bottom:.12em;
+  padding-top:.12em;
+  box-shadow:2px 2px 7px #9fb6cd;
+  +mobile() {
+    font-size: 22px;
+  }
+}
+/*添加上面的CSS代码来修改博客标题样式*/
+@import "post-expand";
+@import "post-collapse";
+@import "post-type";
+@import "post-title";
+```
+
+*注意：如果想把主页标题样式一同修改，可以用把 `.page-post-detail` 去掉。*
+
+参考：[hexo框架基于next主题定制](http://www.aisun.org/2017/10/hexo-next+dingzhi/)（各种优化，很全面）
 
 ### (9) 设置文章封面图片
 
@@ -637,9 +796,121 @@ summary_img: /images/css-hack-1.png
 > pace_theme: pace-theme-minimal
 > ```
 
+### (11) 隐藏底部"强力驱动"内容/文章末尾添加"本文结束"标记/文章末尾追加版权信息
+
+(1) 隐藏底部"强力驱动"内容
+
+修改`themes/next/_config.yml`文件,将`powered`和`enable`设置为`false`。
+
+``` diff
+# 页脚
+footer:
+  # Specify the date when the site was setup.
+  # If not defined, current year will be used.
+  since: 2018
+
+  # Icon between year and copyright info.
+  # icon: user
+  icon: sun-o
+
+  # If not defined, will be used `author` from Hexo main config.
+  copyright:
+  # -------------------------------------------------------------
+  # Hexo link (Powered by Hexo).
+-  powered: true
++  powered: false
+  theme:
+    # Theme & scheme info link (Theme - NexT.scheme).
+-    enable: true
++    enable: false
+    # Version info of NexT after scheme info (vX.X.X).
+    version: true
+```
+
+参考：[Hexo+NexT 打造一个炫酷博客 - 掘金](https://juejin.im/post/5bcd2d395188255c3b7dc1db#heading-52)（各种定制优化，非常全面）
+
+### (12) 设定站点建立时间
+
+这个时间将在站点的底部显示，例如 `© 2013 - 2015`。编辑主题配置文件 `_config.yml`，新增字段 `since`：
+
+``` 
+since: 2013
+```
+
+参考：[设定站点建立时间 · iissnan/hexo-theme-next Wiki](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E5%AE%9A%E7%AB%99%E7%82%B9%E5%BB%BA%E7%AB%8B%E6%97%B6%E9%97%B4)
+
+### (13) 添加网站已运行时间
+
+在`themes/layout/_parrials/footer.swing` 中添加：
+
+``` js
+<!--添加网站的运行时间-->
+<span id="sitetime"> <br></span>
+<script language="javascript">
+	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000
+		var minutes = seconds * 60
+		var hours = minutes * 60
+		var days = hours * 24
+		var years = days * 365
+
+		var today = new Date()
+		var todayYear = today.getFullYear()
+		var todayMonth = today.getMonth()
+		var todayDate = today.getDate()
+		var todayHour = today.getHours()
+		var todayMinute = today.getMinutes()
+		var todaySecond = today.getSeconds()
+		var t1 = Date.UTC(2017,4,18,11,00,00)
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond)
+		var diff = t2-t1
+
+		var diffYears = Math.floor(diff/years)
+		var diffDays = Math.floor((diff/days)-diffYears*365)
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours)
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes)
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds)
+		document.getElementById("sitetime").innerHTML=" 本站已运行"+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒<br>"
+	}
+	siteTime()
+</script>
+```
+
+参考：[Hexo和Next主题的相关设置（持续更新） - 简书](https://www.jianshu.com/p/3a01cc514ce7)
+
+### (14) 设置文章加密访问
+
+打开 `themes/next/layout/_partials/head.swig`文件，在 ``之前插入代码：
+
+``` js
+<script>
+    (function(){
+        if('{{ page.password }}'){
+            if (prompt('请输入密码') !== '{{ page.password }}'){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+```
+
+然后写文章时加上`password: xxx`，如：
+
+``` 
+---
+title: 2018
+date: 2018-10-25 16:10:03
+password: 123456
+---
+```
+
+参考：[最全Hexo博客搭建+主题优化+插件配置+常用操作+错误分析 | 遇见西门](https://www.simon96.online/2018/10/12/hexo-tutorial/)（非常全面~）
 
 
-### 第三方服务整合的比较全面的DEMO欣赏
+
+### (99) 第三方服务整合的比较全面的DEMO欣赏
 
 - [博採眾長](https://lruihao.cn/)
 
@@ -668,4 +939,4 @@ summary_img: /images/css-hack-1.png
 
 *update：2019-02-13 标题由「Hexo之NexT主题的配置及遇到的问题」改为了「NexT主题的配置修改指南及添加第三方服务」；增加了很多内容，如「2.第三方服务及其他修改」这节内容；其他地方做了一些删减和修改。* 
 
-*update：2019-02-14 添加和修改了部分内容。*  
+*update：2019-02-14 补充完善和添加了很多内容。*  

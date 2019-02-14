@@ -5,9 +5,9 @@ type: "photo"
 comments: true
 ---
 
-<h4 align="center">
+<p align="center" style="font-size:22px;font-weight: bold">
     发现生活美~
-</h4>
+</p>
 <div align="center">
     <img src="./img/plum01.jpg" alt="" width="600px" height="350px">
 </div>

@@ -1,7 +1,6 @@
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
 
-
 <div class="copyright">{#
 #}{% set current = date(Date.now(), "YYYY") %}{#
 #}&copy; {% if theme.footer.since and theme.footer.since != current %}{{ theme.footer.since }} &mdash; {% endif %}{#
@@ -26,7 +25,7 @@
 </div>
 
 <!--添加网站的运行时间-->
-<span id="sitetime"> <br></span>
+<span id="sitetime"></span>
 <script language="javascript">
 	function siteTime(){
 		window.setTimeout("siteTime()", 1000);
@@ -43,7 +42,7 @@
 		var todayHour = today.getHours()
 		var todayMinute = today.getMinutes()
 		var todaySecond = today.getSeconds()
-		var t1 = Date.UTC(2017,4,18,11,00,00)
+		var t1 = Date.UTC(2017,4,18,11,00,00)  // 设置建立网站的时间
 		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond)
 		var diff = t2-t1
 
@@ -52,10 +51,11 @@
 		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours)
 		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes)
 		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds)
-		document.getElementById("sitetime").innerHTML=" 本站已运行"+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒<br>"
+		document.getElementById("sitetime").innerHTML=" 本站已运行 "+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒<br>"
 	}
 	siteTime()
-</script>
+</script> 
+  
 <!-- end -->
 
 {% if theme.footer.powered %}

@@ -5,25 +5,19 @@ comments: false
 ---
 
 <div align="center">
-    <img src="./img/about-cover.jpg" alt="" width="800px" height="435px">
+    <img src="./img/about-cover.jpg" alt="" width="900px" height="300px">
 </div>
+<p align="center" style="font-size:22px;font-weight: bold">
+    <i class="fa fa-glide-g" style="font-size:28px;color:#FF8247;"></i> 关于我
+</p>
+
+<br/>
+
+*热爱生活，乐于分享，喜欢钻研，好奇新事物。持续学习者，技术探索者，一切艺术形式的爱好者。* 
 
 
-# (1) 关于我
 
-还没想好怎么介绍自己，这部分必须认真对待，这是认清自我的一种表达，不想随便写写，嘿嘿~
 
-> *热爱生活，乐于分享，喜欢钻研，好奇新事物。持续学习者，技术探索者，一切艺术形式的爱好者。* 
-
-**联系我：** 
-
-- [知乎](https://www.zhihu.com/people/jaybo-52)
-- [CSDN](http://blog.csdn.net/u012195214)
-- [掘金](https://juejin.im/user/59efef14f265da431a426511/activities)
-- [GitHub](https://github.com/strivebo)
-- 公众号：[一个程序员的随想](http://mp.weixin.qq.com/s/YhlSz8NKbDmFVhIbS9gZYA) （ID：CoderThought）
-- QQ交流群：34642903
-- E-Mail：<ishuzb@foxmail.com> 
 
 **偶尔喝点鸡汤，打点鸡血，自我激励：** 
 
@@ -34,11 +28,45 @@ comments: false
 
 
 
-# (2) 求职 
-
-求职简历待写…
-
-欢迎有什么好的工作记得联系我呀(#^.^#) ，联系邮箱：<ishuzb@foxmail.com>
 
 
+---
 
+<p align="center" style="font-size:22px;font-weight: bold">
+    <i class="fa fa-pied-piper" style="font-size:28px;color:#FF8247;"></i> 为什么你要写博客？
+</p>
+
+- 重新认识自己
+- 提供持续学习的动力
+- 积累更多的知识
+- 提高将事情讲清楚的能力
+- 分享带来的连锁反应
+- 帮你找到志同道合的人
+- 记录成长
+- 培养持续做一件事情的能力
+- 讨论反思
+- 搜寻到你意想不到东西
+- 一个人在做一件属于自己的事
+- 互联网的身份识别
+
+<p align="right"><i>——From <a href="https://zhuanlan.zhihu.com/p/19743861?columnSlug=cnfeat">《为什么你要写博客？》</a></i></p>
+
+---
+
+<p align="center" style="font-size:22px;font-weight: bold">
+    <i class="fa fa-opencart" style="font-size:28px;color:#FF8247;"></i> 求职
+</p>
+
+<br/>
+
+待写…
+
+*GitHub 主页：<https://github.com/strivebo>*
+
+欢迎有什么好的工作联系我哈(#^.^#) ，邮箱：<ishuzb@foxmail.com>
+
+
+
+---
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=470 src="//music.163.com/outchain/player?type=0&id=2637966813&auto=1&height=430"></iframe>
