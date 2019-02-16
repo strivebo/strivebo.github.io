@@ -35,3 +35,40 @@ comments: false #是否运行评论,默认true
 ---
 ```
 
+代码片段 - Java 代码：
+
+``` java
+class Hello{
+    public static void main(String[] args){
+        System.out.print("hello world");
+    }
+}
+```
+
+未标识语言的代码片段：
+
+``` 
+#include<iostream>
+int main(){
+    std:cout<<"hello world";
+}
+```
+
+
+
+音乐播放：
+
+``` xml
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=350 height=86 src="//music.163.com/outchain/player?type=2&id=185678&auto=1&height=66"></iframe>
+```
+
+``` html
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=350 height=86 src="//music.163.com/outchain/player?type=2&id=185678&auto=1&height=66"></iframe>
+```
+
+
+
+参考链接：
+
+- [Hexo 图片插入](http://www.xinxiaoyang.com/programming/2016-11-25-hexo-image-bug/)
+- [Hexo-NexT搭建个人博客（五）——插入封面](https://neveryu.github.io/2017/07/15/hexo-next-five/) 

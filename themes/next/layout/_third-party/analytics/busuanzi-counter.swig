@@ -1,21 +1,23 @@
 {% if theme.busuanzi_count.enable %}
 <div class="busuanzi-count">
-  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-  {% if theme.busuanzi_count.site_uv %}
-    <span class="site-uv">
-      {{ theme.busuanzi_count.site_uv_header }}
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      {{ theme.busuanzi_count.site_uv_footer }}
-    </span>
+  {% if theme.busuanzi_count.total_visitors %}
+    <font color=DarkSlateGray face=STLiti><span class="site-uv" title="访问人数">
+      <i class="fa fa-{{ theme.busuanzi_count.total_visitors_icon }}"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次
+    </span><span class="post-meta-divider">|</span></font>
+    <font color=DarkSlateGray face=STLiti>
+    <span title="总字数"><i class="fa fa-edit"></i>&ensp;<span class="post-count">{{ totalcount(site) }}</span>字,</span>
+    <span id="timeDate" title="网站运行时间">载入天数...</span><span id="times" title="网站运行时间">载入时分秒...</span><span class="post-meta-divider">|</span>
+    </font>
   {% endif %}
 
-  {% if theme.busuanzi_count.site_pv %}
-    <span class="site-pv">
-      {{ theme.busuanzi_count.site_pv_header }}
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      {{ theme.busuanzi_count.site_pv_footer }}
-    </span>
+  {% if theme.busuanzi_count.total_views %}
+    <font color=DarkSlateGray face=STLiti><span class="site-pv" title="总访问量">
+      <i class="fa fa-{{ theme.busuanzi_count.total_views_icon }}"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次
+    </span></font>
   {% endif %}
 </div>
 {% endif %}

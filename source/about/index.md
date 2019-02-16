@@ -1,25 +1,29 @@
 ---
-title: 关于我
+title: 关于
 updated: 2019-02-14 23:56:22
 comments: false 
 ---
 
-<div align="center">
-    <img src="./img/about-cover.jpg" alt="" width="900px" height="300px">
+<div align="center" >
+    <img src="./img/about-cover.jpg" alt="" width="900px" height="300px" style="margin: 0 auto 0px;">
 </div>
-<p align="center" style="font-size:22px;font-weight: bold">
+<p align="center" style="font-size:22px;font-weight: bold;margin: 0 0 60px 0;">
     <i class="fa fa-glide-g" style="font-size:28px;color:#FF8247;"></i> 关于我
 </p>
 
-<br/>
+
 
 *热爱生活，乐于分享，喜欢钻研，好奇新事物。持续学习者，技术探索者，一切艺术形式的爱好者。* 
 
 
 
+<i class="fa fa-book" style="font-size:18px;color:#FF8247;"></i> ***学习和阅读：*** 
+
+*（1）Java 后端学习笔记：[在线阅读](https://javaee.strivebo.com/)*
 
 
-**偶尔喝点鸡汤，打点鸡血，自我激励：** 
+
+<i class="fa fa-paper-plane" style="font-size:18px;color:#FF8247;"></i> ***偶尔喝点鸡汤，打点鸡血，自我激励：*** 
 
 - 张一鸣："所谓成功，就是延迟满足。"
 - 有些事不是因为看到了希望才去坚持，而是因为坚持才会看到希望。
@@ -28,13 +32,13 @@ comments: false
 
 
 
-
-
 ---
 
-<p align="center" style="font-size:22px;font-weight: bold">
+<p align="center" style="font-size:22px;font-weight: bold;margin: 0 0 60px 0;">
     <i class="fa fa-pied-piper" style="font-size:28px;color:#FF8247;"></i> 为什么你要写博客？
 </p>
+
+
 
 - 重新认识自己
 - 提供持续学习的动力
@@ -53,13 +57,10 @@ comments: false
 
 ---
 
-<p align="center" style="font-size:22px;font-weight: bold">
+<p align="center" style="font-size:22px;font-weight: bold;margin: 0 0 60px 0;">
     <i class="fa fa-opencart" style="font-size:28px;color:#FF8247;"></i> 求职
 </p>
 
-<br/>
-
-待写…
 
 *GitHub 主页：<https://github.com/strivebo>*
 

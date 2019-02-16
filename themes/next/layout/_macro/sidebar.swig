@@ -102,7 +102,9 @@
             <div class="links-of-author motion-element">
                 {% for name, link in theme.social %}
                   <span class="links-of-author-item">
-                    <a href="{{ link.split('||')[0] | trim }}" target="_blank" title="{{ name }}">
+					<! --增加的下面这行 -->
+                    {% set sidebarURL = link.split('||')[0] | trim %} 
+                    <a href="{{ link.split('||')[0] | trim }}" target="_blank" title="{{ name + ' &rarr; ' + sidebarURL }}">
                       {% if theme.social_icons.enable %}
                         <i class="fa fa-fw fa-{{ link.split('||')[1] | trim | default('globe') }}"></i>{#
                     #}{% endif %}{#
@@ -123,7 +125,12 @@
               </a>
             </div>
           {% endif %}
-
+		  
+		  <! --增加的下面这部分，知识共享协议 -->
+		  {% if theme.sidebar.copyright %}
+             <div class="cc-license motion-element" itemprop="license"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="external nofollow noopener noreferrer" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a></div>
+          {% endif %}
+		  
           {# Blogroll #}
           {% if theme.links %}
             <div class="links-of-blogroll motion-element {{ "links-of-blogroll-" + theme.links_layout | default('inline') }}">
