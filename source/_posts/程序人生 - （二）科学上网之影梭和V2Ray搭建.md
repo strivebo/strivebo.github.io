@@ -5,11 +5,11 @@ categories: 程序人生
 tags: [科学上网]
 ---
 
-该文主要记录影梭(Shadowsocks和ShadowsocksR) 和 V2Ray 搭建过程要点。<!-- more -->
+该文主要记录影梭(Shadowsocks和ShadowsocksR) 和 V2Ray 搭建过程要点。
 
 ### 1. 影梭(SS和SSR)
 
-可以先看我写的一篇总结：[（一）科学上网总结](http://t.cn/EVfbl1u)，该文有记录如何搭建影梭，可以当做先了解下相关知识也可以。
+可以先看我写的一篇总结：[（一）科学上网总结](./（一）科学上网总结.md)，该文有记录如何搭建影梭，可以当做先了解下相关知识也可以。
 
 #### 第一步：使用脚本1
 
@@ -72,10 +72,9 @@ chmod +x bbr.sh
 > ``` xml
 > wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
 > ```
->
 > 使用脚本后会出现如下选项：
 >
-> ![](https://www.moerats.com/usr/picture/qianyingbbr(1).png)
+> ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190217004302.png)
 >
 > 根据自己需求操作，重启后再使用`./tcp.sh`命令接着操作 —> 按 3或4 使用 BBR 加速 ---> 基于前面介绍的方法判断是否开启 BBR 加速，比如输入命令：`lsmod|grep bbr`，如果出现 tcp_bbr 字样表示bbr已安装并启动成功。
 >
@@ -83,7 +82,7 @@ chmod +x bbr.sh
 >
 > PS：如果在删除内核环节出现这样一张图
 >
-> ![](https://www.moerats.com/usr/picture/qianyingbbr(2).png)
+> ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190217004340.png)
 >
 > 注意选择`NO`，然后根据提示重启系统。
 
@@ -119,7 +118,7 @@ o-check-certificate https://raw.githubusercontent.com/91yun/serverspeeder/master
 
 ```
 
-出现这些就算大功告成：![](https://segmentfault.com/img/bVbd2ff?w=264&h=155)
+出现这些就算大功告成：![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190217004426.png)
 
 
 - 要深入了解相关「影梭」的 FQ 知识可以看：[科学上网漫游指南](https://lvii.gitbooks.io/outman/content/)
