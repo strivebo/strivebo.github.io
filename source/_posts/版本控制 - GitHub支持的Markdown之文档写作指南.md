@@ -1,11 +1,11 @@
 ---
-title: GitHub支持的Markdown的文档写作指南
+title: GitHub支持的Markdown之文档写作指南
 date: 2019-02-13 20:01:08
 categories: 版本控制
 tags: [blog,Markdown,GitHub] 
 ---
 
-## GitHub支持的Markdown的语法使用指南
+## GitHub支持的Markdown之文档写作指南
 
 GitHub 的 MarkDown 语法在标准的 Markdown 语法基础上做了扩充，称之为 GitHub Flavored Markdown，简称 GFM，GFM 在 GitHub 上有广泛应用，除了 README 文件外，issues 和wiki 均支持 Markdown语法。<!-- more -->
 
