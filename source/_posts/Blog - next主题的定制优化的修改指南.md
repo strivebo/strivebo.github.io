@@ -468,11 +468,13 @@ daovoice_app_id: 这里填你的获得的 app_id
 >
 > *注2：我的 DaoVoice 账户注册使用的 GitHub 账户。*
 
-### (2) 评论（Disqus）——已更换为 Valine（注：需注册LeanCloud）★
+### (2) 评论Disqus和文章显示评论数——已更换为LeanCloud的Valine评论功能★
 
 Disqus 官网：https://disqus.com/ （本人使用的是谷歌账号注册和登录）
 
-~~NexT 主题添加评论，我采用了 Disqus 评论~~，参考：[Hexo 集成 Disqus 评论](http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/)。在完成网站注册和配置后，打开 NexT 主题配置文件 `config.yml` 文件。
+NexT 主题集成 Disqus 评论，可以打开 NexT 配置文件 `_config.yml` 搜索「disqus」可以找到。
+
+一开始我采用了 Disqus 评论，操作参考：[Hexo 集成 Disqus 评论](http://www.cylong.com/blog/2017/03/26/hexo-next-disqus/)。在完成 Disqus 网站注册和配置后（如何配置就不说了，看链接），打开 NexT 主题配置文件 `config.yml` 文件。
 
 ①大于等于 5.1.1 版本，将 disqus 下的 enable 设定为 true，同时提供你的 shortname，count 用于指定是否显示评论数量：
 
@@ -483,6 +485,8 @@ disqus:
   count: true
 ```
 
+> enable 和 count 都设置为 true 后，这样你的所有文章会显示评论数，及页面下面会自动加载 Disqus 的评论插件。 
+
 ②小于 5.1.1 版本，设定 disqus_shortname 的值即可：
 
 ``` 
@@ -491,7 +495,9 @@ disqus_shortname: shortname
 
 接下来就可以进入后台管理设置你的评论了。
 
-***——update：2019-02-14 已弃用 Disqus 评论。参考知乎：[Hexo（NexT 主题）评论系统哪个好？ - 知乎](https://www.zhihu.com/question/267598518)，采用了  Valine，不用登陆就可以用。*** 
+***——update：2019-02-14 已弃用 Disqus 评论。参考了知乎文章：[Hexo（NexT 主题）评论系统哪个好？ - 知乎](https://www.zhihu.com/question/267598518)，采用了  Valine，不用登陆就可以用。*** 
+
+> *顺便提一下关于几个评论系统的介绍：多说和网易云已经倒下了，其次畅言需要备案，Disqus， Hypercomments 和 LiveRe 都是国外的，加载速度贼慢。*
 
 ***Valine 设置步骤：***
 
@@ -499,7 +505,7 @@ disqus_shortname: shortname
 
    注册完以后需要创建一个应用，名字可以随便起，然后 **进入应用 -> 设置 -> 应用key**，获取你的 appid 和 appkey。
 
-2. 拿到你的 appid 和 appkey 之后，打开**主题配置文件** 搜索 valine，填入 appid 和 appkey。
+2. 拿到你的 appid 和 appkey 之后，打开主题配置文件 `_config.yml` 搜索 valine，填入 appid 和 appkey。
 
 我的配置：
 
@@ -516,7 +522,57 @@ valine:
     pageSize: 10 # pagination size
    ```
 
-另外：记得在 Leancloud -> 设置 -> 安全中心 -> Web 安全域名，把你的域名加进去。
+另外：如果提示安全问题，请参考网上 [该文](https://11.tt/posts/2018/add-valine-to-your-blog/#%E9%85%8D%E7%BD%AE%E5%AE%89%E5%85%A8%E5%9F%9F%E5%90%8D) 添加安全域名。即在 Leancloud -> 设置 -> 安全中心 -> Web 安全域名，把你的域名加进去。
+
+***(1) Valine邮件提醒***
+
+Valine 官方提供的邮件提醒功能是基于`Leancloud的密码重置邮件提醒`，操作步骤如下：
+
+进入 [Leancloud]() -> 选择你的评论所存放的`应用` -> `设置` -> `邮件模板`，按下图设置好用于`重置密码`的邮件主题>然后保存：
+
+1. 修改邮件主题：`你在 的评论收到了新的评论`
+
+2. 修改内容：将下面的代码复制到“内容”中，并将其中的`你的网址首页链接`改为你的网址首页链接。
+
+   ``` html
+   <p>Hi, {{username}}</p>
+   <p>
+       你在 {{appname}} 的评论收到了新的回复，请点击查看：
+   </p>
+   <p><a href="你的网址首页链接" style="display: inline-block; padding: 10px 20px; border-radius: 4px; background-color: #3090e4; color: #fff; text-decoration: none;">马上查看</a></p>
+   ```
+
+3. 点击“保存”按钮
+
+4. 修改 NexT 主题配置文件，搜索 `valine`（快速定位），将其中的`notify`改为`true`。
+
+设置完成后：
+
+1. 发表评论需要像下面这样的验证
+
+   ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190216212041.png)
+
+2. 如果评论者 A 评论文章时候留下了邮箱，那么其他人比如 B，点击回复 A 的时候，那么 A 的邮箱就会收到相应的邮件通知，提示：
+
+   ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190216212307.png)
+
+   注意：点击查看，会跳转到评论的博客主页，而不是对应的评论文章。
+
+注意事项：
+
+``` xml
+- 发送次数过多，可能会暂时被Leancloud 屏蔽邮件发送功能
+- 由于`邮件提醒`功能使用的“Leancloud的密码重置邮件提醒”，只能传递`昵称`、`邮箱`两个属性，所以邮件提醒链接`无法直达指定文章页`。请悉知。
+- 开启`邮件提醒`会默认开启`验证码`选项。
+- 该功能目前还在测试阶段，谨慎使用。
+- 目前`邮件提醒`正处于测试阶段，仅在`子级`对存在邮件地址的`父级`发表评论时发送邮件
+```
+
+参考：[NexT主题设置Valine评论系统邮件提醒](https://www.nhtzj.com/3315416634/)
+
+***(2)文章显示评论数问题：*** 
+
+**注意，换为  Valine 后，发现文章的评论数不显示，**尝试了改动某处看是否能解决问题，发现解决了。操作这样的：把 disqus 的评论关闭，即设置主题配置文件下的 disqus 下的 enable 为 false，即可正常显示评论数。
 
 ### (3)文章阅读次数（注： 使用的LeanCloud）★
 
