@@ -1508,12 +1508,20 @@ code {color:#c7254e;background:#f9f2f4;border:1px solid #d6d6d6;}
 }
 ```
 
-如果想要添加页面背景图，也是在该文件添加，添加内容如下：
+关于页面的其他设置也可以在此设置。参考：[custom.styl](https://github.com/Vincentqyw/blog-code/blob/master/themes/next/source/css/_custom/custom.styl)
 
-``` 
+查看效果：[见我博客](https://strivebo.com/)  
+
+另外在网上有看到别人的博客有个页面效果——文章之间、以及文章与下面分页之间有隔横，这个效果样式一直想拿到，觉得那样的更好看。后面联系到了博客作者，问了这事，他说是用的最新版的 NexT 主题，默认就是这样。再然后我找到了 NexT 版本更新日志的博客网站 [NexT – Theme for Hexo](https://theme-next.org/) 发现也是那样的效果（此时最新源码：[hexo-theme-next](https://github.com/theme-next/hexo-theme-next/tree/v6.0.6)），看来真是新版 NexT 默认样式。前端我只会一点，不会改啊，忧桑QAQ，只能这样了，日后有时间在探究吧~
+
+### (22) 更换博客背景图
+
+打开 `\themes\next\source\css\_custom\` 文件夹下的 `custom.styl` 文件，添加如下代码：
+
+``` css
 //背景图
 body { 
-    background-image: url(/images/cc-by-nc-sa.svg);
+    background-image: url(/images/background.jpg);
     background-attachment: fixed; // 不随屏幕滚动而滚动fixed,scroll,inherit
     background-repeat: no-repeat; // 如果背景图不够屏幕大小则重复铺，改为no-repeat则表示不重复铺
     background-size: cover; // contain等比例铺满屏幕 //cover拉伸铺满
@@ -1527,11 +1535,7 @@ body {
 }
 ```
 
-其中，url 后的为背景图片地址，如上为 `\themes\next\source\images\` 文件夹下。
-
-关于页面的其他设置也可以在此设置。参考：[custom.styl](https://github.com/Vincentqyw/blog-code/blob/master/themes/next/source/css/_custom/custom.styl)
-
-查看效果：[见我博客](https://strivebo.com/)  
+其中，背景图片为 background-image 后面的 url 地址，即存放在 `\themes\next\source\images\` 文件夹下。
 
 ### (99) 第三方服务整合的比较全面的DEMO欣赏
 
