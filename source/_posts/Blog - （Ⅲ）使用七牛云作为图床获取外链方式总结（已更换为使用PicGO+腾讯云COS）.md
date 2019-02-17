@@ -215,19 +215,35 @@ GitHub 上也有教程：[gyk001/hexo-qiniu-sync](https://github.com/gyk001/hexo
 
 ## (2) 上传工具-PicGo 
 
-使用 PicGo 工具，配置下快捷键，上传简直不能太方便，极力推荐。
+使用 PicGo 工具，配置自定义的快捷键，上传图片简直不能太方便了，墙裂推荐。
 
 GitHub 地址：[Molunerfinn/PicGo](https://github.com/Molunerfinn/PicGo)，如何使用 PicGo 可以参考该文：[PicGo：基于 Electron 的图片上传工具 - 少数派](https://sspai.com/post/42310)。该工具支持微博图床、七牛图床、腾讯云 COS、GitHub 等等。
 
 使用 PicGo 上传图片到腾讯云 COS，参考：[图床上传工具PicGo v1.5更新：支持腾讯云COSv5版本、支持GitHub图床、支持上传前重命名文件等等 - 少数派](https://sspai.com/post/44495)
 
+另外 PicGo 还支持微博图床、阿里云OSS、又拍云等作为图床，甚至 GitHub 图床。如果不嫌图片加载速度可能不那么快，可以考虑一下 GitHub 作为图床，记得我在哪里看到过，GitHub 单个仓库存储容量可以达到 1000G，所以放心用吧，我觉得也考虑把这个作为文件备份的地方。
 
+具体如何配置参考：[传送门](https://sspai.com/post/44495)。我有实际操作了一遍，有几点要说的：
+
+1. 在 <https://github.com/settings/tokens> 中生成的 token，记得复制以下存放在其他地方留着备用，因为这个 token 只会显示一次；
+
+2. PicGo 设置中，域名为空即可，另外，如果需要把图片存放在图床仓库 img 文件夹，则先第一步，在仓库新建 img 文件夹（如何在 GitHub 仓库新建文件夹相信你有办法的），然后在 PicGo 的存储路径指定为 `img/` 即可，这样得到的地址如下格式：
+
+   ``` xml
+   https://raw.githubusercontent.com/strivebo/backup/master/img/20190218004624.png
+   ```
+
+3. 使用 GitHub 作为图床，图床仓库不要去设置为私有，如果设置为了私有仓库，在其他人浏览器不会显示；
+
+   
 
 ---
 
 *update：2018-01-31*
 
 *update：2019-02-13 部分内容和文字表达有所修改；增加了「4. 目前使用的方法  [荐]」节内容。*
+
+*update：2019-02-17 增加了利用 PicGo 使用 GitHub 作为图床的内容*  
 
 
 

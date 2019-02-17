@@ -20,8 +20,9 @@ tags: [NexT,Blog]
 本人使用的版本为：
 
 ``` xml
+nodejs：v8.10.0
 npm：5.6.0  #命令 npm -v 可以查看到
-next 主题版本：5.1.4  #打开站点配置文件_config.yml搜索version可以找打
+NexT主题版本：5.1.4  #打开站点配置文件_config.yml搜索version可以找到
 ```
 
 `hexo version` 的信息如下：
@@ -620,10 +621,10 @@ NexT 从 5.0.1 版本开始提供一个字体定制特性。以下的修改将�
 $font-size-base = 16px
 
 // 代码字体的大小
-$code-font-size = 15px
+$code-font-size = 14px
 ```
 
-注1：代码字体我设置的为 15px，正文字体设置的为 16px，字体族设置的为 `$font-family-base = Lato,"PingFang SC","Microsoft YaHei",sans-serif`。
+注1：代码字体我设置的为 14px，正文字体设置的为 16px，字体族设置的为 `$font-family-base = Lato,"PingFang SC","Microsoft YaHei",sans-serif`。
 
 注2：关于代码大小设置，除了可以修改主题下的 `source/css/_variables/custom.styl` 文件，还可以通过修改同目录下的 `source/css/_variables/base.styl` 文件达到同一目的，base.styl 会覆盖 custom.style 的修改。
 
@@ -1521,9 +1522,9 @@ code {color:#c7254e;background:#f9f2f4;border:1px solid #d6d6d6;}
 }
 ```
 
-关于页面的很多设置都可以在此设置。可参考：[Vincentqyw-custom.styl](https://github.com/Vincentqyw/blog-code/blob/master/themes/next/source/css/_custom/custom.styl)、[Lruihao-custom.styl](https://github.com/Lruihao/lruihao.github.io/blob/hexo/themes/next-old/source/css/_custom/custom.styl)。
+关于页面的很多设置都可以在此设置。
 
-查看效果：[见我博客](https://strivebo.com/)  
+除了上面这些，我还设置了其他很多，比如页面底部页码、网页加载条、返回顶部按钮、左侧信息栏等样式。可参考：[Vincentqyw-custom.styl](https://github.com/Vincentqyw/blog-code/blob/master/themes/next/source/css/_custom/custom.styl)、[Lruihao-custom.styl](https://github.com/Lruihao/lruihao.github.io/blob/hexo/themes/next-old/source/css/_custom/custom.styl)。查看效果：[见我博客](https://strivebo.com/)  
 
 另外在网上有看到别人的博客有个页面效果——文章之间、以及文章与下面分页之间有隔横，这个效果样式一直想拿到，觉得那样的更好看。后面联系到了博客作者，问了这事，他说是用的最新版的 NexT 主题，默认就是这样。再然后我找到了 NexT 版本更新说明的博客网站 [NexT – Theme for Hexo](https://theme-next.org/) 发现它也是那样的效果（最新源码：[hexo-theme-next](https://github.com/theme-next/hexo-theme-next/tree/v6.0.6)），看来真是新版 NexT 默认样式。前端我只会一点，不会改啊，忧桑QAQ，只能这样了，日后有时间在探究吧~
 
