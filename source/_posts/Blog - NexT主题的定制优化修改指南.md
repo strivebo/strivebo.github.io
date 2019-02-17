@@ -1,8 +1,8 @@
 ---
-title: next主题的定制优化的修改指南
-date: 2019-02-15 20:01:08
+title: （Ⅱ）NexT主题的定制优化修改指南
+date: 2019-02-17 20:01:08
 categories: Blog
-tags: [blog] 
+tags: [NexT,Blog] 
 ---
 
 ## 写在前面
@@ -1242,15 +1242,15 @@ toc:
 
 ### (19) 底部大改版：添加自定义版权等信息、访问人数/次、网站运行时间等信息★
 
-注：已对「(12) 设定站点建立时间」、「(13) 添加网站已运行时间」做的修改做了更换；以及隐藏了底部"强力驱动"和版本内容，如何隐藏见该文 (11) 节操作。
+注：已对「(12) 设定站点建立时间」、「(13) 添加网站已运行时间」做的修改做了更换；以及隐藏了底部"强力驱动"和版本内容（如何隐藏见该文 (11) 节操作）。
 
-**(1) 底部添加自定义版权信息**
+**(1) 底部添加自定义版权信息** 
 
 ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190216155259.png)
 
 > *注：如上，左侧是之前的，右侧是修改后的。* 
 
-现把修改后的代码摘入如下，方面复制：
+打开 `\themes\next\layout\_partials\` 文件夹下的 `footer.swig` 文件。现把修改后的代码摘入如下，方便复制：
 
 ``` xml
 <div class="copyright">{#
@@ -1278,6 +1278,17 @@ toc:
 ```
 
 这是效果：![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190216155600.png)
+
+这里使用的是「华文隶书」字体，你也可以通过修改`face=STLiti` 换为别的字体。要注意的是，当你这里使用了「华文隶书」字体，别人访问该网页的电脑或手机若没有安装该字体，则不会显示此字体样式。我自己在手机端访问，就发现不会显示此字体样式。
+
+**但一定要别人在没有安装「华文隶书」字体的电脑或手机上显示该字体样式，有办法吗？**答案是有的。只需要把该字体放在 NexT 主题源码中，比如 `\themes\next\source\images\` 文件夹下。
+
+电脑安装了 Office， 会自动安装一些字体，包括「华文隶书」。如何安装字体：[下载和安装自定义字体以便在 Office 中使用 - Office 支持](https://support.office.com/zh-cn/article/%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93%E4%BB%A5%E4%BE%BF%E5%9C%A8-office-%E4%B8%AD%E4%BD%BF%E7%94%A8-0ee09e74-edc1-480c-81c2-5cf9537c70ce)
+
+- 方法1：双击下载好的 ttf 文件，点击「安装」即可。
+- 方法2：复制下载好的 ttf 文件，粘贴到 `C:\Windows\Fonts` 会自动安装字体。
+
+卸载字体：进入 `C:\Windows\Fonts` 选择需要卸载的字体删除即可。
 
 **(2) 底部添加访问人数和人次，以及网站运行时间**
 
@@ -1330,6 +1341,8 @@ setInterval("createtime()",250);
 </div>
 {% endif %}
 ```
+
+> *注：这里同上一样，使用了「华文隶书」字体。*   
 
 最后在打开 next 主题配置文件 `_config.yml` 找到 busuanzi_count，修改为如下：
 
@@ -1442,7 +1455,7 @@ social_icons:
 
 效果：![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190216171849.png)
 
-### (21) 关于页面样式的修改，如链接的颜色、回顶部按钮样式、底部页码等
+### (21) 关于页面样式的修改，如链接的颜色、回顶部按钮样式、底部页码等等
 
 打开 `\themes\next\source\css\_custom\` 文件夹下的 `custom.styl` 文件，添加如下内容，修改内容已有注释写明：
 
@@ -1508,11 +1521,11 @@ code {color:#c7254e;background:#f9f2f4;border:1px solid #d6d6d6;}
 }
 ```
 
-关于页面的其他设置也可以在此设置。参考：[custom.styl](https://github.com/Vincentqyw/blog-code/blob/master/themes/next/source/css/_custom/custom.styl)
+关于页面的很多设置都可以在此设置。可参考：[Vincentqyw-custom.styl](https://github.com/Vincentqyw/blog-code/blob/master/themes/next/source/css/_custom/custom.styl)、[Lruihao-custom.styl](https://github.com/Lruihao/lruihao.github.io/blob/hexo/themes/next-old/source/css/_custom/custom.styl)。
 
 查看效果：[见我博客](https://strivebo.com/)  
 
-另外在网上有看到别人的博客有个页面效果——文章之间、以及文章与下面分页之间有隔横，这个效果样式一直想拿到，觉得那样的更好看。后面联系到了博客作者，问了这事，他说是用的最新版的 NexT 主题，默认就是这样。再然后我找到了 NexT 版本更新日志的博客网站 [NexT – Theme for Hexo](https://theme-next.org/) 发现也是那样的效果（此时最新源码：[hexo-theme-next](https://github.com/theme-next/hexo-theme-next/tree/v6.0.6)），看来真是新版 NexT 默认样式。前端我只会一点，不会改啊，忧桑QAQ，只能这样了，日后有时间在探究吧~
+另外在网上有看到别人的博客有个页面效果——文章之间、以及文章与下面分页之间有隔横，这个效果样式一直想拿到，觉得那样的更好看。后面联系到了博客作者，问了这事，他说是用的最新版的 NexT 主题，默认就是这样。再然后我找到了 NexT 版本更新说明的博客网站 [NexT – Theme for Hexo](https://theme-next.org/) 发现它也是那样的效果（最新源码：[hexo-theme-next](https://github.com/theme-next/hexo-theme-next/tree/v6.0.6)），看来真是新版 NexT 默认样式。前端我只会一点，不会改啊，忧桑QAQ，只能这样了，日后有时间在探究吧~
 
 ### (22) 更换博客背景图
 
@@ -1553,7 +1566,17 @@ body {
 
 
 
-## 3. 主题制作
+## 3. Hexo博客速度优化
+
+*注：关于速度的优化，本人还未实践…* 
+
+参考：
+
+- [Hexo博客-Next性能优化之路 | Waber's Blog](http://waberyang.com/2017/03/12/Hexo%E5%8D%9A%E5%AE%A2-Next%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E4%B9%8B%E8%B7%AF/)
+- [Hexo博客之速度优化 - 简书](https://www.jianshu.com/p/93b63852f0b3)
+- [hexo next主题深度优化(六)，使用hexo-neat插件压缩页面，大幅度提升页面性能和响应速度](https://blog.csdn.net/dataiyangu/article/details/84963491)
+
+## 4. 主题制作
 
 - [从零开始制作 Hexo 主题](http://www.ahonn.me/2016/12/15/create-a-hexo-theme-from-scratch/)
 - [写一个自己的Hexo主题](https://segmentfault.com/a/1190000006057336)
@@ -1638,8 +1661,10 @@ cnzz_analytics: true     # 博客的访问统计，这里使用 CNZZ 的统计
 
 *update：2018-01-30*
 
-*update：2019-02-13 标题由「Hexo之NexT主题的配置及遇到的问题」改为了「next主题的定制优化的修改指南.」；增加了很多内容，如「2.第三方服务及其他修改」这节内容；其他地方做了一些删减和修改。* 
+*update：2019-02-13 标题由「Hexo之NexT主题的配置及遇到的问题」改为了「NexT主题的定制优化修改指南.」；增加了很多内容，如「2.第三方服务及其他修改」这节内容；其他地方做了一些删减和修改。* 
 
 *update：2019-02-14 补充完善和添加了很多内容。*  
 
-*update：2019-02-15 添加了「添加RSS订阅功能」、「取消文章目录对标题的自动编号和取消目录」等小节、以及站点底部和页面样式的修改等内容*
+*update：2019-02-15 添加了「添加RSS订阅功能」、「取消文章目录对标题的自动编号和取消目录」等小节、以及站点底部和页面样式的一些修改等*
+
+*update：2019-02-17 修改了一点页面样式；增加了「Hexo博客速度优化」节*  

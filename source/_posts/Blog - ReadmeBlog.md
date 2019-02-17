@@ -2,7 +2,7 @@
 title: 博客搭建日志及博客文章管理说明
 date: 2019-02-13 20:01:08
 categories: Blog
-tags: [blog] 
+tags: [Blog] 
 summary_img: /cover_images/001.jpg
 ---
 博客搭建日志及博客文章管理说明。<!-- more -->

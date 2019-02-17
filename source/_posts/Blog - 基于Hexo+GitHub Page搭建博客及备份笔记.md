@@ -1,8 +1,8 @@
 ---
-title: 基于Hexo+GitHub Page搭建博客及备份笔记
+title: （Ⅰ）基于Hexo+GitHub Page搭建博客及备份笔记
 date: 2019-02-13 20:01:08
 categories: Blog
-tags: [blog] 
+tags: [Blog,GitHub,Hexo] 
 ---
 
 ## 前言

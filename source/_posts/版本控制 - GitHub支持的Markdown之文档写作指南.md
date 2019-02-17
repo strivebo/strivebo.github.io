@@ -2,7 +2,7 @@
 title: GitHub支持的Markdown之文档写作指南
 date: 2019-02-13 20:01:08
 categories: 版本控制
-tags: [blog,Markdown,GitHub] 
+tags: [Blog,Markdown,GitHub] 
 ---
 
 ## GitHub支持的Markdown之文档写作指南

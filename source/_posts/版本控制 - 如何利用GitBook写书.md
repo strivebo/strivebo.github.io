@@ -2,7 +2,7 @@
 title: 如何利用GitBook写书
 date: 2019-02-13 20:01:08
 categories: 版本控制
-tags: [blog,GitBook,GitHub] 
+tags: [Blog,GitBook,GitHub] 
 ---
 
 ### (1) 本地操作步骤
