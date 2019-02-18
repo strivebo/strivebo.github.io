@@ -8,7 +8,7 @@ type: "video"
     音乐和视觉盛宴~
 </p>
 
-> *欢迎下方评论分享你觉得值得推荐的音乐电影，也欢迎分享你的故事~* 
+> *欢迎下方评论分享你觉得值得推荐的音乐和电影，也欢迎分享你的故事~* 
 
 
 
@@ -24,4 +24,4 @@ type: "video"
 
 <br/> 
 
-<iframe height=498 width=510 src='http://player.youku.com/embed/XMTU0ODEwMzM3Ng==' frameborder=0 'allowfullscreen'></iframe>
+<iframe height=300 width=510 src='http://player.youku.com/embed/XMTU0ODEwMzM3Ng==' frameborder=0 'allowfullscreen'></iframe>

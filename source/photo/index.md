@@ -2,7 +2,7 @@
 title: 相册
 date: 2018-04-16 22:14:07
 type: "photo"
-comments: true
+comments: false
 ---
 
 <p align="center" style="font-size:20px;font-weight: bold;color:#ff9900;">
@@ -13,8 +13,7 @@ comments: true
 >
 > *我们不是用相机在拍照，我们带到摄影中去的是你曾经读过的书，看过的电影，听过的音乐，走过的路，爱过的人。——安塞尔·亚当斯*
 
-
-<p align="center" style="font-size:22px;font-weight: bold;font-style:oblique;margin:0 0 0px 0;">2019</p>
+<p align="center" style="font-size:22px;font-weight: bold;font-style:oblique;margin:0 0 0px 0;">2018</p>
 
 <div align="center">
 	<ul style="margin:0px 0 0 0;">
@@ -28,26 +27,27 @@ comments: true
 
 
 
-<p align="center" style="font-size:22px;font-weight: bold;font-style:oblique;margin:0 0 0px 0;">2018</p>
+<p align="center" style="font-size:22px;font-weight: bold;font-style:oblique;margin:0 0 0px 0;">2017</p>
 
 
 
 <div align="center">
 	<ul style="margin:0px 0 0 0;">
+        <!-- 第一个横排四图，未对齐 -->
         <li style="list-style-type:none;float:left;"><img src="./img/plum01.jpg" alt="" width="190px" height="220px"></li>
         <li style="list-style-type:none;float:left;"><img src="./img/sunflower01.jpg" alt="" width="190px" height="220px"></li>
         <li style="list-style-type:none;float:left;"><img src="./img/axh01.jpg" alt="" width="220px" height="190px"></li>
         <li style="list-style-type:none;float:left;"><img src="./img/axh02.jpg" alt="" width="220px" height="190px"></li>
-
-        <li style="list-style-type:none;float:left;"><img src="./img/plum01.jpg" alt="" width="190px" height="220px"></li>
+        <!-- 第二个横排四图，对齐了 -->
+		<li style="list-style-type:none;float:left;"><img src="./img/plum01.jpg" alt="" width="190px" height="220px"></li>
         <li style="list-style-type:none;float:left;"><img src="./img/sunflower01.jpg" alt="" width="190px" height="220px"></li>
         <li style="list-style-type:none;float:left;"><img src="./img/axh01.jpg" alt="" width="220px" height="190px"></li>
-    	<li style="list-style-type:none;float:left;"><img src="./img/axh01.jpg" alt="" width="220px" height="190px"></li>
+        <li style="list-style-type:none;float:left;"><img src="./img/axh01.jpg" alt="" width="220px" height="190px"></li>
+        <!-- 第三个横排，对齐了 -->
         <li style="list-style-type:none;float:left;"><img src="./img/axh01.jpg" alt="" width="220px" height="190px"></li>
         <li style="list-style-type:none;float:left;"><img src="./img/axh01.jpg" alt="" width="220px" height="190px"></li>
-        <li style="list-style-type:none;float:left;"><img src="./img/axh01.jpg" alt="" width="220px" height="190px"></li>
-        
-        <!-- 最后要设置为不浮动，否则下面的评论会异常 -->
+        <li style="list-style-type:none;float:left;"><img src="./img/axh01.jpg" alt="" width="220px" height="190px"></li> 
+        <!-- 最后要设置个为不浮动，否则下面的评论会异常(当前页面评论已关) -->
         <li style="list-style-type:none;"><p style="width:190px;height:220px;"></p></li>
     </ul>
 </div>

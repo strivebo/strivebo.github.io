@@ -1,5 +1,5 @@
 ---
-title: （Ⅱ）NexT主题的定制优化修改指南
+title: （Ⅱ）NexT主题的优化定制修改指南
 date: 2019-02-17 20:01:08
 categories: Blog
 tags: [NexT,Blog] 
@@ -42,32 +42,23 @@ cldr:32.0
 tz:2017c
 ```
 
-## 1. NexT主题基本配置
+## 一、NexT主题基本配置
 
-选来选去一直决定不下来选哪个主题合适，在尝试了好多个意向主题之后，最后还是决定选 GitHub 最高 star 的主题 NexT 了。那么多人在用，综合来说，普遍大众应该还是很认可的。
+关于博客主题的选择问题，考虑了很久一直决定不下来选哪个主题合适，在尝试了多个觉得不错的主题之后，最终还是决定选择 GitHub 最多 star 的 NexT 主题了。有那么多人在用，普遍大众应该还是很认可的。NexT 主题版本更新日志和下载：[NexT – Theme for Hexo](https://theme-next.org/) | [NexT主题 - GitHub](https://github.com/iissnan/hexo-theme-next)
 
-- [NexT](https://theme-next.org/) | [NexT主题 - GitHub](https://github.com/iissnan/hexo-theme-next)
+关于这个主题的相关配置、优化定制网上容易找到非常多的资料，但基本的配置，还是建议直接看官方文章：
 
-关于这个主题的相关配置、优化等操作网上很容易找到非常详的细资料。建议直接看官方文档吧：[主题配置 - NexT 使用文档](http://theme-next.iissnan.com/theme-settings.html)。
+- [主题配置 - NexT 使用文档](http://theme-next.iissnan.com/theme-settings.html)
+- [主题配置参考 · iissnan/hexo-theme-next Wiki](https://github.com/iissnan/hexo-theme-next/wiki/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83)（ NexT 主题 GitHub 上其 wiki 页面关于主题设置教程）
 
-这里主要记录下 NexT 的配置过程我有遇到的问题。先来欣赏使用的 NexT 该主题的 DEMO 网站吧，这是一个：
+本文会介绍 NexT 主题大部分的基本配置修改以及优化定制博客。
 
-- [吴小龙同學](http://wuxiaolong.me/)
+网上比较全面的修改指南，供参考：
 
-这是 NexT 主题 GitHub 上其 wiki 页面关于主题设置教程：[主题配置参考 · iissnan/hexo-theme-next Wiki](https://github.com/iissnan/hexo-theme-next/wiki/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83)
-
-关于 NexT主题的修改：
-
-- 还是很全面的： 2016-04-07 [Hexo站点、NexT主题修改全记录](http://www.lzblog.cn/2016/04/07/Hexo%E7%AB%99%E7%82%B9%E3%80%81NexT%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9%E5%85%A8%E8%AE%B0%E5%BD%95/)
-
-这个主题相关的设置网上一搜是真的太多了，下面列举一些：
-
-- [Hexo+nexT主题搭建个人博客](http://www.wuxubj.cn/2016/08/Hexo-nexT-build-personal-blog/#)
-
-
-- [Hexo搭建GitHub博客（三）- NexT主题配置使用](https://zhiho.github.io/2015/09/29/hexo-next/)
-- [hexo的next主题个性化教程:打造炫酷网站](http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html) 
-- [浅谈tag标签分类和目录分类的区别以及如何SEO优化妙用！](http://www.brightmoonseo.com/basic/link/1187.html) 
+- 2016-04-07 [Hexo站点、NexT主题修改全记录](http://www.lzblog.cn/2016/04/07/Hexo%E7%AB%99%E7%82%B9%E3%80%81NexT%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9%E5%85%A8%E8%AE%B0%E5%BD%95/)
+- 2018-05-01 [关于Hexo6.0搭建个人博客(进阶篇)](https://segmentfault.com/a/1190000014676320)
+- 2017-05-24 [hexo的next主题个性化配置教程](https://segmentfault.com/a/1190000009544924)
+- ……
 
 ### (0) 主题设置/动态背景/显示当前浏览进度
 
@@ -429,7 +420,7 @@ social_icons:
 
 
 
-## 2. 第三方服务及其他修改
+## 二、第三方服务及其他修改
 
 添加第三方服务，官网文档：[第三方服务集成 - NexT 使用文档](https://theme-next.iissnan.com/third-party-services.html)。
 
@@ -1551,6 +1542,24 @@ body {
 
 其中，背景图片为 background-image 后面的 url 地址，即存放在 `\themes\next\source\images\` 文件夹下。
 
+### (23) 设置博客的图标favicon
+
+第一步：首先要有一个常见格式名（如`.jpg`, `.png`等）的图片作为备选 favicon，选择一个 favicon 制作网站完成制作，例如 [FavIcon from Pics](http://favicon.htmlkit.com/favicon/)、[比特虫](http://www.bitbug.net/)、[favicon制作 - 在线工具](https://tool.lu/favicon/)，最好设置为 32x32，除了自己制作，当然也可以去一些网站上找，如：[EasyIcon](http://www.easyicon.net/)。
+
+第二步：将`favicon.ico`文件放在网站根目录下的 source 文件夹，如 `/themes/next/source/images` 文件夹下，并且修改配置文件：
+
+``` xml
+favicon:
+  small: /images/favicon-16x16-next.png #小图标 默认的NexT
+  medium: /images/favicon.ico	#中图标 默认NexT
+  apple_touch_icon: /images/apple-touch-icon-next.png #苹果触摸图标
+  safari_pinned_tab: /images/logo.svg #safari固定标签
+```
+
+可以看到有四种效果，一般我们只需将 medium 换成我们自己图标路径就行了。然后刷新网站，就可以看到效果了。效果：<img src="https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190218151352.png"/>
+
+参考：[关于Hexo6.0搭建个人博客(进阶篇)](https://segmentfault.com/a/1190000014676320)
+
 ### (99) 第三方服务整合的比较全面的DEMO欣赏
 
 - [博採眾長](https://lruihao.cn/)
@@ -1567,7 +1576,7 @@ body {
 
 
 
-## 3. Hexo博客速度优化
+## 三、Hexo博客速度优化
 
 *注：关于速度的优化，本人还未实践…* 
 
@@ -1577,7 +1586,7 @@ body {
 - [Hexo博客之速度优化 - 简书](https://www.jianshu.com/p/93b63852f0b3)
 - [hexo next主题深度优化(六)，使用hexo-neat插件压缩页面，大幅度提升页面性能和响应速度](https://blog.csdn.net/dataiyangu/article/details/84963491)
 
-## 4. 主题制作
+## 四、主题制作
 
 - [从零开始制作 Hexo 主题](http://www.ahonn.me/2016/12/15/create-a-hexo-theme-from-scratch/)
 - [写一个自己的Hexo主题](https://segmentfault.com/a/1190000006057336)
@@ -1662,10 +1671,10 @@ cnzz_analytics: true     # 博客的访问统计，这里使用 CNZZ 的统计
 
 *update：2018-01-30*
 
-*update：2019-02-13 标题由「Hexo之NexT主题的配置及遇到的问题」改为了「NexT主题的定制优化修改指南.」；增加了很多内容，如「2.第三方服务及其他修改」这节内容；其他地方做了一些删减和修改。* 
+*update：2019-02-13 标题由「Hexo之NexT主题的配置及遇到的问题」改为了「NexT主题的优化定制修改指南.」；增加了很多内容，如「2.第三方服务及其他修改」这节内容；其他地方做了一些删减和修改。* 
 
 *update：2019-02-14 补充完善和添加了很多内容。*  
 
 *update：2019-02-15 添加了「添加RSS订阅功能」、「取消文章目录对标题的自动编号和取消目录」等小节、以及站点底部和页面样式的一些修改等*
 
-*update：2019-02-17 修改了一点页面样式；增加了「Hexo博客速度优化」节*  
+*update：2019-02-17 修改了一点页面样式；增加了「Hexo博客速度优化」节；增加了博客 favicon*  
