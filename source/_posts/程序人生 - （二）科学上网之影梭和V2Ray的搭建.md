@@ -216,6 +216,43 @@ DigitalOcean 使用小时计费模式，删除后便不再计费，非常合理�
 
 ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190112140010.png)
 
+**(3) 关于欠费问题**
+
+本人在使用 DigitalOcean 欠费后还能继续使用，欠费好多天后还能用，纳闷了，总觉得要了解清楚，于是发起了一个 Ticket，得到的回复大概意思是，到了一定时间会自动关掉的。
+
+那我便没放在心上，因为觉得再欠费几天就会被自动停掉，但没有想到的是欠费二十多天，欠费 6.73$，依旧能使用，而且每天给我发邮件提示欠费金额。看着每天都在扣费，但又不给我自动关闭，心里着实不够踏实，于是我打开网站准备主动删除 Droplet，发现删不掉，看到网上有人说可以试试注销账号方式，于是试着注销账号，注销不了，很坑啊，再到网上找解决方式，看到有人提到发起 Ticket，于是我第二次发起一个 Ticket，内容如下：
+
+``` html
+Hello,I'm your old friend. Last year I heard about Digital Ocean from Github,I also got an exclusive education offer on github.I got a $50 coupon so l used it to buy ur server.I used ur vps to build up my web services ..... That's all reasons that I should thank you!
+
+I usually recommend your service to my classmates and friends, some of them choose to sign up as your paying users..…Due to my recent negligence and I didn't often check my email in time, my account owed $6.73, I thought you would stop my service as long as my account balance runs out. I remember I started a ticket last time and mentioned this problem. Now I am very anxious, and want to stop my service, but it won't work.I don't konw why.
+
+I am not deliberately do that, can you don't ask me pay for the bilng that I overuse, or can you allow me to destroy my service?My account is ishuzb@sina.com. I would appreciate it if you can help me!
+
+One way or another,I love your service and I will recommend Digital Ocean to my friend!
+Thanks a lotl!
+```
+
+然后过不多久就收到好几封邮件，其中一封：
+
+``` xml
+Hello,
+
+I have added a $10 credit to your account to cover the small balance. This should remove the hold on your account and allow you to login. 
+
+Please remove all active services before deactivating the account. 
+
+If you have any further questions or concerns, please feel free to reach back out to us at any time.
+
+Best, 
+Wendy
+Platform Support Specialist
+```
+
+直接给了我账户 10$，DigitalOcean 真是牛逼。哈哈，总算可以删除了~
+
+
+
 ### 2. V2Ray 
 
 #### (1) V2Ray介绍

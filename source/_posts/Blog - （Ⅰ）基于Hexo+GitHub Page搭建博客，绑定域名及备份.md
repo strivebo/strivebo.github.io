@@ -1,6 +1,6 @@
 ---
-title: （Ⅰ）基于Hexo+GitHub Page搭建博客及备份笔记
-date: 2019-02-13 20:01:08
+title: （Ⅰ）基于Hexo+GitHub Page搭建博客，绑定域名及备份
+date: 2019-02-14 20:01:08
 categories: Blog
 tags: [Blog,GitHub,Hexo] 
 ---
@@ -204,15 +204,15 @@ hexo d -g  #生成并上传
 
 **(2) 对仓库的操作——添加CNAME文件**
 
-在 GitHub 博客仓库 master 分支根目录创建一个 `CNAME` 文件(无后缀)，里面填写你的域名，加不加`www`看自己喜好，因为经测试：
+在 GitHub 博客仓库 master 分支根目录创建一个 `CNAME` 文件(无后缀)，里面填写你的域名，加不加 `www` 看自己喜好，因为经测试：
 
 - 如果你填写的是没有 www 的，比如 mygit.me，那么无论是访问 `http://www.mygit.me` 还是 `http://mygit.me`，都会自动跳转到 `http://mygit.me`
 - 如果你填写的是带 www 的，比如 `www.mygit.me` ，那么无论是访问 `http://www.mygit.me` 还是 `http://mygit.me`，都会自动跳转到 `http://www.mygit.me`
 - 如果你填写的是其它子域名，比如 abc.mygit.me，那么访问 `http://abc.mygit.me` 没问题，但是访问 `http://mygit.me` ，不会自动跳转到 `http://abc.mygit.me`
 
-另外，如果不想如上在远程仓库进行直接生成 `CNAME` 文件，可按如下操作在本地添加再部署：
+关于添加 `CNAME` 文件简单提下，如果你不想如上直接在远程仓库创建 `CNAME` 文件，可按如下操作在本地添加完再部署：
 
-> 在博客目录的 source 文件夹下添加 `CNAME` 文件，`hexo g` 编译会自动生成这个文件于 public 中，`hexo d` 部署的时候会把 public 文件夹下文件复制于`.deploy_git` 目录下进行发布。
+> 在博客目录的 source 文件夹下添加 `CNAME` 文件，`hexo g` 编译会自动生成这个文件于 public 中，`hexo d` 部署的时候会把 public 文件夹下文件复制于 `.deploy_git` 目录下进行发布。
 
 参考资料：[使用hexo+github搭建免费个人博客详细教程](http://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html)  
 
@@ -220,7 +220,7 @@ hexo d -g  #生成并上传
 
 (1) 域名注册和解析
 
-一开始我使用的都是阿里云的，包括购买域名、域名解析，后来域名快要到期了，准备续费三年，发现有点小贵，于是想着买一个新的域名会不会更便宜呢？然后有在腾讯云下搜了下相同名称但后缀为 .com 的域名和在阿里云续费三年价格还便宜一点点，遂直接在腾讯云买了个新的域名（[购买传送门](https://dnspod.cloud.tencent.com/)），解析用的是腾讯云的免费解析套餐（[云解析套餐 - 腾讯云](https://buy.cloud.tencent.com/cns) 了解下）。以下是我的解析设置：
+一开始我使用的都是阿里云的，包括购买域名、域名解析，后来域名快要到期了，准备续费三年，发现有点小贵，于是想着买一个新的域名会不会更便宜呢？然后有在腾讯云下搜了下相同名称但后缀为 `.com` 的域名发现比在阿里云续费三年价格还便宜一点点，遂直接在腾讯云买了个新的域名（[购买传送门](https://dnspod.cloud.tencent.com/)），解析用的是腾讯云的免费解析套餐（[云解析套餐 - 腾讯云](https://buy.cloud.tencent.com/cns) 可以了解下）。以下是我的解析设置：
 
 | 主机记录 | 记录类型 | 线路类型 | 记录值              |
 | -------- | -------- | -------- | ------------------- |
@@ -352,4 +352,4 @@ git push origin backup:backup
 
 *update：2019-02-13 标题及部分内容和文字表达处修改*
 
-*update：2019-02-14 增加了「域名绑定个人实操」小节内容* 
+*update：2019-02-14 增加了「域名绑定个人实操」小节内容；标题由「基于Hexo+GitHub Page搭建博客及备份笔记」改为「「（Ⅰ）基于Hexo+GitHub Page搭建博客，绑定域名及备份」」* 
