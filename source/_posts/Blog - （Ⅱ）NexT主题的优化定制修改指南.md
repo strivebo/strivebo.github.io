@@ -42,7 +42,7 @@ cldr:32.0
 tz:2017c
 ```
 
-## 一、NexT主题基本配置
+## 一、主题基本配置
 
 关于博客主题的选择问题，考虑了很久一直决定不下来选哪个主题合适，在尝试了多个觉得不错的主题之后，最终还是决定选择 GitHub 最多 star 的 NexT 主题了。有那么多人在用，普遍大众应该还是很认可的。NexT 主题版本更新日志和下载：[NexT – Theme for Hexo](https://theme-next.org/) | [NexT主题 - GitHub](https://github.com/iissnan/hexo-theme-next)
 
@@ -343,6 +343,39 @@ content_limit_delim: 上面截取描述的分隔符,截取内容是以指定的�
 配置好之后运行 `hexo g`就可以找到你博客的 `pubilc` 文件夹下发现 `atom.xml` 文件了，然后运行 `hexo` 服务就可以在个人站点处看到 `RSS` 的订阅图标了,点击这个图标就可以出现 `RSS` 订阅的地址,就可以添加到你的 `RSS` 阅读器方便查看博客的最新文章。
 
 参考：[为hexo博客添加RSS订阅功能](https://segmentfault.com/a/1190000012647294)
+
+### (9) 文章字数统计、阅读时长开启和关闭，以及使用图标还是文本
+
+打开 NexT 主题配置文件 `_config.yml`，修改：
+
+``` xml
+post_wordcount:
+  item_text: true # 文章 字数统计 阅读时长 使用图标 还是 文本表示
+  wordcount: true
+  min2read: true
+  totalcount: false
+  separated_meta: false # 是否换行显示 字数统计 及 阅读时长
+```
+
+参考：[Hexo Next主题开启字数统计及阅读时长](https://shjhe.github.io/hexo/2018/07/04/Hexo%20Next%E4%B8%BB%E9%A2%98%E5%BC%80%E5%90%AF%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1%E5%8F%8A%E9%98%85%E8%AF%BB%E6%97%B6%E9%95%BF/)
+
+另外，如果想要把「发表于」、「分类于」、「阅读时长」修改为英文，可以打开 `\themes\next\languages\zh-Hans.yml` 文件，修改 posted、visitors 等值为英文，如下：
+
+``` 
+post:
+  created: 创建于
+  modified: 更新于
+  sticky: 置顶
+  posted: Posted on #发表于
+  visitors: Visitors #阅读次数 
+  in: In #分类于
+  read_more: 阅读全文
+  untitled: 未命名
+  toc_empty: 此文章未包含目录
+  wordcount: 字数统计
+  min2read: 阅读时长
+  totalcount: Site words total count
+```
 
  ### 遇到的问题
 
@@ -1576,7 +1609,13 @@ favicon:
 
 
 
-## 三、Hexo博客速度优化
+## 三、博客速度/SEO优化
+
+### (1) SEO
+
+参考：[hexo 博客 seo 优化](https://segmentfault.com/a/1190000009254968)
+
+### (2) 速度优化
 
 *注：关于速度的优化，本人还未实践…* 
 

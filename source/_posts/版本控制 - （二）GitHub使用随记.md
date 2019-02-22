@@ -1,5 +1,5 @@
 ---
-title: （二）GitHub的使用随记
+title: （二）GitHub使用随记
 date: 2019-02-13 21:08:54
 categories: 版本控制
 tags: [Git,GitHub,版本控制]

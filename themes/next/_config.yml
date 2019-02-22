@@ -85,7 +85,7 @@ footer:
 canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
-seo: false
+seo: true
 
 # If true, will add site-subtitle to index page, added in main hexo config.
 # subtitle: Subtitle
@@ -249,7 +249,7 @@ post_wordcount:
   wordcount: true
   min2read: true
   totalcount: false
-  separated_meta: true
+  separated_meta: false
 
 # Wechat Subscriber 订阅微信公众号
 wechat_subscriber:
