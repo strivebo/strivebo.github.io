@@ -1,5 +1,5 @@
 ---
-title: 如何利用GitBook制作电子书，发布于网络并绑定个性域名
+title: 利用GitBook制作电子书，发布于网络并绑定个性域名
 date: 2019-02-21 20:01:08
 categories: 版本控制
 tags: [Blog,GitBook,GitHub] 
