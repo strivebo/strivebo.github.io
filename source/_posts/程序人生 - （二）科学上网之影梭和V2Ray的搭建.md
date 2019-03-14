@@ -11,7 +11,7 @@ tags: [科学上网]
 
 可以先看我写的一篇总结：[（一）科学上网总结](https://strivebo.com/2019/02/12/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F%20-%20%EF%BC%88%E4%B8%80%EF%BC%89%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%80%BB%E7%BB%93/)，该文有记录如何搭建影梭，可以当做先了解下相关知识也可以。
 
-#### 第一步：使用脚本1
+#### (1) 第一步：使用脚本1
 
 参考：[自己搭建ss/ssr服务器教程（适合初学者，最低2.5美元/月）](https://github.com/XX-net/XX-Net/issues/6506)
 
@@ -39,7 +39,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/dou
 
 > *PS：亲测，第一个脚本文件已经不可用了，第二个还能使用，以防下次第二个也不正常使用，于是我下载下来了，以及下面的 BBR 加速脚本也给下载了，放在 tools 文件夹下的【脚本备份】目录下。* 
 
-#### 第二步：谷歌BBR加速
+#### (2) 第二步：谷歌BBR加速
 
 ``` xml
 yum -y install wget
@@ -175,6 +175,10 @@ BBR加速脚本：[VPS服务器Google BBR一键安装脚本](https://ssr.tools/1
   >
   > 下载：[ShadowsocksX-NG-R8.dmg](https://github.com/qinyuhang/ShadowsocksX-NG-R/releases/download/1.4.4-r8/ShadowsocksX-NG-R8.dmg)（我已下载放在 tools 文件夹中，名为 `ShadowsocksX-NG-R8.dmg`）
 
+- 另外这篇文章 [SS/SSR 简介 - 聪聪 Blog](https://congcong0806.github.io/2018/04/20/SS/#%E5%AE%A2%E6%88%B7%E7%AB%AF) 列举了很多各个平台SS/SSR客户端并且能点击链接到下载处。下面截图是文章中列举的 SS/SSR 部分 iOS 客户端：
+
+  ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190228153320.png)
+
 #### VPS推荐
 
 [适合搭建SSR的国外VPS服务器推荐汇总](https://ssr.tools/55)
@@ -184,7 +188,7 @@ BBR加速脚本：[VPS服务器Google BBR一键安装脚本](https://ssr.tools/1
 - Linode
 - DigitalOcean
 
-#### 关于DigitalOcean VPS的说明
+#### 补充：关于DigitalOcean VPS的说明
 
 本人目前一直在用 DigitalOcean，其流量和计费方式为：
 
@@ -216,7 +220,7 @@ DigitalOcean 使用小时计费模式，删除后便不再计费，非常合理�
 
 ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190112140010.png)
 
-**(3) 关于欠费问题**
+**（3）关于欠费问题**
 
 本人在使用 DigitalOcean 欠费后还能继续使用，欠费好多天后还能用，纳闷了，总觉得要了解清楚，于是发起了一个 Ticket，得到的回复大概意思是，到了一定时间会自动关掉的。
 

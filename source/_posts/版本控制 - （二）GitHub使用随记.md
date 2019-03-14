@@ -5,15 +5,14 @@ categories: 版本控制
 tags: [Git,GitHub,版本控制]
 ---
 
-## 一、Git及GitHub的使用
+
+## 一、GitHub使用技巧
 
 ### 1. 突破GitHub单个大文件上传限制
 
 GitHub 上新建的仓库容量大小限制在 1G，单个文件不能超过 100M，有 50M 的文件，就会警告了。 可通过以下命令查找超过 100M 的文件：`find ./ -type f -size +102400k`。 想要突破 GitHub 的限制，支持单个文件超出 100M，可以使用  [Git LFS](https://github.com/git-lfs/git-lfs)。 <!-- more -->
 
 参考：[突破github的100M单个大文件上传限制 ](https://blog.csdn.net/tyro_java/article/details/53440666)
-
-
 
 ### 2. Git只Clone仓库指定文件或文件夹
 
@@ -44,8 +43,6 @@ PS：后来发现，其实直接打开想要下载的文件，在右上角可以
 
 - [git clone克隆或下载一个仓库单个文件夹](https://blog.csdn.net/qq_36560161/article/details/78260532)
 - [git只clone仓库中指定子目录和指定文件的实现](http://www.cnblogs.com/juking/p/7223669.html)
-
-
 
 ### 3. 利用GitHub进行多人协作开发
 
@@ -128,8 +125,6 @@ git push
 
 - [如何利用 Git 与 GitHub 进行多人协作开发](https://www.jianshu.com/p/8c69d1021d98)
 - [github的多人协作](https://gist.github.com/suziewong/4378619#gistcomment-1873334)
-
-
 
 ### 4. 同一台电脑配置多个Git账号
 
@@ -282,8 +277,6 @@ ssh -T git@github.com
 - [一台电脑配置多个ssh key（不同的多个邮箱ssh key，多git账号，智能选择对应的ssh key）](https://blog.csdn.net/yimingsilence/article/details/79980135)
 - [管理git生成的多个ssh key](https://www.jianshu.com/p/f7f4142a1556)
 
-
-
 ### 6. 如何将GitHub已有的项目转移到组织仓库中去
 
 打开仓库，点击 setting，拉到最下面，点击 Transfer，会看到要求输入如下：
@@ -294,8 +287,6 @@ ssh -T git@github.com
 
 参考资料：[github如何将已有的项目转移到组织仓库中去](https://blog.csdn.net/u011328417/article/details/74584487)
 
-
-
 ### 7. 如何在GitHub上添加协议？
 
 ①进入你的“代码仓库”，点击"Create new file"，这时 GitHub 的新页面上，有一个空格让你填入文件名称。
@@ -305,8 +296,6 @@ ssh -T git@github.com
 ③点击“Commit new file”，这时你添加的开源协议就在代码仓库的菜单中了。
 
 参考：[如何在github上添加协议](https://www.jianshu.com/p/e4d6e6a05f14)
-
-
 
 ### 8. 保持码云Gitee和GitHub同步更新？
 
@@ -360,11 +349,80 @@ git push gitee master
 
 参考：[使用码云 - 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00150154460073692d151e784de4d718c67ce836f72c7c4000)
 
-
-
 ### 9. 如何正确接收 GitHub 的消息邮件
 
 参考：[如何正确接收 GitHub 的消息邮件](https://github.com/cssmagic/blog/issues/49) 
+
+### 10. 精准分享关键代码
+
+比如你有一个文件里的某一行代码写得非常酷炫或者关键，想分享一下。可以在 url 后面加上，比如，点击下面这 个 url：<https://github.com/AlloyTeam/AlloyTouch/blob/master/alloy_touch.js#L240>，你便会跳到 `alloy_touch.js` 的第 240 行。如果是想分享多行代码，也很简单：url 后面加上 `#L` 开始行号 `-L` 结束行号，比如，AlloyTouch 的运动缓动和逆向缓动函数如下面代码段所示：<https://github.com/AlloyTeam/AlloyTouch/blob/master/alloy_touch.js#L39-L45>，其实也不用记忆你直接在网址后面操作，GitHub 自动会帮你生成 url。比如你点击 39 行，url 变成了：<https://github.com/AlloyTeam/AlloyTouch/blob/master/alloy_touch.js#L39>，再按住 shift 点击 45 行，url 变成了：<https://github.com/AlloyTeam/AlloyTouch/blob/master/alloy_touch.js#L39-L45>，然后你这个 url 就可以复制分享出去了，点击这个 url 的人自动会跳到 39 行，并且 39-45 行高亮。
+
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190303114615.png)
+
+### 11. 通过提交的msg自动关闭issues
+
+比如有人提交了个 issues <https://github.com/AlloyTeam/AlloyTouch/issues/6>，然后你去主干上改代码，改完之后提交填 msg 的时候，填入：`fix https://github.com/AlloyTeam/AlloyTouch/issues/6`，这个 issues 会自动被关闭。当然不仅仅是 fix 这个关键字。下面这些关键字也可以：
+
+``` markdown
+close
+closes
+closed
+fixes
+fixed
+resolve
+resolves
+resolved
+```
+
+### 12. gitattributes设置项目语言
+
+GitHub 会根据相关文件代码的数量来自动识别你这个项目哪个语言代码项目。这就带来了一个问题，比如 AlloyTouch 最开始被识别成 HTML 项目，因为 HTML 例子比 JS 文件多。怎么办呢？gitattributes 来帮助你搞定。在项目的根目录下添加如下 `.gitattributes` 文件便可，里面的：
+
+``` xml
+*.html linguist-language=JavaScript
+```
+
+主要意思是把所有 html 文件后缀的代码识别成 js 文件。
+
+### 13. 查看自己项目的访问数据
+
+在自己的项目下，点击 Insights，然后再点击 Traffic，里面有 Referring sites 和 Popular content 的详细数据和排名。如：Referring sites
+
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190303115918.png)
+
+其中 Referring sites 代表大家都是从什么网站来到你的项目的，Popular content 代表大家经常看你项目的哪些文件。
+
+### 14. trending排行榜
+
+来看看怎么查看某类型语言的每日排行榜。比如 JavaSrcipt 每日排行榜：
+
+- JavaScript：<https://github.com/trending/javascript?since=daily>
+- Java：<https://github.com/trending/java?since=daily>
+- Python：<https://github.com/trending/python?since=daily>
+
+GitHub 推荐：<https://github.com/explore>
+
+### 15. 使用GitHub release发布应用
+
+(1) 创建release
+
+1. 在 repo 的主页上，点击 release，进入 release 界面 
+
+2. 在 release 界面点选 create a new release 
+
+3. 填写相关信息，上传文件 
+
+   ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190309121245.png)
+
+   4. publish release 
+
+   5. 通过 GitHub 官方提供的 api 可访问我们的 release 信息：
+
+      ``` xml
+      /repos/:owner/:repo/releases/:id
+      ```
+
+参考：[github release 功能的使用及问题解决 ](https://blog.csdn.net/Eggy2015/article/details/52138751)
 
 
 
@@ -393,15 +451,15 @@ GitHub 支持的表情，官网查询：<https://www.webfx.com/tools/emoji-cheat
 
 
 
-## 三、Git及GitHub细节和技巧
+## 三、GitHub使用细节
 
 ### 1. 本地查看远程分支
 
 git clone 默认会把远程仓库整个给 clone下来，但只会在本地默认创建一个 master 分支，如果远程还有其他的分支，此时用 `git branch -a` 查看所有分支。
 
-### 2. Git支持多种协议
+### 2. GitHub支持多种协议
 
-GitHub 给出的地址不止一个，除了``git@github.com:xiaoming/test.git`这个地址，还可以使用`https://github.com/xiaoming/test.git`这样的地址。实际上，Git 支持多种协议，默认的`git://`使用ssh，但也可以使用 https 等其他协议。
+GitHub 给出的地址不止一个，除了 `git@github.com:xiaoming/test.git` 这个地址，还可以使用`https://github.com/xiaoming/test.git`  这样的地址。实际上，Git 支持多种协议，默认的 `git://` 使用ssh，但也可以使用 https 等其他协议。
 
 使用 https 除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放 http 端口的公司内部就无法使用 ssh 协议而只能用 https。
 
@@ -480,13 +538,21 @@ ssh-keygen 命令用于为“ssh”生成、管理和转换认证密钥，它支
 <iframe src="https://ghbtns.com/github-btn.html?user=strivebo&amp;repo=websites-and-tools&amp;type=fork&amp;count=true&amp;size=large" allowtransparency="true" frameborder="0" scrolling="0" width="156px" height="30px"></iframe>
 ```
 
-把 user 和 repo 改成你自己的就可以了。PS：亲测，GitHub 网站页面暂不支持。
+把 user 和 repo 改成你自己的就可以了。注：亲测，GitHub 网站页面暂不支持。
+
+### 8. GitHub快捷方式
+
+- issue 中输入冒号 `:` 添加表情
+- 任意界面 `shift + ？`显示快捷键
+- issue 中选中文字，R 键快速引用
 
 
 
-## 推荐资料
+## 参考及推荐资料
 
 - GitHub：[waylau/github-help](https://github.com/waylau/github-help)
+- [GitHub 秘籍-极客学院Wiki](http://wiki.jikexueyuan.com/project/github-secret/)
+- [你必须收藏的Github技巧  - 博客园](http://www.cnblogs.com/iamzhanglei/p/6177961.html)
 
 
 
@@ -494,6 +560,5 @@ ssh-keygen 命令用于为“ssh”生成、管理和转换认证密钥，它支
 
 *update：2019-02-18* 
 
-
-
+*update：2019-03-03* 
 

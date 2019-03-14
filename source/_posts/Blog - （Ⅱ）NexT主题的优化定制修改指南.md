@@ -688,7 +688,7 @@ highlight:
   tab_replace:
 ```
 
-文字自动检测默认不启动，所以改成 `true` 使其起作用。看英文应该能明白什么意思。解释下，line_number 表示是否显示代码行号，auto_detect 表示是否对未标识哪种语言的代码进行自动检测，tab_replace 表示是否替换 tab 为空格。附上一个关于 Hexo 的站点及主题配置文件常见配置项的中文解释 [Hexo 搭建个人博客 · 进阶篇](http://ruikye.com/2014/08/30/Hexo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%C2%B7-%E8%BF%9B%E9%98%B6%E7%AF%87/)，我放在文章附录部分。
+文字自动检测默认不启动，所以改成 `true` 使其起作用。看英文应该能明白什么意思。解释下，line_number 表示是否显示代码行号，auto_detect 表示是否对未标识哪种语言的代码进行自动检测，tab_replace 表示是否替换 tab 为空格。附上一个关于 Hexo 的站点及主题配置文件常见配置项的中文解释 [Hexo 搭建个人博客 · 进阶篇](http://ruikye.com/2014/08/30/Hexo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%C2%B7-%E8%BF%9B%E9%98%B6%E7%AF%87/)，我有摘录并放在本文附录部分。
 
 注意：我有把 auto_detect 设置为了 true，但 `hexo s` 生成博客时报错：`TypeError: Cannot set property 'lastIndex' of undefined`，后来网上找到了同样遇到该问题的人，链接：[Hexo博客(12)使用google-code-prettify代码高亮 | masikkk](http://masikkk.com/article/hexo-12-google-code-prettify/)，根据文章说，将站点配置文件 `_config.yml` 中的 highlight 选项的 auto_detect 设为 false，完美解决。确实如此。
 
