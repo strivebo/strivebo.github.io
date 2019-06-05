@@ -87,7 +87,7 @@ GitHub 提供了两种认证方式，一是 edu 邮箱认证，二是证件认�
 >
 > 提交后，GitHub 可能需要几周来回复你的申请，如果觉得慢可以给 education@github.com 发一发邮件。我就是在发了邮件后 3 天得到了那边的回复。
 
-### (2) 认证实践经历
+### (2) 认证实践经历1：使用edu邮箱
 
 我因为网上申请到了自己学校 edu 邮箱，故使用的第一种方式申请。
 
@@ -103,10 +103,36 @@ GitHub 提供了两种认证方式，一是 edu 邮箱认证，二是证件认�
 >
 > 另外要说下，毕业年份的填写，为了保险起见，我填写的为真实的毕业年份。但网上也有人填写的的年份很远，不知道有没有什么影响，如果没有影响，那是可以的，毕竟，比如 GitHub 私有仓库是在你毕业年份之前才能享受的福利。
 
-GitHub 学生包申请认证之图片解释版：
+GitHub 学生包申请认证详细步骤参考：
 
 - [GitHub教程 学生认证——学生包申请](http://blog.csdn.net/qq_36667170/article/details/79084166)
 - [Get Your Github Student Developer Pack](https://www.jianshu.com/p/9f47151f4633)
+
+### (3) 认证实践经历2：使用学生信息
+
+校园卡正面和背面和学生拍了个照，然后使用 Typora 引入图片，然后写上这么一份说明：
+
+``` xml
+Description:
+
+I am a graduate student in this school.
+
+The first picture, on the left, is the front of my campus card, with the card number xxxxxxxxxxxx. The 2017 number in this figure indicates that I was enrolled in 2017, namely the class of 2017. I graduated in 2020, but it is not shown here.The first picture on the right is my student card.
+
+The second picture is the back of my campus card.
+```
+
+然后导出为图片格式，上传。
+
+申请理由写的是：
+
+``` xml
+I am a second-year postgraduate student from China, and I used Github to share my code with my classmates and friends since I entered university.
+
+I plan to use github to do more things, such as deploying web pages to cloud hosts, binding domain names for websites, and so on.
+```
+
+
 
 
 ## 3. 学生包福利的使用
@@ -126,3 +152,5 @@ GitHub 学生包申请认证之图片解释版：
 *update：2018-02-12* 
 
 *update：2019-02-13 部分内容和文字表达有所修改。*
+
+*update：2019-04-15 添加了「认证实践经历2：使用学生信息」内容*
