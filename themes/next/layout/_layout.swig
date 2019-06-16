@@ -51,7 +51,7 @@
 		
 		<div style="font-family:Courier New;display:inline-block;height:20px;line-height:20px;">
 			Powered by <a target="_blank" href="https://hexo.io/zh-cn/index.html">Hexo</a>,Theme by 
-			<a target="_blank" href="https://theme-next.iissnan.com/">NexT</a>. 
+			<a target="_blank" href="https://github.com/iissnan/hexo-theme-next/tree/v5.1.4">NexT.Gemini</a>v5.1.4. 
 			Hosted by <a target="_blank" href="https://pages.github.com/">GitHub Page</a>
         </div>
 		

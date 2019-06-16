@@ -122,8 +122,8 @@ menu_icons:
 # Schemes
 #scheme: Muse
 #scheme: Mist
-scheme: Pisces
-#scheme: Gemini
+#scheme: Pisces
+scheme: Gemini
 
 
 # ---------------------------------------------------------------
@@ -169,7 +169,7 @@ links:
 # Sidebar Avatar    头像设置
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-avatar: /uploads/me.jpg
+avatar: /uploads/avatar.jpg
 
 # Table Of Contents in the Sidebar
 toc:

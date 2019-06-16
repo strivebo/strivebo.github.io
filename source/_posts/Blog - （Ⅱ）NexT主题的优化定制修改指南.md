@@ -17,13 +17,15 @@ tags: [NexT,Blog]
 - GitHub：[Themes · hexojs](https://github.com/hexojs/hexo/wiki/Themes )
 - 知乎：[有哪些好看的 Hexo 主题？](https://www.zhihu.com/question/24422335) <!-- more -->
 
-本人使用的版本为：
+本人使用主题为 NexT v5.1.4。搭建过程各个软件和工具的版本信息如下：
 
 ``` xml
 nodejs：v8.10.0
 npm：5.6.0  #命令 npm -v 可以查看到
 NexT主题版本：5.1.4  #打开站点配置文件_config.yml搜索version可以找到
 ```
+
+> 注：新版的 NexT 主题源码早已转移在了这个仓库 <https://github.com/theme-next/hexo-theme-next
 
 `hexo version` 的信息如下：
 
@@ -41,6 +43,8 @@ unicode:10.0
 cldr:32.0
 tz:2017c
 ```
+
+
 
 ## 一、主题基本配置
 
@@ -1550,7 +1554,9 @@ code {color:#c7254e;background:#f9f2f4;border:1px solid #d6d6d6;}
 
 除了上面这些，我还设置了其他很多，比如页面底部页码、网页加载条、返回顶部按钮、左侧信息栏等样式。可参考：[Vincentqyw-custom.styl](https://github.com/Vincentqyw/blog-code/blob/master/themes/next/source/css/_custom/custom.styl)、[Lruihao-custom.styl](https://github.com/Lruihao/lruihao.github.io/blob/hexo/themes/next-old/source/css/_custom/custom.styl)。查看效果：[见我博客](https://strivebo.com/)  
 
-另外在网上有看到别人的博客有个页面效果——文章之间、以及文章与下面分页之间有隔横，这个效果样式一直想拿到，觉得那样的更好看。后面联系到了博客作者，问了这事，他说是用的最新版的 NexT 主题，默认就是这样。再然后我找到了 NexT 版本更新说明的博客网站 [NexT – Theme for Hexo](https://theme-next.org/) 发现它也是那样的效果（最新源码：[hexo-theme-next](https://github.com/theme-next/hexo-theme-next/tree/v6.0.6)），看来真是新版 NexT 默认样式。前端我只会一点，不会改啊，忧桑QAQ，只能这样了，日后有时间在探究吧~
+另外在网上有看到别人的博客有个页面效果——文章之间、以及文章与下面分页之间有隔横，这个效果样式一直想拿到，觉得那样的更好看。后面联系到了博客作者，问了这事，他说是用的最新版的 NexT 主题，默认就是这样。再然后我找到了 NexT 版本更新说明的博客网站 [NexT – Theme for Hexo](https://theme-next.org/) 发现它也是那样的效果（最新源码：[hexo-theme-next](https://github.com/theme-next/hexo-theme-next/tree/v6.0.6)），看来真是新版 NexT 默认样式。前端我只会一点，不会改啊，只能这样了，日后有时间在探究吧~
+
+> 2019-06-16 更新：现在知道了，只需要在主题配置文件设置 scheme 为 Gemini 即可。
 
 ### (22) 更换博客背景图
 
@@ -1717,3 +1723,5 @@ cnzz_analytics: true     # 博客的访问统计，这里使用 CNZZ 的统计
 *update：2019-02-15 添加了「添加RSS订阅功能」、「取消文章目录对标题的自动编号和取消目录」等小节、以及站点底部和页面样式的一些修改等*
 
 *update：2019-02-17 修改了一点页面样式；增加了「三、博客速度/SEO优化」节；增加了博客 favicon*  
+
+*update：2019-06-16 设置了 scheme: Gemini。注：新版的 NexT 主题源码早已转移在了这个仓库 <https://github.com/theme-next/hexo-theme-next>*  
