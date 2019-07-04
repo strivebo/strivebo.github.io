@@ -1726,7 +1726,7 @@ cnzz_analytics: true     # 博客的访问统计，这里使用 CNZZ 的统计
 
 > 1、设置了 scheme: Gemini。注：新版的 NexT 主题源码早已转移在了这个仓库 <https://github.com/theme-next/hexo-theme-next>*  
 >
-> 2、取消了「网页加载进度条」；设置了顶部条 height: 2px；设置底部页码 border-radius: 0%；
+> 2、修改 `/themes/source/css/_custom/custom.styl`：取消了「网页加载进度条」；设置了顶部条 height: 2px；设置底部页码 border-radius: 0%；
 >
 > 3、注释了 `source/css/_variables/custom.styl` 中的：
 >
