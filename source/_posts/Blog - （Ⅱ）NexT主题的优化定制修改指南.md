@@ -1,7 +1,9 @@
+---
 title: （Ⅱ）NexT主题的优化定制修改指南
 date: 2019-02-17 20:01:08
 categories: Blog
 tags: [NexT,Blog] 
+---
 
 ## 写在前面
 
@@ -1550,7 +1552,7 @@ code {color:#c7254e;background:#f9f2f4;border:1px solid #d6d6d6;}
 
 关于页面的很多设置都可以在此设置。
 
-除了上面这些，我还设置了其他很多，比如页面底部页码、网页加载条、返回顶部按钮、左侧信息栏等样式。可参考：[Vincentqyw-custom.styl](https://github.com/Vincentqyw/blog-code/blob/master/themes/next/source/css/_custom/custom.styl)、[Lruihao-custom.styl](https://github.com/Lruihao/lruihao.github.io/blob/hexo/themes/next-old/source/css/_custom/custom.styl)。查看效果：[见我博客](https://strivebo.com/)  
+除了上面这些，我还设置了其他很多，比如页面底部页码、网页加载条、返回顶部按钮、左侧信息栏等样式。可参考：[Vincentqyw的custom.styl](https://github.com/Vincentqyw/blog-code/blob/master/themes/next/source/css/_custom/custom.styl)、[Lruihao的custom.styl](<https://github.com/Lruihao/lruihao.github.io/blob/hexo/themes/next/source/css/_custom/custom.styl>)。
 
 另外在网上有看到别人的博客有个页面效果——文章之间、以及文章与下面分页之间有隔横，这个效果样式一直想拿到，觉得那样的更好看。后面联系到了博客作者，问了这事，他说是用的最新版的 NexT 主题，默认就是这样。再然后我找到了 NexT 版本更新说明的博客网站 [NexT – Theme for Hexo](https://theme-next.org/) 发现它也是那样的效果（最新源码：[hexo-theme-next](https://github.com/theme-next/hexo-theme-next/tree/v6.0.6)），看来真是新版 NexT 默认样式。前端我只会一点，不会改啊，只能这样了，日后有时间在探究吧~
 
@@ -1722,18 +1724,20 @@ cnzz_analytics: true     # 博客的访问统计，这里使用 CNZZ 的统计
 
 *update：2019-02-17 修改了一点页面样式；增加了「三、博客速度/SEO优化」节；增加了博客 favicon*  
 
-*update：2019-06-16：*
+*update：2019-06-16*
 
-> 1、设置了 scheme: Gemini。注：新版的 NexT 主题源码早已转移在了这个仓库 <https://github.com/theme-next/hexo-theme-next>*  
+> 1、设置了 scheme: Gemini。注：新版的 NexT 主题源码早已转移在了这个仓库 *<https://github.com/theme-next/hexo-theme-next>*  
 >
-> 2、修改 `/themes/source/css/_custom/custom.styl`：取消了「网页加载进度条」；设置了顶部条 height: 2px；设置底部页码 border-radius: 0%；
+> 2、修改 `/themes/source/css/_custom/custom.styl`：取消了「网页加载进度条」；设置了顶部条 `height: 2px`；设置底部页码 `border-radius: 0%`；
 >
-> 3、注释了 `source/css/_variables/custom.styl` 中的：
+> 3、注释了 `source/css/_variables/custom.styl` 中的这两行代码：
 >
 > ``` xml
-> $main-desktop = 1200px
-> $content-desktop = 950px
+ $main-desktop = 1200px
+ $content-desktop = 950px
 > ```
->
-> 在 `source/css/_variables/Gemini.styl` 文件中设置 `$main-desktop ` 由 75% 设置为了 1150px：`$main-desktop=1150px`
+> 在 `source/css/_variables/Gemini.styl` 文件中设置 `$main-desktop ` 为 75%：`$main-desktop=75%`
 
+*update：2019-07-04* 
+
+> 打开 `/themes/source/css/_custom/custom.styl`：①侧边栏信息样式 border-radius 修改为了 0， `border-radius: 0px;`，②更换了博客背景图，③ 修改尾部 .footer 的 +mobel() 下的样式 bottom 为 120 px，用来解决手机端底部的显示阻挡页面翻页的按钮。④设置了 body 样式，从而在手机端不显示背景图 ⑤设置了顶部条在手机端显示白色，高度为0px。

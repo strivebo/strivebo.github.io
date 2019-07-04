@@ -9,21 +9,26 @@
 //顶部条
 .headband {
   height: 2px;
+  +mobile(){
+	height: 0px;
+    background: #fff;
+  }
 }
 
 //参考：https://github.com/Lruihao/lruihao.github.io/blob/hexo/themes/next-old/source/css/_custom/custom.styl
 //背景图
 body { 
-    background-image: url(/images/background.jpg);
+    background-image: url(/images/background3.jpg);
     background-attachment: fixed; // 不随屏幕滚动而滚动fixed,scroll,inherit
     background-repeat: no-repeat; // 如果背景图不够屏幕大小则重复铺，改为no-repeat则表示不重复铺
     background-size: cover; // contain等比例铺满屏幕 //cover拉伸铺满
     background-position: bottom;//x,y轴调整
     +mobile(){
-      background-image: url(/images/background.jpg);
-      background-size: cover;
+		background: #f5f7f9;
+		//background-size: cover;
     }
 }
+
 
 //首部背景
 .site-meta {
@@ -48,25 +53,25 @@ body {
 //侧边栏信息样式修改
 .sidebar{
   background: none;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 .sidebar-inner {
   padding: 10px 10px 10px;
   background: rgba(255,255,255,0.7);
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 //尾部
 .footer {
   font-size: 15px;
-  //bottom: -28px;
+  font-family: STLiti; //"华文隶书"
+  //bottom: -120px //-28px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0);
-
   +mobile() {
     font-size: 12px;
     border-radius: 0px;
-    bottom: -30px;
+    //bottom: -120px;
     background: rgba(255, 255, 255, 0.1);
   }
 }
@@ -131,6 +136,8 @@ body {
 	background-color: rgba(0, 0, 0, 0.75); //black
 }
 
+
+
 // 文章```代码块顶部样式
 .highlight figcaption {
     margin: 0em;
@@ -176,8 +183,8 @@ code {
 .page-number:hover,.page-number:active{
 	color: rgb(136, 255, 13);
 	border-radius: 0%;
-    //background-color: rgba(255, 0, 100, 0.75); //品红
-	background-color: rgba(0, 0, 0, 0.75); //black
+    background-color: rgba(255, 0, 100, 0.75); //品红
+	//background-color: rgba(0, 0, 0, 0.75); //black
 }
 
 //参考 END//
@@ -194,7 +201,7 @@ code {
 */
 
 
-/*网页加载条*/
+/*网页加载条*/ 
 /* This is a compiled file, you should be editing the file in the templates directory */
 /*
 .pace {
