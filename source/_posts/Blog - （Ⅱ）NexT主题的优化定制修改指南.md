@@ -1740,4 +1740,6 @@ cnzz_analytics: true     # 博客的访问统计，这里使用 CNZZ 的统计
 
 *update：2019-07-04* 
 
-> 打开 `/themes/source/css/_custom/custom.styl`：①侧边栏信息样式 border-radius 修改为了 0， `border-radius: 0px;`，②更换了博客背景图，③ 修改尾部 .footer 的 +mobel() 下的样式 bottom 为 120 px，用来解决手机端底部的显示阻挡页面翻页的按钮。④设置了 body 样式，从而在手机端不显示背景图 ⑤设置了顶部条在手机端显示白色，高度为0px。
+> 1、打开 `/themes/source/css/_custom/custom.styl`：①侧边栏信息样式 border-radius 修改为了 0， `border-radius: 0px;`，②更换了博客背景图，③ 修改尾部 .footer 的 +mobel() 下的样式 bottom 为 120 px，用来解决手机端底部的显示阻挡页面翻页的按钮。④设置了 body 样式，从而在手机端不显示背景图 ⑤设置了顶部条在手机端显示白色，高度为0px。
+>
+> 2、打开 `/themes/next/layout/_layout.swig`，设置底部版声明的字体样式为黑色 `color:black`

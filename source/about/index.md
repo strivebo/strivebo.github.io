@@ -12,9 +12,7 @@ comments: false
 </p>
 
 
-> 热爱生活，乐于分享，喜欢钻研，好奇新事物。持续学习者，技术探索者。
-
-*代码是我的主业，除了代码，我也感兴趣金融经济、摄影、剪辑等，期待未来有所进步，当然生活中也不能少了运动、音乐、电影、阅读……它们都是我不想缺少的部分。对于未来，我愿景着能做自己喜欢的事，过自己理想的生活，而我正努力并享受这个追求美好的过程~*
+热爱生活，乐于分享，喜欢钻研，好奇新事物。持续学习者，技术探索者。渴望内心自由的理想主义者，期望将来活成想要成为的样子。
 
 *欢迎大家与我交流和学习，一起进步，企鹅号：857686499* 
 
@@ -69,8 +67,9 @@ comments: false
 ---
 
 <p align="center" style="font-size:22px;font-weight: bold;margin: 0 0 60px 0;">
-    <i class="fa fa-opencart" style="font-size:28px;color:#FF8247;"></i> 求职
+    <i class="fa fa-opencart" style="font-size:28px;color:#FF8247;"></i> 编程技能
 </p>
+
 
 
 我的 GitHub：<https://github.com/strivebo>

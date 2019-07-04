@@ -50,10 +50,9 @@
         {% include '_third-party/analytics/analytics-with-widget.swig' %}
 		<!--版权等自定义↓-->
 		
-		<div style="font-family:Courier New;display:inline-block;height:20px;line-height:20px;">
+		<div style="font-family:Courier New;display:inline-block;height:20px;line-height:20px;color:black">
 			Powered by <a target="_blank" href="https://hexo.io/zh-cn/index.html">Hexo</a>,Theme by 
-			<a target="_blank" href="https://github.com/iissnan/hexo-theme-next/tree/v5.1.4">NexT.Gemini</a>v5.1.4. 
-			Hosted by <a target="_blank" href="https://pages.github.com/">GitHub Page</a>
+			<a target="_blank" href="https://github.com/iissnan/hexo-theme-next/tree/v5.1.4">NexT.Gemini.v5.1.4</a>. Hosted by <a target="_blank" href="https://pages.github.com/">GitHub Page</a>
         </div>
 		
 		<!--备案等自定义↓-->
