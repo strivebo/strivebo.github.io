@@ -1,9 +1,7 @@
----
 title: （Ⅱ）NexT主题的优化定制修改指南
 date: 2019-02-17 20:01:08
 categories: Blog
 tags: [NexT,Blog] 
----
 
 ## 写在前面
 
@@ -1724,4 +1722,18 @@ cnzz_analytics: true     # 博客的访问统计，这里使用 CNZZ 的统计
 
 *update：2019-02-17 修改了一点页面样式；增加了「三、博客速度/SEO优化」节；增加了博客 favicon*  
 
-*update：2019-06-16 设置了 scheme: Gemini。注：新版的 NexT 主题源码早已转移在了这个仓库 <https://github.com/theme-next/hexo-theme-next>*  
+*update：2019-06-16：*
+
+> 1、设置了 scheme: Gemini。注：新版的 NexT 主题源码早已转移在了这个仓库 <https://github.com/theme-next/hexo-theme-next>*  
+>
+> 2、取消了「网页加载进度条」；设置了顶部条 height: 2px；设置底部页码 border-radius: 0%；
+>
+> 3、注释了 `source/css/_variables/custom.styl` 中的：
+>
+> ``` xml
+> $main-desktop = 1200px
+> $content-desktop = 950px
+> ```
+>
+> 在 `source/css/_variables/Gemini.styl` 文件中设置 `$main-desktop ` 由 75% 设置为了 1150px：`$main-desktop=1150px`
+
