@@ -663,7 +663,7 @@ leancloud_visitors:
 - [Hexo之NexT主题优化（4）-添加文章访问数和站点访问数](http://happywayq.com/Hexo%E7%9A%84NexT%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96-%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E8%AE%BF%E9%97%AE%E6%95%B0%E5%92%8C%E7%AB%99%E7%82%B9%E8%AE%BF%E9%97%AE%E6%95%B0/)
 - [Hexo的NexT主题个性化：添加文章阅读量](http://www.jeyzhang.com/hexo-next-add-post-views.html)
 
-### (4 动态背景、点击出现桃心效果、去除文章底部带#号的标签
+### (4 动态背景、点击出现桃心效果、去除文章底部带#号的标签、文章下面标签样式更改
 
 修改模板 `/themes/next/layout/_macro/post.swig`，搜索 `rel="tag">#`，将`#`换成：
 
@@ -672,6 +672,25 @@ leancloud_visitors:
 ```
 
 参考：[2018最新版Hexo博客Next主题6.0配置优化](https://blog.csdn.net/qq_32454537/article/details/79482896)
+
+标签样式更改，打开 `\themes\next\source\css\_custom\custom.styl`，添加：
+
+``` css
+//文章下面的标签样式
+.posts-expand .post-tags a{
+	box-shadow:0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+	transition:.2s ease-out;
+	padding: 3px 5px;
+	margin: 5px;
+	background: #eee;
+	border-bottom: none;
+	border-radius: 10px;
+	&:hover {
+    color: $blue;
+    //text-decoration: underline;
+  }
+}
+```
 
 ### (5) 更改正文和代码的字体/更改内容区域的宽度
 
@@ -1775,7 +1794,7 @@ cnzz_analytics: true     # 博客的访问统计，这里使用 CNZZ 的统计
 
 *update：2019-07-04* 
 
-> 1、打开 `/themes/source/css/_custom/custom.styl`：①侧边栏信息样式 border-radius 修改为了 0， `border-radius: 0px;`，②更换了博客背景图，③ 修改尾部 .footer 的 +mobel() 下的样式 bottom 为 120 px，用来解决手机端底部的显示阻挡页面翻页的按钮。④设置了 body 样式，从而在手机端不显示背景图 ⑤设置了顶部条在手机端显示白色，高度为0px。⑤修改了顶部条样式 ⑥去除了标题颜色等样式，添加了点别的样式
+> 1、打开 `/themes/source/css/_custom/custom.styl`：①侧边栏信息样式 border-radius 修改为了 0， `border-radius: 0px;`，②更换了博客背景图，③ 修改尾部 .footer 的 +mobel() 下的样式 bottom 为 120 px，用来解决手机端底部的显示阻挡页面翻页的按钮。④设置了 body 样式，从而在手机端不显示背景图 ⑤设置了顶部条在手机端显示白色，高度为0px。⑤修改了顶部条样式 ⑥去除了标题颜色等样式，添加了点别的样式 ⑦设置了 body 样式下的手机端字体大小为 14 px ⑧以及一些其他小的修改
 >
 > 2、打开 `/themes/next/layout/_layout.swig`，设置底部版声明的字体样式为黑色 `color:black`
 >

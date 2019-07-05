@@ -7,10 +7,14 @@
  //src: url("/images/STLITI.TTF");
 //}
 
-
+//设置在手机端显示的字体大小
+body{
+	+mobile(){
+			font-size: 14px
+	  }	
+}
 
 ///参考：https://mackvord.github.io/hexo/3167973627.html
-
 // 导航头超链接样式
 .header-inner,.menu a {
     color: rgb(80, 115, 184);
@@ -20,11 +24,7 @@
 	//background:#E6E6FA;
     color: #a166ab  //rgb(161, 102, 171);
     border-bottom: 1px solid rgb(161, 102, 171);
-	//border-bottom-color:#f00;
-	//display: block;
-
 }
-
 
 
 //////////////////////////////////////////////
@@ -39,7 +39,7 @@
   }
 }
 
-// 文章标题字体  // 参考：https://github.com/karellincoln/hexo-theme-next/blob/master/source/css/_custom/custom.styl
+//文章标题字体  //参考：https://github.com/karellincoln/hexo-theme-next/blob/master/source/css/_custom/custom.styl
 .posts-expand .post-title {
     font-size: 26px;
     font-weight: 700;
@@ -50,7 +50,7 @@
 }
 
 
-//参考：https://github.com/Lruihao/lruihao.github.io/blob/hexo/themes/next-old/source/css/_custom/custom.styl
+//参考：https://github.com/Lruihao/lruihao.github.io/blob/hexo/themes/next/source/css/_custom/custom.styl
 //背景图
 body { 
     background-image: url(/images/bg6.jpg);
@@ -64,7 +64,6 @@ body {
     }
 }
 
-
 //首部背景
 .site-meta {
     height: 100px;
@@ -73,7 +72,6 @@ body {
 }
 
 //文章下面的标签样式
-/*
 .posts-expand .post-tags a{
 	box-shadow:0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
 	transition:.2s ease-out;
@@ -82,8 +80,11 @@ body {
 	background: #eee;
 	border-bottom: none;
 	border-radius: 10px;
+	&:hover {
+    color: $blue;
+    //text-decoration: underline;
+  }
 }
-*/
 
 //侧边栏信息样式修改
 .sidebar{
@@ -96,7 +97,7 @@ body {
   border-radius: 0px;
 }
 
-//尾部
+//底部
 .footer {
   font-size: 15px;
   font-family: STLiti; //"华文隶书"
@@ -111,34 +112,25 @@ body {
   }
 }
 
-
 //去掉图片边框
 //.posts-expand .post-body img {
-//    border: 0px;
+//   border: 0px;
 //}
 
-//页面样式修改
-/*
-.content-wrap {
-  border-radius: 10px;
-  +mobile(){
-    border-radius: 0px;
-  }
-}
-*/
 
 
 //参考：https://github.com/Vincentqyw/blog-code/blob/master/themes/next/source/css/_custom/custom.styl
 // 更改文中链接的颜色
-.post-body a {
-  color: $orange;
+.post-body a:not(.btn) { /* 类名不是 `.btn` 的 <p> 元素 */
+  color: #D02090;
   text-decoration: none;
-  border-bottom: 1;
+  border-bottom: 0;
   &:hover {
     color: $blue;
-    //text-decoration: underline;
+    text-decoration: underline;
   }
 }
+
 
 // 右下角返回顶部按钮样式
 .back-to-top:hover {
@@ -159,11 +151,13 @@ body {
 
 
 //修改文章内code样式
+/*
 code {
-	color:#c7254e;
+	color:rgb(172,57,140);
 	background:#f9f2f4;
-	border:1px solid #d6d6d6;
+	border:0px solid #d6d6d6;
 }
+*/
 
 // [Read More]按钮样式: 
 .post-button .btn:hover {
