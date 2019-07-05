@@ -14,6 +14,8 @@ comments: false
 
 热爱生活，乐于分享，喜欢钻研，好奇新事物。持续学习者，技术探索者。渴望内心自由的理想主义者，期望将来活成想要成为的样子。
 
+
+
 *欢迎大家与我交流和学习，一起进步，企鹅号：857686499* 
 
 *也欢迎关注我的公号「一个程序员的随想」：* 
@@ -70,8 +72,6 @@ comments: false
     <i class="fa fa-opencart" style="font-size:28px;color:#FF8247;"></i> 编程技能
 </p>
 
-
-
 我的 GitHub：<https://github.com/strivebo>
 
 欢迎有什么好的工作推荐和联系我(#^.^#) ，邮箱：<ishuzb@foxmail.com>
@@ -80,4 +80,3 @@ comments: false
 
 ---
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=470 src="//music.163.com/outchain/player?type=0&id=2637966813&auto=0&height=430"></iframe>
