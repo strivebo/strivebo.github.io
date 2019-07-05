@@ -1,19 +1,54 @@
 // Custom styles.
 
 //压缩的字体，
-@font-face {
- font-family: STLiti;
- src: url("/images/STLITI.TTF");
+
+//@font-face {
+ //font-family: STLiti;
+ //src: url("/images/STLITI.TTF");
+//}
+
+
+
+///参考：https://mackvord.github.io/hexo/3167973627.html
+
+// 导航头超链接样式
+.header-inner,.menu a {
+    color: rgb(80, 115, 184);
+    border-bottom: none;
 }
+.header-inner,.menu a:hover {
+	//background:#E6E6FA;
+    color: #a166ab  //rgb(161, 102, 171);
+    border-bottom: 1px solid rgb(161, 102, 171);
+	//border-bottom-color:#f00;
+	//display: block;
+
+}
+
+
+
+//////////////////////////////////////////////
 
 //顶部条
 .headband {
-  height: 2px;
-  +mobile(){
-	height: 0px;
-    background: #fff;
+    height: 2.0px;
+    background-image: linear-gradient(90deg, #F79533 0%, #F37055 15%, #EF4E7B 30%, #A166AB 44%, #5073B8 58%, #1098AD 72%, #07B39B 86%, #6DBA82 100%);
+	+mobile(){
+		height: 0px;
+		background: #fff;
   }
 }
+
+// 文章标题字体  // 参考：https://github.com/karellincoln/hexo-theme-next/blob/master/source/css/_custom/custom.styl
+.posts-expand .post-title {
+    font-size: 26px;
+    font-weight: 700;
+}
+// 文章标题动态效果
+.posts-expand .post-title-link::before {
+    background-image: linear-gradient(90deg, #a166ab 0%, #ef4e7b 25%, #f37055 50%, #ef4e7b 75%, #a166ab 100%);
+}
+
 
 //参考：https://github.com/Lruihao/lruihao.github.io/blob/hexo/themes/next-old/source/css/_custom/custom.styl
 //背景图
@@ -93,31 +128,6 @@ body {
 */
 
 
-//评论区
-/*
-.comments{
-  padding: 20px 20px 20px;
-  //margin: 60px 0 0 0;
-  -webkit-box-shadow: 0 0 14px #cacbcb;
-  -moz-box-shadow: 0 0 14px #cacbcb;
-  box-shadow: 0 0 14px #cacbcb;
-  background: rgba(255,255,255,0.3);
-  margin: 0;
-  border-radius: 10px;
-  +mobile(){
-    margin-bottom: 0px;
-    padding: 0px 0px 0px;
-    -webkit-box-shadow: 0 0 0px rgba(255,255,255,0);
-    -moz-box-shadow: 0 0 0px rgba(255,255,255,0);
-    box-shadow: 0 0 0px rgba(255,255,255,0);
-    background: rgba(255,255,255,0)
-    border-radius: 0px;
-  }
-}
-*/
-//参考 END//
-
-
 //参考：https://github.com/Vincentqyw/blog-code/blob/master/themes/next/source/css/_custom/custom.styl
 // 更改文中链接的颜色
 .post-body a {
@@ -135,8 +145,6 @@ body {
     color: rgb(255,165,0); //rgb(136, 255, 13);
 	background-color: rgba(0, 0, 0, 0.75); //black
 }
-
-
 
 // 文章```代码块顶部样式
 .highlight figcaption {
@@ -281,3 +289,11 @@ code {
   100% { transform: rotate(360deg); transform: rotate(360deg); }
 } */
 /*网页加载条 END*/
+
+
+//二维码不抖动
+#wechat:hover p, #alipay:hover p {
+    animation: none;
+}
+
+

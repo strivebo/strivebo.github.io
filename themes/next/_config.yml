@@ -261,8 +261,8 @@ wechat_subscriber:
 
 # Reward  赞赏  
 reward_comment: 觉得文章对您有帮助请我喝杯咖啡吧^_^ 
-wechatpay: /uploads/wechatpay.jpg
-alipay: /uploads/alipay.jpg
+wechatpay: /uploads/award_wx_400x400.png
+#alipay: /uploads/alipay.jpg
 #bitcoin: /images/bitcoin.png
 
 # Declare license on posts

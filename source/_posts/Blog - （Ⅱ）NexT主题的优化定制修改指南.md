@@ -286,7 +286,9 @@ wechat_subscriber:
   description: 欢迎扫描二维码关注公众号一起成长~
 ```
 
-### (7) 开启打赏
+### (7) 开启打赏、禁用打赏文字抖动
+
+**1、开启打赏**
 
 越来越多的平台（微信公众平台，新浪微博，简书，百度打赏等）支持打赏功能，付费阅读时代越来越近，特此增加了打赏功能，支持微信打赏和支付宝打赏。 只需要主题配置文件中填入微信和支付宝收款二维码图片地址即可开启该功能。打赏功能配置示例：
 
@@ -296,7 +298,7 @@ wechatpay: /path/to/wechat-reward-image
 alipay: /path/to/alipay-reward-image
 ```
 
-我的操作：把收款二维码存放在了 NexT 主题的`source/uploads/`目录下，然后配置如下：
+本人操作：把收款二维码存放在了 NexT 主题的`source/uploads/`目录下，然后配置如下：
 
 ``` 
 # Reward  赞赏  
@@ -304,6 +306,39 @@ reward_comment: 觉得文章对您有帮助请我喝杯咖啡吧^_^
 wechatpay: /uploads/wechatpay.jpg
 alipay: /uploads/alipay.jpg
 ```
+
+**2、禁用打赏文字抖动**
+
+1）方法一：
+
+具体的做法就是注释掉文字抖动函数，文件路径：`/themes/next/source/css/_common/components/post/post-reward.styl`
+
+``` xml
+## 注释打赏文字抖动函数，将下面代码注释掉
+#wechat:hover p{
+    animation: roll 0.1s infinite linear;
+    -webkit-animation: roll 0.1s infinite linear;
+    -moz-animation: roll 0.1s infinite linear;
+}
+#alipay:hover p{
+    animation: roll 0.1s infinite linear;
+    -webkit-animation: roll 0.1s infinite linear;
+    -moz-animation: roll 0.1s infinite linear;
+}
+```
+
+方法二：
+
+可以在 `themes\next\source\css\_custom\custom.styl` 中添加重叠样式（推荐）：
+
+``` html
+//二维码不抖动
+#wechat:hover p, #alipay:hover p {
+    animation: none;
+}
+```
+
+
 
 ### (8) 添加RSS订阅功能
 
@@ -768,28 +803,28 @@ menu:
 
 参考：[hexo高阶教程：next主题优化之加入网易云音乐、网易云跟帖、炫酷动态背景、自定义样式，打造属于你自己的定制化博客](https://juejin.im/post/58eb2fd2a0bb9f006928f8c7)
 
-### (7) 添加音乐/视频
+### (7) 添加音乐、视频
 
-**1）添加单曲音乐**
+**1、添加单曲音乐**
 
-进入 [网易云音乐](https://music.163.com/) 的官网，搜索歌曲，点开歌曲，点击「生成外链播放器」生成外链，直接拿来用就行。iframe 插件可以在代码中设置宽高等参数，auto 为设置是否自动播放。flash 不可以自己设置参数。
+进入 [网易云音乐](https://music.163.com/) 的官网，搜索歌曲，点开歌曲，点击「生成外链播放器」生成外链，直接拿来用就行。iframe 插件可以在代码中设置宽高等参数，auto 为设置是否自动播放，auto 设为 0 表示手动播放，为 1 表示自动播放。flash 不可以自己设置参数。
 
 自动播放示例：
 
 ``` html
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=350 height=86 src="//music.163.com/outchain/player?type=2&id=185678&auto=1&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=350 height=86 src="//music.163.com/outchain/player?type=2&id=185678&auto=0&height=66"></iframe>
 ```
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=350 height=86 src="//music.163.com/outchain/player?type=2&id=185678&auto=1&height=66"></iframe>
 
-嵌入不自动播放只需要把以上代码中的 auto 改为 =0 即可。
 
-**2）添加歌单**
+
+**2、添加歌单**
 
 如果想要加入歌单，就需要找到歌单或者自己创建歌单，热后点击歌单，找到并点击进去「生成外链播放器」，其余操作就和上面一样了。不过，若歌单有变化的话，这个外链的歌曲同样跟着变。示例：
 
 ``` html
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=450 src="//music.163.com/outchain/player?type=0&id=2637966813&auto=1&height=430"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=450 src="//music.163.com/outchain/player?type=0&id=2637966813&auto=0&height=430"></iframe>
 ```
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=450 src="//music.163.com/outchain/player?type=0&id=2637966813&auto=1&height=430"></iframe>
@@ -1740,6 +1775,8 @@ cnzz_analytics: true     # 博客的访问统计，这里使用 CNZZ 的统计
 
 *update：2019-07-04* 
 
-> 1、打开 `/themes/source/css/_custom/custom.styl`：①侧边栏信息样式 border-radius 修改为了 0， `border-radius: 0px;`，②更换了博客背景图，③ 修改尾部 .footer 的 +mobel() 下的样式 bottom 为 120 px，用来解决手机端底部的显示阻挡页面翻页的按钮。④设置了 body 样式，从而在手机端不显示背景图 ⑤设置了顶部条在手机端显示白色，高度为0px。
+> 1、打开 `/themes/source/css/_custom/custom.styl`：①侧边栏信息样式 border-radius 修改为了 0， `border-radius: 0px;`，②更换了博客背景图，③ 修改尾部 .footer 的 +mobel() 下的样式 bottom 为 120 px，用来解决手机端底部的显示阻挡页面翻页的按钮。④设置了 body 样式，从而在手机端不显示背景图 ⑤设置了顶部条在手机端显示白色，高度为0px。⑤修改了顶部条样式 ⑥去除了标题颜色等样式，添加了点别的样式
 >
 > 2、打开 `/themes/next/layout/_layout.swig`，设置底部版声明的字体样式为黑色 `color:black`
+>
+> 3、添加了「禁用打赏文字抖动」
