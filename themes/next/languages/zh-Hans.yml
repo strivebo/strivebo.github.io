@@ -22,17 +22,17 @@ sidebar:
   toc: 文章目录
 
 post:
-  created: 创建于
-  modified: 更新于
+  created: Post created #创建于
+  modified: Post modified #更新于
   sticky: 置顶
-  posted: 发表于
-  visitors: 阅读次数 
-  in: 分类于
+  posted: Posted on #发表于
+  visitors: Visitors #阅读次数 
+  in: In #分类于
   read_more: 阅读全文
   untitled: 未命名
   toc_empty: 此文章未包含目录
-  wordcount: 字数统计
-  min2read: 阅读时长
+  wordcount: Words #字数统计
+  min2read: Reading time #阅读时长
   totalcount: Site words total count
   copyright:
     author: 本文作者

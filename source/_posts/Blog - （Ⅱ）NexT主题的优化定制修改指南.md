@@ -1323,7 +1323,7 @@ toc:
 
 参考：[hexo的next主题个性化配置教程 - SegmentFault 思否](https://segmentfault.com/a/1190000009544924)
 
-### (19) 底部大改版：添加自定义版权等信息、访问人数/次、网站运行时间等信息★
+### (19) 底部大改版：添加自定义版权等信息、访问人数/次、网站运行时间、修改底部的桃心
 
 注：已对「(12) 设定站点建立时间」、「(13) 添加网站已运行时间」做的修改做了更换；以及隐藏了底部"强力驱动"和版本内容（如何隐藏见该文 (11) 节操作）。
 
@@ -1364,16 +1364,26 @@ toc:
 
 这里使用的是「华文隶书」字体，你也可以通过修改`face=STLiti` 换为别的字体。要注意的是，当你这里使用了「华文隶书」字体，别人访问该网页的电脑或手机若没有安装该字体，则不会显示此字体样式。我自己在手机端访问，就发现不会显示此字体样式。
 
-**但一定要别人在没有安装「华文隶书」字体的电脑或手机上显示该字体样式，有办法吗？**答案是有的。只需要把该字体放在 NexT 主题源码中，比如 `\themes\next\source\images\` 文件夹下。
+**但倘若是想要别人在没有安装「华文隶书」字体的电脑或手机上显示该字体样式，有办法吗？**答案是有的。只需要把该字体 ttf 文件放在 NexT 主题源码中，比如 `\themes\next\source\images\` 文件夹下，然后打开 `\themes\next\source\css\_custom\custom.styl` 文件，添加：
 
-电脑安装了 Office， 会自动安装一些字体，包括「华文隶书」。如何安装字体：[下载和安装自定义字体以便在 Office 中使用 - Office 支持](https://support.office.com/zh-cn/article/%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93%E4%BB%A5%E4%BE%BF%E5%9C%A8-office-%E4%B8%AD%E4%BD%BF%E7%94%A8-0ee09e74-edc1-480c-81c2-5cf9537c70ce)
+``` xml
+//压缩的字体
+@font-face {
+	font-family: STLiti;
+	src: url("/images/STLITI.TTF");
+}
+```
 
-- 方法1：双击下载好的 ttf 文件，点击「安装」即可。
-- 方法2：复制下载好的 ttf 文件，粘贴到 `C:\Windows\Fonts` 会自动安装字体。
+即可。
 
-卸载字体：进入 `C:\Windows\Fonts` 选择需要卸载的字体删除即可。
+> 这里提下，电脑安装了 Office， 会自动安装一些字体，包括「华文隶书」。如何安装字体：[下载和安装自定义字体以便在 Office 中使用 - Office 支持](https://support.office.com/zh-cn/article/%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93%E4%BB%A5%E4%BE%BF%E5%9C%A8-office-%E4%B8%AD%E4%BD%BF%E7%94%A8-0ee09e74-edc1-480c-81c2-5cf9537c70ce)
+>
+> - 方法1：双击下载好的 ttf 文件，点击「安装」即可。
+> - 方法2：复制下载好的 ttf 文件，粘贴到 `C:\Windows\Fonts` 会自动安装字体。
+>
+> 卸载字体：进入 `C:\Windows\Fonts` 选择需要卸载的字体删除即可。
 
-**(2) 底部添加访问人数和人次，以及网站运行时间**
+**(2) 底部添加访问人数、人次，全站总字数，以及网站运行时间**
 
 打开 `\themes\next\layout\_partials\` 文件夹下的 `footer.swig` 文件，添加如下内容：
 
@@ -1490,6 +1500,42 @@ busuanzi_count:
 **!!!最后博客底部效果，如图：**
 
 ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190216185828.png)
+
+**(4) 修改底部的桃心**
+
+打开 `\themes\next\layout\_partials\footer.swig` 文件，修改：
+
+``` html
+<span class="with-love">
+    <i class="fa fa-{{ theme.footer.icon }}"></i>
+</span>
+```
+
+修改为：
+
+``` html
+<span class="with-love" id="animate" style="font-size: 13px">
+	<i class="fa fa-heart"></i>
+</span>
+```
+
+然后再打开 `\themes\next\source\css\_common\components\footer\footer.styl` 文件，在相应处添加或修改为如下：
+
+``` css
+if hexo-config('footer.icon.animated') {
+	#animate {
+    animation: iconAnimate 1.88s ease-in-out infinite;
+	}
+}
+
+.with-love {
+  display: inline-block;
+  margin: 0 5px;
+  color: #9a6eac;
+}
+```
+
+
 
 ### (20) 左侧添加社交链接和协议
 
@@ -1653,6 +1699,67 @@ favicon:
 
 参考：[关于Hexo6.0搭建个人博客(进阶篇)](https://segmentfault.com/a/1190000014676320)
 
+### (24) 文章标题下显示评论或Comments字样
+
+打开：`\themes\next\layout\_macro\post.swig` 文件，搜索 `<span class="post-meta-item-icon">`，在所有搜索到的该 span 标签下添加：
+
+``` html
+<span class="post-meta-item-text">评论：</span>
+```
+
+或者：（看自个想要中文还是英文字眼显示）
+
+``` html
+<span class="post-meta-item-text">Comments：</span>
+```
+
+因为我用的是 valine 评论，所以我也可以只在 valine 下添加如上代码。
+
+```html
+{% elseif theme.valine.enable and theme.valine.appid and theme.valine.appkey %}
+<span class="post-comments-count">
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+    </span>
+    <span class="post-meta-item-text">Comments：</span>
+    <a href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
+        <span class="post-comments-count valine-comment-count" data-xid="{{ url_for(post.path) }}" itemprop="commentCount"></span>
+    </a>
+</span>
+{% endif %}
+```
+
+不过还是建议在搜索到的该标签下都添加，以防今后换别的评论系统不显示。
+
+### (25) 设置文章标题下的发表、分类、访问次数、文章字数、阅读时间等为英文
+
+打开 `\themes\next\languages\zh-Hans.yml`，在 post 下相应处修改为如下：
+
+``` xml
+post:
+  created: Post created #创建于
+  modified: Post modified #更新于
+  sticky: 置顶
+  posted: Posted on #发表于
+  visitors: Visitors #阅读次数 
+  in: In #分类于
+  read_more: 阅读全文
+  untitled: 未命名
+  toc_empty: 此文章未包含目录
+  wordcount: Words #字数统计
+  min2read: Reading time #阅读时长
+  totalcount: Site words total count
+```
+
+注：`#` 为注释。
+
+### (26) 设置文章加密
+
+参考：[next 主题添加密码访问 | YouForever](<https://www.zhyong.cn/posts/68c4/>)，使用的插件 hexo-blog-encrypt  地址：<https://github.com/MikeCoder/hexo-blog-encrypt>
+
+
+
 ### (99) 第三方服务整合的比较全面的DEMO欣赏
 
 - [博採眾長](https://lruihao.cn/)
@@ -1799,3 +1906,11 @@ cnzz_analytics: true     # 博客的访问统计，这里使用 CNZZ 的统计
 > 2、打开 `/themes/next/layout/_layout.swig`，设置底部版声明的字体样式为黑色 `color:black`
 >
 > 3、添加了「禁用打赏文字抖动」
+
+*update：2019-07-07*
+
+> 1、添加了文章标题下的评论字样的显示。
+>
+> 2、修改了文章标题下的发表、分类、访问次数、文章字数、阅读时间等为英文。
+>
+> 3、增加了菜单

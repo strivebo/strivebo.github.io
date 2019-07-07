@@ -6,20 +6,24 @@
 
 2、Create a new local branch, and switch to remote branch backup: `git checkout -b backup origin/backup`（Notice: at this point, you are on the local `backup branch`）
 
-3、Install hexo using the npm command: try `npm install -g hexo-cli` or `npm install -g hexo` or `npm install hexo --save` 
+3、Install hexo, using the npm command: try `npm install -g hexo-cli` or `npm install -g hexo` or `npm install hexo --save` 
 
-4、Writing
+4、Writing 
 
 5、`hexo g` --> `hexo d`, complete.
 
-Finally, use the command `git push` to upload files for backup to remote `backup branch`。
+- `hexo g`: this command generates a folder named `public` locally , which is compiled files of  **the source folder.**
+- `hexo d`: this command uploads files from **the local public folder** to **the remote `master` branch**
+
+Finally, use the command `git push` to upload files for backup **to the remote `backup` branch**。
 
 Notice, this backup branch mainly backed up following folders and files：
 
 ``` xml
-source/ 
 scaffolds/
+source/ 
 theme/
+.gitignore
 README.md
 _config.yml
 package-lock.json

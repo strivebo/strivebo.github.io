@@ -27,10 +27,10 @@ override: false
 # For example, you put your favicons into `hexo-site/source/images` directory.
 # Then need to rename & redefine they on any other names, otherwise icons from Next will rewrite your custom icons in Hexo.
 favicon:
-  small: /images/favicon-16x16-next.png
-  medium: /images/favicon.ico
-  apple_touch_icon: /images/apple-touch-icon-next.png
-  safari_pinned_tab: /images/logo.svg
+  small: /images/favicon2-16x16.png     #/images/favicon-16x16-next.png
+  medium: /images/favicon2-32x32.png    #/images/favicon-32x32.ico
+  apple_touch_icon: /images/apple-touch-icon-next2.png  #/images/apple-touch-icon-next.png
+  safari_pinned_tab: /images/logo2.svg  #/images/logo.svg
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
 
@@ -106,10 +106,13 @@ menu:
   archives: /archives || archive
   categories: /categories || th
   tags: /tags || tags
-  #添加了「相册」、「音影」和「留言」菜单
+  #添加了如下菜单
   相册: /photo || camera
   音影: /video || video-camera
   留言: /message || comments
+  简历: http://resume.strivebo.com/ || file
+  #教程: 
+  #资源: 
   about: /about || user
    
 menu_icons:

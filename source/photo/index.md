@@ -15,40 +15,17 @@ comments: false
 
 <p align="center" style="font-size:22px;font-weight: bold;font-style:oblique;margin:0 0 0px 0;">2018</p>
 
-<div align="center">
-	<ul style="margin:0px 0 0 0;">
-        <li style="list-style-type:none;"><img src="./images/sh001.jpg" alt="" width="600px" height="350px"></li>
-        <li style="list-style-type:none;"><img src="./images/xx001.jpg" alt="" width="600px" height="350px"></li>
+<div align="left">
+	<ul style="margin:0px 0 0 0;" aligin="left">
+        <li style="list-style-type:none;"><img src="./images/sh001.jpg" alt="" width="500px" height="350px"></li>
+        <li style="list-style-type:none;"><img src="./images/xx001.jpg" alt="" width="500px" height="350px"></li>
     </ul>
 </div>
+
 
 
 ---
 
 
 
-<p align="center" style="font-size:22px;font-weight: bold;font-style:oblique;margin:0 0 0px 0;">2017</p>
-
-
-
-<div align="center">
-	<ul style="margin:0px 0 0 0;">
-        <!-- 第一个横排四图，未对齐 -->
-        <li style="list-style-type:none;float:left;"><img src="./images/plum01.jpg" alt="" width="190px" height="220px"></li>
-        <li style="list-style-type:none;float:left;"><img src="./images/sunflower01.jpg" alt="" width="190px" height="220px"></li>
-        <li style="list-style-type:none;float:left;"><img src="./images/axh01.jpg" alt="" width="220px" height="190px"></li>
-        <li style="list-style-type:none;float:left;"><img src="./images/axh02.jpg" alt="" width="220px" height="190px"></li>
-        <!-- 第二个横排四图，对齐了 -->
-		<li style="list-style-type:none;float:left;"><img src="./images/plum01.jpg" alt="" width="190px" height="220px"></li>
-        <li style="list-style-type:none;float:left;"><img src="./images/sunflower01.jpg" alt="" width="190px" height="220px"></li>
-        <li style="list-style-type:none;float:left;"><img src="./images/axh01.jpg" alt="" width="220px" height="190px"></li>
-        <li style="list-style-type:none;float:left;"><img src="./images/axh01.jpg" alt="" width="220px" height="190px"></li>
-        <!-- 第三个横排，对齐了 -->
-        <li style="list-style-type:none;float:left;"><img src="./images/axh01.jpg" alt="" width="220px" height="190px"></li>
-        <li style="list-style-type:none;float:left;"><img src="./images/axh01.jpg" alt="" width="220px" height="190px"></li>
-        <li style="list-style-type:none;float:left;"><img src="./images/axh01.jpg" alt="" width="220px" height="190px"></li> 
-        <!-- 最后要设置个为不浮动，否则下面的评论会异常(当前页面评论已关) -->
-        <li style="list-style-type:none;"><p style="width:190px;height:220px;"></p></li>
-    </ul>
-</div>
 

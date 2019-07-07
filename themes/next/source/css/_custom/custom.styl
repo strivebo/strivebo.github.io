@@ -1,13 +1,12 @@
 // Custom styles.
 
-//压缩的字体，
+//压缩的字体。导入
+@font-face {
+	font-family: STLiti;
+	src: url("/images/STLITI.TTF");
+}
 
-//@font-face {
- //font-family: STLiti;
- //src: url("/images/STLITI.TTF");
-//}
-
-//设置在手机端显示的字体大小
+//可以在这里设置博客在手机端显示的字体大小
 body{
 	+mobile(){
 			font-size: 14px
@@ -26,12 +25,11 @@ body{
     border-bottom: 1px solid rgb(161, 102, 171);
 }
 
-
 //////////////////////////////////////////////
 
 //顶部条
 .headband {
-    height: 2.0px;
+    height: 1.5px;
     background-image: linear-gradient(90deg, #F79533 0%, #F37055 15%, #EF4E7B 30%, #A166AB 44%, #5073B8 58%, #1098AD 72%, #07B39B 86%, #6DBA82 100%);
 	+mobile(){
 		height: 0px;
@@ -131,7 +129,6 @@ body {
   }
 }
 
-
 // 右下角返回顶部按钮样式
 .back-to-top:hover {
     color: rgb(255,165,0); //rgb(136, 255, 13);
@@ -156,10 +153,9 @@ code {
 	color:rgb(172,57,140);
 	background:#f9f2f4;
 	border:0px solid #d6d6d6;
-}
-*/
+}*/
 
-// [Read More]按钮样式: 
+// [阅读全文]按钮样式: 
 .post-button .btn:hover {
 	
     color: rgb(136, 255, 13) !important;
@@ -189,8 +185,7 @@ code {
 	//background-color: rgba(0, 0, 0, 0.75); //black
 }
 
-//参考 END//
-
+//////////////////////////////////////////////
 
 /* 版权声明的样式，暂时先不用
 .post-copyright {
@@ -202,8 +197,7 @@ code {
 }
 */
 
-
-/*网页加载条*/ 
+/*网页加载条, 已注释，不需要*/ 
 /* This is a compiled file, you should be editing the file in the templates directory */
 /*
 .pace {

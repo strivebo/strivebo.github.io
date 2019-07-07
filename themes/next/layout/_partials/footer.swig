@@ -5,8 +5,10 @@
 #}{% set current = date(Date.now(), "YYYY") %}{#
 #}<font color=black face=STLiti>Copyright &nbsp;</font><font color=black>&copy;</font> {% if theme.footer.since and theme.footer.since != current %}<font color=black face=STLiti>{{ theme.footer.since }} - </font>{% endif %}{#
 #}<font color=black face=STLiti><span itemprop="copyrightYear">{{ current }}</span></font>
-  <span class="with-love">
-    <i class="fa fa-{{ theme.footer.icon }}"></i>
+  <span class="with-love" id="animate" style="font-size: 13px">
+    <!-- <i class="fa fa-{{ theme.footer.icon }}"></i> -->
+	<!-- <i class="fa fa-star"></i> -->
+	<i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder" style="font-family:STLiti;color:black;">{{ theme.footer.copyright || config.author }} . All Rights Reserved.</span>
 
