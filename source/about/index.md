@@ -16,7 +16,7 @@ comments: false
 
 热爱生活，乐于分享，喜欢钻研，好奇新事物。持续学习者，技术探索者。渴望内心自由的理想主义者，期望将来活成想要成为的样子。
 
-欢迎与我交流和学习，一起进步，企鹅号：857686499，也欢迎关注我的公号「一个程序员的随想」： 
+欢迎与我交流和学习，一起进步，企鹅号：857686499，也欢迎关注公号「一个程序员的随想」： 
 
 ![](./img/wechat-180x180.jpg)
 
@@ -31,7 +31,7 @@ comments: false
 技术栈：
 
 - 前端：HTM、CSS、JavaScript
-- 后端 ：Java、JSP、Servlet、Spring、Mybatis等
+- 后端 ：Java、JSP、Servlet、Spring、Mybatis、Linux、Redis、Docker、版本控制(SVN/Git) 等
 - 人工智能：Python、深度学习、计算机视觉
 
 我的 GitHub：<https://github.com/strivebo>
@@ -40,13 +40,9 @@ comments: false
 
 
 
-
-
 <div align="center" style="font-size:22px;font-weight: bold;margin: 0 0 40px 0;">
     <i class="fa fa-pied-piper" style="font-size:22px;color:#FF8247;"></i> 为什么你要写博客？
 </div>
-
-
 
 
 - 重新认识自己
