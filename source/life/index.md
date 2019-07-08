@@ -28,8 +28,9 @@ comments: true
 
 
 <p align="center" style="font-size:20px;font-weight: bold;color:#ff9900;">
-    音乐和视觉盛宴~
+    音乐和影视~
 </p>
+
 
 > *欢迎下方评论分享你觉得值得推荐的音乐和电影，也欢迎分享你的故事~* 
 
