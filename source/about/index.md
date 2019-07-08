@@ -4,50 +4,48 @@ updated: 2019-02-14 23:56:22
 comments: false 
 ---
 
-<div align="center" >
-    <img src="./img/about-cover.jpg" alt="" width="900px" height="300px" style="margin: 0 auto 0px;">
+<br/>
+
+![](./img/about-cover.jpg)
+
+<div align="center" style="font-size:22px;font-weight: bold;margin: 0 0 40px 0;">
+    <i class="fa fa-glide-g" style="font-size:22px;color:#FF8247;"></i> 关于我
 </div>
-<p align="center" style="font-size:22px;font-weight: bold;margin: 0 0 60px 0;">
-    <i class="fa fa-glide-g" style="font-size:28px;color:#FF8247;"></i> 关于我
-</p>
+
 
 
 热爱生活，乐于分享，喜欢钻研，好奇新事物。持续学习者，技术探索者。渴望内心自由的理想主义者，期望将来活成想要成为的样子。
 
-
-
-*欢迎大家与我交流和学习，一起进步，企鹅号：857686499* 
-
-*也欢迎关注我的公号「一个程序员的随想」：* 
+欢迎与我交流和学习，一起进步，企鹅号：857686499，也欢迎关注我的公号「一个程序员的随想」： 
 
 ![](./img/wechat-180x180.jpg)
 
-<i class="fa fa-book" style="font-size:18px;color:#FF8247;"></i> **学习和阅读：** 
-
-（1）Java 后端学习笔记：[在线阅读](https://javaee.strivebo.com/)
 
 
+<div align="center" style="font-size:22px;font-weight: bold;margin: 0 0 40px 0;">
+    <i class="fa fa-opencart" style="font-size:22px;color:#FF8247;"></i> 编程技能
+</div>
 
-<i class="fa fa-paper-plane" style="font-size:18px;color:#FF8247;"></i> **偶尔喝点鸡汤，打点鸡血，自我激励：** 
 
-- 张一鸣："所谓成功，就是延迟满足。"
-- 有些事不是因为看到了希望才去坚持，而是因为坚持才会看到希望。
-- 你必须很努力，才能看起来毫不费力！
-- ……
 
-<i class="fa fa-meetup" style="font-size:18px;color:#FF8247;"></i> **引发思考的一些话：**
+技术栈：
 
-- 阅读是唯一短期内可能没什么太大帮助，但是长期积累下来一定对你有巨大影响的一件事。
-- 悲观者大多会正确，乐观者才有可能成功。
-- 浏览内容不会引发思考。真正能引发思考的，是要培养自己思考的能力。除了阅读，去研究别人分析问题看待问题的思路，才是一个不错的途径。我经常从你们所鄙视的人那里，获得一些非常有价值的思考。而这，一般人体会不到。——*From Fenng* 
-- 所谓幸福，可能就是能力大于欲望一点点，大部分人感受不到幸福，可能就是欲望大于能力太多了，所以总是交流，总是“在别处”。——*From 某篇文章评论* 
-- ……
+- 前端：HTM、CSS、JavaScript
+- 后端 ：Java、JSP、Servlet、Spring、Mybatis等
+- 人工智能：Python、深度学习、计算机视觉
 
----
+我的 GitHub：<https://github.com/strivebo>
 
-<p align="center" style="font-size:22px;font-weight: bold;margin: 0 0 60px 0;">
-    <i class="fa fa-pied-piper" style="font-size:28px;color:#FF8247;"></i> 为什么你要写博客？
-</p>
+欢迎有什么好的工作推荐和联系我(#^.^#) ，邮箱：<ishuzb@foxmail.com>
+
+
+
+
+
+<div align="center" style="font-size:22px;font-weight: bold;margin: 0 0 40px 0;">
+    <i class="fa fa-pied-piper" style="font-size:22px;color:#FF8247;"></i> 为什么你要写博客？
+</div>
+
 
 
 
@@ -66,17 +64,5 @@ comments: false
 
 <p align="right"><i>——From <a href="https://zhuanlan.zhihu.com/p/19743861?columnSlug=cnfeat">《为什么你要写博客？》</a></i></p>
 
----
 
-<p align="center" style="font-size:22px;font-weight: bold;margin: 0 0 60px 0;">
-    <i class="fa fa-opencart" style="font-size:28px;color:#FF8247;"></i> 编程技能
-</p>
-
-我的 GitHub：<https://github.com/strivebo>
-
-欢迎有什么好的工作推荐和联系我(#^.^#) ，邮箱：<ishuzb@foxmail.com>
-
-
-
----
 

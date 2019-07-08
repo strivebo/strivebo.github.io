@@ -107,10 +107,13 @@ menu:
   categories: /categories || th
   tags: /tags || tags
   #添加了如下菜单
-  相册: /photo || camera
-  音影: /video || video-camera
+  阅读: /reading || book #sticky-note
+  生活: /life || life-ring
+    #相册: /photo || camera
+    #音影: /video || video-camera
   留言: /message || comments
   简历: http://resume.strivebo.com/ || file
+  #学习
   #教程: 
   #资源: 
   about: /about || user
@@ -143,6 +146,9 @@ social:
   CSDN: https://blog.csdn.net/u012195214 || pinterest
   掘金: https://juejin.im/user/59efef14f265da431a426511 || bandcamp
   邮箱: mailto:ishuzb@foxmail.com || envelope
+  #微博: xxxx || pinterest
+  #微信: xxxx || weixin
+  #QQ:   xxxx || qq
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook

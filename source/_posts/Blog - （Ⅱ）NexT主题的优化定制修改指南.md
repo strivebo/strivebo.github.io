@@ -492,7 +492,7 @@ social_icons:
 
 
 
-## 二、第三方服务及其他修改
+## 二、进阶优化配置
 
 添加第三方服务，官网文档：[第三方服务集成 - NexT 使用文档](https://theme-next.iissnan.com/third-party-services.html)。
 
@@ -1784,13 +1784,15 @@ post:
 
 ### (2) 速度优化
 
-*注：关于速度的优化，本人还未实践…* 
+*注：关于访问速度优化，本人还未实践…* 
 
 参考：
 
 - [Hexo博客-Next性能优化之路 | Waber's Blog](http://waberyang.com/2017/03/12/Hexo%E5%8D%9A%E5%AE%A2-Next%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E4%B9%8B%E8%B7%AF/)
 - [Hexo博客之速度优化 - 简书](https://www.jianshu.com/p/93b63852f0b3)
 - [hexo next主题深度优化(六)，使用hexo-neat插件压缩页面，大幅度提升页面性能和响应速度](https://blog.csdn.net/dataiyangu/article/details/84963491)
+
+
 
 ## 四、主题制作
 
