@@ -502,7 +502,7 @@ social_icons:
 - 搜索服务
 - 其他服务
 
-### (1) 在线联系（DaoVoice）★
+### (1) 在线联系（DaoVoice）
 
 参考：  [hexo的next主题个性化教程:打造炫酷网站](http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html)（含全站总字数、DaoVoice 在线联系等等）。
 
@@ -532,7 +532,7 @@ daovoice_app_id: 这里填你的获得的 app_id
 >
 > *注2：我的 DaoVoice 账户注册使用的 GitHub 账户。*
 
-### (2) 评论Disqus和文章显示评论数——已更换为LeanCloud的Valine评论功能★
+### (2) 评论Disqus和文章显示评论数——已更换为LeanCloud的Valine评论功能
 
 Disqus 官网：https://disqus.com/ （本人使用的是谷歌账号注册和登录）
 
@@ -638,7 +638,7 @@ Valine 官方提供的邮件提醒功能是基于`Leancloud的密码重置邮件
 
 **注意，换为  Valine 后，发现文章的评论数不显示，**尝试了改动某处看是否能解决问题，发现解决了。操作这样的：把 disqus 的评论关闭，即设置主题配置文件下的 disqus 下的 enable 为 false，即可正常显示评论数。
 
-### (3)文章阅读次数（注： 使用的LeanCloud）★
+### (3)文章阅读次数（注： 使用的LeanCloud）
 
 ①打开 LeanCloud 官网，进入 [注册页面](https://leancloud.cn/login.html#/signup) 注册。完成邮箱激活后，点击头像，进入`控制台`页面，创建一个新应用(类型为`JavaScript SDK`)，点击应用进入；
 
@@ -930,7 +930,7 @@ summary_img: /images/css-hack-1.png
 - [Hexo 图片插入](http://www.xinxiaoyang.com/programming/2016-11-25-hexo-image-bug/)
 - [Hexo-NexT搭建个人博客（五）——插入封面](https://neveryu.github.io/2017/07/15/hexo-next-five/) 
 
-### (10) 网页加载进度条★
+### (10) 网页加载进度条
 
 打开 `/themes/next/layout/_partials/head.swig` 文件，在文件末尾添加如下代码：
 
