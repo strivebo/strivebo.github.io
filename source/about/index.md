@@ -34,7 +34,11 @@ comments: false
 - 后端 ：Java、JSP、Servlet、Spring、Mybatis、Linux、Redis、Docker、版本控制(SVN/Git) 等
 - 人工智能：Python、深度学习、计算机视觉
 
-我的 GitHub：<https://github.com/strivebo>
+技术平台：
+
+- GitHub：<https://github.com/strivebo>
+- CSDN：<https://blog.csdn.net/u012195214>
+- 掘金：<https://juejin.im/user/59efef14f265da431a426511>
 
 欢迎有什么好的工作推荐和联系我(#^.^#) ，邮箱：<ishuzb@foxmail.com>
 

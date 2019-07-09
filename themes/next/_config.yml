@@ -143,7 +143,7 @@ scheme: Gemini
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
   GitHub: https://github.com/strivebo || github-square
-  CSDN: https://blog.csdn.net/u012195214 || pinterest
+  CSDN: https://blog.csdn.net/u012195214 || pie-chart  #life-ring
   掘金: https://juejin.im/user/59efef14f265da431a426511 || bandcamp
   邮箱: mailto:ishuzb@foxmail.com || envelope
   #微博: xxxx || pinterest
