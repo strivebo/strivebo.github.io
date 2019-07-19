@@ -268,21 +268,23 @@ wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/0oVice
 
 ###  各平台影梭下载
 
-- 各平台 Shadowsocks 客户端下载地址：[Shadowsocks - Clients](https://shadowsocks.org/en/download/clients.html)
+1、各平台 Shadowsocks 客户端下载地址：[Shadowsocks - Clients](https://shadowsocks.org/en/download/clients.html)
 
-- SSR Mac 客户端下载：[SSR MAC客户端ShadowsocksX-NG-R下载、安装及使用教程](https://ssr.tools/164)
+2、SSR Mac 客户端下载：[SSR MAC客户端ShadowsocksX-NG-R下载、安装及使用教程](https://ssr.tools/164)
 
-  > Shadowsocks 的 MAC 客户端，主要有两个版本：ShadowsocksX 和 ShadowsocksX-NG，其中ShadowsocksX-NG 为ShadowsocksX 的最新版本 。**目前这两个版本仅支持 SS 原版，不支持 SSR 的混淆功能。** 
-  >
-  > 目前更建议安装 Shadowsocks-NG-R 版本。
-  >
-  > ShadowsocksX-NG-R 目前最新版本为 ShadowsocksX-NG-R8 1.4.4，适用于 iMac/Macbook。
-  >
-  > 下载：[ShadowsocksX-NG-R8.dmg](https://github.com/qinyuhang/ShadowsocksX-NG-R/releases/download/1.4.4-r8/ShadowsocksX-NG-R8.dmg)（我已下载放在 tools 文件夹中，名为 `ShadowsocksX-NG-R8.dmg`）
+> Shadowsocks 的 MAC 客户端，主要有两个版本：ShadowsocksX 和 ShadowsocksX-NG，其中ShadowsocksX-NG 为ShadowsocksX 的最新版本 。**目前这两个版本仅支持 SS 原版，不支持 SSR 的混淆功能。** 
+>
+> 目前更建议安装 Shadowsocks-NG-R 版本。
+>
+> ShadowsocksX-NG-R 目前最新版本为 ShadowsocksX-NG-R8 1.4.4，适用于 iMac/Macbook。
+>
+> 下载：[ShadowsocksX-NG-R8.dmg](https://github.com/qinyuhang/ShadowsocksX-NG-R/releases/download/1.4.4-r8/ShadowsocksX-NG-R8.dmg)
 
-- 另外这篇文章 [SS/SSR 简介 - 聪聪 Blog](https://congcong0806.github.io/2018/04/20/SS/#%E5%AE%A2%E6%88%B7%E7%AB%AF) 列举了很多各个平台SS/SSR客户端并且能点击链接到下载处。下面截图是文章中列举的 SS/SSR 部分 iOS 客户端：
+3、另外这篇文章 [SS/SSR 简介 - 聪聪 Blog](https://congcong0806.github.io/2018/04/20/SS/#%E5%AE%A2%E6%88%B7%E7%AB%AF) 列举了很多各个平台 SS/SSR 客户端并且能点击链接到下载处。下面截图是文章中列举的 SS/SSR 部分 iOS 客户端：
 
-  ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190228153320.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190228153320.png)
+
+Shadowrocket 下载（需切换到美区下载）：<https://apps.apple.com/us/app/shadowrocket/id932747118>
 
 ### VPS推荐
 
@@ -292,6 +294,22 @@ wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/0oVice
 - Vultr
 - Linode
 - DigitalOcean
+
+也可以考虑下 Google Cloud，有信用卡可以薅下该羊毛：
+
+- [谷歌云免费搭建一年SSR服务器]([https://freeleox.github.io/2018/11/02/Google%20Cloud%20SSR/](https://freeleox.github.io/2018/11/02/Google Cloud SSR/))
+
+- [10分钟教你用 Google Cloud Platform 搭建自己的VPN](https://elephantnose.github.io/2018/09/24/10%E5%88%86%E9%92%9F%E6%95%99%E4%BD%A0%E7%94%A8%20Google%20Cloud%20Platform%20%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84VPN/)
+
+- [Google Cloud Platform免费申请&一键搭建SSR & BBR加速教程](https://www.wmsoho.com/google-cloud-platform-ssr-bbr-tutorial/)
+
+  > Google 云服务平台对新用户赠送 300 美元，可以免费使用 1 年。并且到期后如果不打算续费，也不会额外收取费用 （像亚马逊AWS就直接扣你费用）。
+  >
+  > 如果还想继续用，直接新注册个账号，免费 (现在需要新卡了)。用来搭 SS 的话, 最低配置的机型 $5/月, 出口大陆流量 1T 以内为 0.23$/1G，算下来每个月可用 80 多 G 的流量，足够用了, 当然你还可以顺便搭个网站之类的。
+  >
+  > 注意：需要用到信用卡!!!
+
+
 
 ### 补充：关于DigitalOcean VPS的说明
 
@@ -358,7 +376,7 @@ Wendy
 Platform Support Specialist
 ```
 
-直接给了我账户 10$，DigitalOcean 真是牛逼。哈哈，总算可以删除了~
+直接给了我账户 10$，DigitalOcean 真是牛逼。哈哈，总算可以删除了。
 
 注：这里多说下我的「经验教训」，如果你是第一次使用，可以使用通过链接（这个网上搜下，我搜到的是这个：<https://try.digitalocean.com/virtual-private-servers/>）注册可以获得对新用户的 100 美刀，但有效期时间 60 天，然后你付款 5 美刀定金就可以使用了 digitalocean 了，但是这个时候如果你还有 digitalocean 的优惠码就不能使用了。所以如果你有优惠码的话，就不要通过那个链接注册，直接进入官网注册账户就好，这样才可以使用优惠码。
 
@@ -406,6 +424,17 @@ V2Ray Mac客户端
 客户端下载：
 
 ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190124153425.png)
+
+## 3. 实现路由器科学上网
+
+
+
+参考：
+
+- [改造路由器实现“无痛的科学上网”——其实没那么难](<https://jizusun.github.io/openwrt-router-intro>)
+- [SSR 路由器客户端下载、安装及使用教程（openwrt ShadowsocksR）-SSR中文网](<https://ssr.tools/136>)
+
+
 
 
 
