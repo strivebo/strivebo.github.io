@@ -1,5 +1,5 @@
 ---
-title: 篇Ⅰ：基于Hexo+GitHub Page搭建免费博客并绑定域名，以及博客备份
+title: 篇Ⅰ：基于Hexo+GitHub Page搭建免费博客并绑定域名以及博客备份
 date: 2019-02-14 20:01:08
 categories: Blog
 tags: [Blog,GitHub,Hexo] 

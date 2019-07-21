@@ -1,5 +1,5 @@
 ---
-title: Git&GitHub 学习4：GitHub支持的Markdown写作格式指南
+title: Git&GitHub 学习4：GitHub支持的Markdown写作指南
 date: 2019-02-13 20:01:08
 categories: 版本控制
 tags: [Blog,Markdown,GitHub] 
