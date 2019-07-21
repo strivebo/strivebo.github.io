@@ -1,20 +1,21 @@
 ---
-title: （二）GitHub使用随记
+title: Git&GitHub 学习2：GitHub使用
 date: 2019-02-13 21:08:54
 categories: 版本控制
 tags: [Git,GitHub,版本控制]
 ---
 
+GitHub 使用指南。<!-- more -->
 
-## 一、GitHub使用技巧
+# 一、GitHub 使用技巧
 
-### 1. 突破GitHub单个大文件上传限制
+## 1. 突破GitHub单个大文件上传限制
 
-GitHub 上新建的仓库容量大小限制在 1G，单个文件不能超过 100M，有 50M 的文件，就会警告了。 可通过以下命令查找超过 100M 的文件：`find ./ -type f -size +102400k`。 想要突破 GitHub 的限制，支持单个文件超出 100M，可以使用  [Git LFS](https://github.com/git-lfs/git-lfs)。 <!-- more -->
+GitHub 上新建的仓库容量大小限制在 1G，单个文件不能超过 100M，有 50M 的文件，就会警告了。 可通过以下命令查找超过 100M 的文件：`find ./ -type f -size +102400k`。 想要突破 GitHub 的限制，支持单个文件超出 100M，可以使用  [Git LFS](https://github.com/git-lfs/git-lfs)。 
 
 参考：[突破github的100M单个大文件上传限制 ](https://blog.csdn.net/tyro_java/article/details/53440666)
 
-### 2. Git只Clone仓库指定文件或文件夹
+## 2. Git只Clone仓库指定文件或文件夹
 
 步骤总结如下：
 
@@ -44,9 +45,9 @@ PS：后来发现，其实直接打开想要下载的文件，在右上角可以
 - [git clone克隆或下载一个仓库单个文件夹](https://blog.csdn.net/qq_36560161/article/details/78260532)
 - [git只clone仓库中指定子目录和指定文件的实现](http://www.cnblogs.com/juking/p/7223669.html)
 
-### 3. 利用GitHub进行多人协作开发
+## 3. 利用GitHub进行多人协作开发
 
-#### (1) 开发并且提交代码
+### (1) 开发并且提交代码
 
 首先要从 GitHub 上 clone 自己仓库代码到本地，你需要执行如下命令：
 
@@ -71,7 +72,7 @@ git push orgin master #push到名为orgin的远程仓库的指定分支master
 
 这样就完成了修改远程仓库代码了。
 
-#### (2) 多人协作开发
+### (2) 多人协作开发
 
 Q：假如想要进行多人协作开发。比如要对 xiaoming 的名为 git-test 的仓库贡献自己写的代码，比如说添加新功能，怎么操作呢？
 
@@ -126,7 +127,7 @@ git push
 - [如何利用 Git 与 GitHub 进行多人协作开发](https://www.jianshu.com/p/8c69d1021d98)
 - [github的多人协作](https://gist.github.com/suziewong/4378619#gistcomment-1873334)
 
-### 4. 同一台电脑配置多个Git账号
+## 4. 同一台电脑配置多个Git账号
 
 在日常使用 GitHub 作为仓库使用的时候，有时可能会遇到这样的一些情况：
 
@@ -225,7 +226,7 @@ SSH Key 的配置：
 - [同一台电脑配置多个git账号](https://github.com/jawil/notes/issues/2)
 - [一台电脑绑定两个git帐号(GitHub和GitLab)](https://blog.csdn.net/jifaliwo123/article/details/79126785)
 
-### 5. Git配置多个SSH-key？为什么？
+## 5. Git配置多个SSH-key？为什么？
 
 背景：当有多个 git 账号时，比如：
 
@@ -277,7 +278,7 @@ ssh -T git@github.com
 - [一台电脑配置多个ssh key（不同的多个邮箱ssh key，多git账号，智能选择对应的ssh key）](https://blog.csdn.net/yimingsilence/article/details/79980135)
 - [管理git生成的多个ssh key](https://www.jianshu.com/p/f7f4142a1556)
 
-### 6. 如何将GitHub已有的项目转移到组织仓库中去
+## 6. 如何将GitHub已有的项目转移到组织仓库中去
 
 打开仓库，点击 setting，拉到最下面，点击 Transfer，会看到要求输入如下：
 
@@ -287,7 +288,7 @@ ssh -T git@github.com
 
 参考资料：[github如何将已有的项目转移到组织仓库中去](https://blog.csdn.net/u011328417/article/details/74584487)
 
-### 7. 如何在GitHub上添加协议？
+## 7. 如何在GitHub上添加协议？
 
 ①进入你的“代码仓库”，点击"Create new file"，这时 GitHub 的新页面上，有一个空格让你填入文件名称。
 
@@ -297,7 +298,7 @@ ssh -T git@github.com
 
 参考：[如何在github上添加协议](https://www.jianshu.com/p/e4d6e6a05f14)
 
-### 8. 保持码云Gitee和GitHub同步更新？
+## 8. 保持码云Gitee和GitHub同步更新？
 
 使用 GitHub 时，国内的用户经常遇到的问题是访问速度太慢，有时候还会出现无法连接的情况（原因你懂的）。如果我们希望体验 Git 飞一般的速度，可以使用国内的 Git 托管服务——[码云](https://gitee.com/)（[gitee.com](https://gitee.com/)）。和 GitHub 相比，码云也提供免费的 Git 仓库。此外，还集成了代码质量检测、项目演示等功能。对于团队协作开发，码云还提供了项目管理、代码托管、文档管理的服务，5 人以下小团队免费。
 
@@ -349,17 +350,17 @@ git push gitee master
 
 参考：[使用码云 - 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00150154460073692d151e784de4d718c67ce836f72c7c4000)
 
-### 9. 如何正确接收 GitHub 的消息邮件
+## 9. 如何正确接收 GitHub 的消息邮件
 
 参考：[如何正确接收 GitHub 的消息邮件](https://github.com/cssmagic/blog/issues/49) 
 
-### 10. 精准分享关键代码
+## 10. 精准分享关键代码
 
 比如你有一个文件里的某一行代码写得非常酷炫或者关键，想分享一下。可以在 url 后面加上，比如，点击下面这 个 url：<https://github.com/AlloyTeam/AlloyTouch/blob/master/alloy_touch.js#L240>，你便会跳到 `alloy_touch.js` 的第 240 行。如果是想分享多行代码，也很简单：url 后面加上 `#L` 开始行号 `-L` 结束行号，比如，AlloyTouch 的运动缓动和逆向缓动函数如下面代码段所示：<https://github.com/AlloyTeam/AlloyTouch/blob/master/alloy_touch.js#L39-L45>，其实也不用记忆你直接在网址后面操作，GitHub 自动会帮你生成 url。比如你点击 39 行，url 变成了：<https://github.com/AlloyTeam/AlloyTouch/blob/master/alloy_touch.js#L39>，再按住 shift 点击 45 行，url 变成了：<https://github.com/AlloyTeam/AlloyTouch/blob/master/alloy_touch.js#L39-L45>，然后你这个 url 就可以复制分享出去了，点击这个 url 的人自动会跳到 39 行，并且 39-45 行高亮。
 
 ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190303114615.png)
 
-### 11. 通过提交的msg自动关闭issues
+## 11. 通过提交的msg自动关闭issues
 
 比如有人提交了个 issues <https://github.com/AlloyTeam/AlloyTouch/issues/6>，然后你去主干上改代码，改完之后提交填 msg 的时候，填入：`fix https://github.com/AlloyTeam/AlloyTouch/issues/6`，这个 issues 会自动被关闭。当然不仅仅是 fix 这个关键字。下面这些关键字也可以：
 
@@ -374,7 +375,7 @@ resolves
 resolved
 ```
 
-### 12. gitattributes设置项目语言
+## 12. gitattributes设置项目语言
 
 GitHub 会根据相关文件代码的数量来自动识别你这个项目哪个语言代码项目。这就带来了一个问题，比如 AlloyTouch 最开始被识别成 HTML 项目，因为 HTML 例子比 JS 文件多。怎么办呢？gitattributes 来帮助你搞定。在项目的根目录下添加如下 `.gitattributes` 文件便可，里面的：
 
@@ -384,7 +385,7 @@ GitHub 会根据相关文件代码的数量来自动识别你这个项目哪个�
 
 主要意思是把所有 html 文件后缀的代码识别成 js 文件。
 
-### 13. 查看自己项目的访问数据
+## 13. 查看自己项目的访问数据
 
 在自己的项目下，点击 Insights，然后再点击 Traffic，里面有 Referring sites 和 Popular content 的详细数据和排名。如：Referring sites
 
@@ -392,7 +393,7 @@ GitHub 会根据相关文件代码的数量来自动识别你这个项目哪个�
 
 其中 Referring sites 代表大家都是从什么网站来到你的项目的，Popular content 代表大家经常看你项目的哪些文件。
 
-### 14. trending排行榜
+## 14. trending排行榜
 
 来看看怎么查看某类型语言的每日排行榜。比如 JavaSrcipt 每日排行榜：
 
@@ -402,7 +403,7 @@ GitHub 会根据相关文件代码的数量来自动识别你这个项目哪个�
 
 GitHub 推荐：<https://github.com/explore>
 
-### 15. 使用GitHub release发布应用
+## 15. 使用GitHub release发布应用
 
 (1) 创建release
 
@@ -426,9 +427,9 @@ GitHub 推荐：<https://github.com/explore>
 
 
 
-## 二、GitHub项目美化
+# 二、GitHub项目美化
 
-### 1. GitHub项目徽章的添加和设置
+## 1. GitHub项目徽章的添加和设置
 
 GitHub 项目的 README.md 中可以添加徽章（Badge）对项目进行标记和说明，这些好看的小图标不仅简洁美观，而且还包含了清晰易读的信息。
 
@@ -443,7 +444,7 @@ GitHub 徽标的官方网站是：[shields.io/](https://link.juejin.im/?target=h
 - [为你的Github README生成漂亮的徽章和进度条](https://shikieiki.github.io/2017/03/01/%E4%B8%BA%E4%BD%A0%E7%9A%84Github%E7%94%9F%E6%88%90%E6%BC%82%E4%BA%AE%E7%9A%84%E5%BE%BD%E7%AB%A0%E5%92%8C%E8%BF%9B%E5%BA%A6%E6%9D%A1/)
 - [GitHub 项目徽章的添加和设置](https://juejin.im/entry/5907fa59570c3500582d326c)
 
-### 2. 为GitHub项目添加表情
+## 2. 为GitHub项目添加表情
 
 GitHub 支持的表情，官网查询：<https://www.webfx.com/tools/emoji-cheat-sheet/>
 
@@ -451,19 +452,19 @@ GitHub 支持的表情，官网查询：<https://www.webfx.com/tools/emoji-cheat
 
 
 
-## 三、GitHub使用细节
+# 三、GitHub使用细节
 
-### 1. 本地查看远程分支
+## 1. 本地查看远程分支
 
 git clone 默认会把远程仓库整个给 clone下来，但只会在本地默认创建一个 master 分支，如果远程还有其他的分支，此时用 `git branch -a` 查看所有分支。
 
-### 2. GitHub支持多种协议
+## 2. GitHub支持多种协议
 
 GitHub 给出的地址不止一个，除了 `git@github.com:xiaoming/test.git` 这个地址，还可以使用`https://github.com/xiaoming/test.git`  这样的地址。实际上，Git 支持多种协议，默认的 `git://` 使用ssh，但也可以使用 https 等其他协议。
 
 使用 https 除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放 http 端口的公司内部就无法使用 ssh 协议而只能用 https。
 
-### 3. 设置默认被推送的分支
+## 3. 设置默认被推送的分支
 
 ``` xml
 git push -u origin test #设置默认被推送的分支
@@ -472,7 +473,7 @@ git push	#这个时候我推送的远程分支应该是 origin/test
 
 查看`git push`关联的远程分支：`git branch -v`。
 
-### 4. ssh-keygen命令
+## 4. ssh-keygen命令
 
 ssh-keygen 命令用于为“ssh”生成、管理和转换认证密钥，它支持 RSA 和 DSA 两种认证密钥。语法：`ssh-keygen(选项)`
 
@@ -493,7 +494,7 @@ ssh-keygen 命令用于为“ssh”生成、管理和转换认证密钥，它支
 
 如：`ssh-keygen -t rsa -C "123456@qq.com"`
 
-### 5. Git忽略提交(.gitignore文件)
+## 5. Git忽略提交(.gitignore文件)
 
 在使用 Git 的过程中，我们喜欢有的文件比如日志，临时文件，编译的中间文件等不要提交到代码仓库，这时就要设置相应的忽略规则，来忽略这些文件的提交。简单来说一个场景：在你使用`git add .`的时候，遇到了把你不想提交的文件也添加到了缓存中去的情况，比如项目的本地配置信息，如果你上传到 Git 中去其他人 pull 下来的时候就会和他本地的配置有冲突，所以这样的个性化配置文件我们一般不把它推送到 GIt 服务器中，但是又为了偷懒每次添加缓存的时候都想用`git add .`而不是手动一个一个文件添加，该怎么办呢？很简单，Git 为我们提供了一个`.gitignore`文件只要在这个文件中申明那些文件你不希望添加到 Git 中去，这样当你使用`git add .`的时候这些文件就会被自动忽略掉。
 
@@ -507,7 +508,7 @@ ssh-keygen 命令用于为“ssh”生成、管理和转换认证密钥，它支
 
 参考：[Git忽略提交规则 - .gitignore配置运维总结](https://www.cnblogs.com/kevingrace/p/5690241.html)
 
-### 6. 如何在README.md中嵌入一个Gist？
+## 6. 如何在README.md中嵌入一个Gist？
 
 适用于 GitHub 的网页，通过 Jekyll，使用 Markdown 中的脚本标记，然后由 Jekyll 处理。因为 Markdown支持 html，所以可以直接使用< script>标签嵌入 Gist。
 
@@ -525,7 +526,7 @@ ssh-keygen 命令用于为“ssh”生成、管理和转换认证密钥，它支
 - [Github：如何在README.md中嵌入一个gist？](https://codeday.me/bug/20171022/88303.html)
 - [Custom css file for readme.md in a Github repo - Stack Overflow](https://stackoverflow.com/questions/51956361/custom-css-file-for-readme-md-in-a-github-repo)
 
-### 7. 其他网页上面嵌入个人的GitHub仓库？
+## 7. 其他网页上面嵌入个人的GitHub仓库？
 
 是否想在其他网页上面嵌入自己的 GitHub 仓库页面，有个 star 或 fork 按钮，如下图：
 
@@ -540,7 +541,7 @@ ssh-keygen 命令用于为“ssh”生成、管理和转换认证密钥，它支
 
 把 user 和 repo 改成你自己的就可以了。注：亲测，GitHub 网站页面暂不支持。
 
-### 8. GitHub快捷方式
+## 8. GitHub快捷方式
 
 - issue 中输入冒号 `:` 添加表情
 - 任意界面 `shift + ？`显示快捷键
@@ -548,9 +549,9 @@ ssh-keygen 命令用于为“ssh”生成、管理和转换认证密钥，它支
 
 
 
-## 参考及推荐资料
+# 参考及推荐资料
 
-- GitHub：[waylau/github-help](https://github.com/waylau/github-help)
+- [waylau/github-help](https://github.com/waylau/github-help)
 - [GitHub 秘籍-极客学院Wiki](http://wiki.jikexueyuan.com/project/github-secret/)
 - [你必须收藏的Github技巧  - 博客园](http://www.cnblogs.com/iamzhanglei/p/6177961.html)
 
@@ -558,7 +559,5 @@ ssh-keygen 命令用于为“ssh”生成、管理和转换认证密钥，它支
 
 ---
 
-*update：2019-02-18* 
-
-*update：2019-03-03* 
+*update：2019-07-21* 
 

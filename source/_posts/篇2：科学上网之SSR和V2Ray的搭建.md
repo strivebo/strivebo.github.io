@@ -1,19 +1,19 @@
 ---
-title: （二）科学上网之影梭和V2Ray的搭建
+title: 篇2：科学上网之SSR和V2Ray的搭建
 date: 2019-02-12 20:01:08
 categories: 程序人生
 tags: [科学上网]
 ---
 
-该文主要记录影梭(Shadowsocks和ShadowsocksR) 和 V2Ray 的搭建过程要点。<!-- more -->
+该文主要记录 Shadowsocks/ShadowsocksR 和 V2Ray 的搭建过程要点。<!-- more -->
 
-## 1. 影梭(SS和SSR)
+# 一、SS 或 SSR 的搭建
 
-可以先看我写的一篇总结：[（一）科学上网总结](https://strivebo.com/2019/02/12/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F%20-%20%EF%BC%88%E4%B8%80%EF%BC%89%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%80%BB%E7%BB%93/)，该文有记录如何搭建影梭，可以当做先了解下相关知识也可以。
+可以先看我写的一篇总结：[篇1：科学上网总结](https://strivebo.com/2019/02/12/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F%20-%20%EF%BC%88%E4%B8%80%EF%BC%89%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%80%BB%E7%BB%93/)，该文有记录如何搭建影梭，可以当做先了解下相关知识也可以。
 
-### (1) 第一步安装脚本
+## 1. 第一步：安装脚本
 
-#### 安装脚本1
+### 安装脚本1
 
 参考：[自己搭建ss/ssr服务器教程（适合初学者，最低2.5美元/月）](https://github.com/XX-net/XX-Net/issues/6506)
 
@@ -41,7 +41,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/dou
 
 > *PS：亲测，第一个脚本文件已经不可用了，第二个还能使用，以防下次第二个也不正常使用，于是我下载下来了，以及下面的 BBR 加速脚本也给下载了，放在 tools 文件夹下的【脚本备份】目录下。* 
 
-#### 或者安装脚本2
+### 或者安装脚本2
 
 参考：[Vultr最简单的梯子搭建SS教程，只需30分钟，畅游互联网世界](https://segmentfault.com/a/1190000015699248)
 
@@ -78,7 +78,7 @@ o-check-certificate https://raw.githubusercontent.com/91yun/serverspeeder/master
 
 - 要深入了解相关「影梭」的 FQ 知识可以看：[科学上网漫游指南](https://lvii.gitbooks.io/outman/content/)
 
-#### 或者安装脚本3
+### 或者安装脚本3
 
 关于 SSR 的服务器安装、客户端下载，可以仔细查阅该网站——[SSR中文网](https://ssr.tools/)。
 
@@ -116,7 +116,7 @@ Putty 连接至 VPS 服务器，分别运行如下各命令：
 
 BBR加速脚本：[VPS服务器Google BBR一键安装脚本](https://ssr.tools/199)，同【第二步：谷歌BBR加速】小节的 BBR 加速脚本。
 
-#### ShadowsocksR 推荐协议混淆设置
+### ShadowsocksR 推荐协议混淆设置
 
 协议推荐：
 
@@ -141,9 +141,9 @@ BBR加速脚本：[VPS服务器Google BBR一键安装脚本](https://ssr.tools/1
 
 
 
-### (2) 第二步：谷歌BBR加速
+## 2. 第二步：谷歌BBR加速
 
-#### BBR加速脚本1
+### BBR加速脚本1
 
 ``` xml
 yum -y install wget
@@ -167,7 +167,7 @@ chmod +x bbr.sh
 >
 > 查看内核版本：`uname -r`
 
-#### 或者安装BBR加速脚本2
+### 或者安装BBR加速脚本2
 
 **如果前面那个 BBR 加速安装失败！**那么可以看下该文安装这个 BBR 加速：[BBR+BBR魔改+Lotsever(锐速)一键脚本 for Centos/Debian/Ubuntu](https://github.com/XX-net/XX-Net/issues/6506)
 
@@ -194,7 +194,7 @@ chmod +x bbr.sh
 
 
 
-### (3) 第二步：或安装锐速加速
+## 3. 第二步：或安装锐速加速
 
 1、安装锐速需降级系统内核，而安装 Google BBR 则需升级系统内核，故两者不能同时安装。
 
@@ -220,7 +220,7 @@ uname -r
 
 这种输出结果说明我们的服务器已经安装 Google BBR 拥塞控制算法，此时已经无法继续安装锐速。
 
-#### 1. 若系统为 CentOS7 x64，安装锐速加速
+### 1. 若系统为 CentOS7 x64，安装锐速加速
 
 如下图：
 
@@ -248,7 +248,7 @@ yum install net-tools -y && wget --no-check-certificate -O appex.sh https://raw.
 
 ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190605201410.png)
 
-#### 2. 若系统为 CentOS6 x64，安装锐速加速
+### 2. 若系统为 CentOS6 x64，安装锐速加速
 
 若你的系统选择是 CentOS6 x64，不需要更换内核，直接执行下列安装命令
 
@@ -266,7 +266,7 @@ wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/0oVice
 
 
 
-###  各平台影梭下载
+##  各平台影梭下载
 
 1、各平台 Shadowsocks 客户端下载地址：[Shadowsocks - Clients](https://shadowsocks.org/en/download/clients.html)
 
@@ -286,7 +286,7 @@ wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/0oVice
 
 Shadowrocket 下载（需切换到美区下载）：<https://apps.apple.com/us/app/shadowrocket/id932747118>
 
-### VPS推荐
+## VPS推荐
 
 [适合搭建SSR的国外VPS服务器推荐汇总](https://ssr.tools/55)
 
@@ -311,7 +311,7 @@ Shadowrocket 下载（需切换到美区下载）：<https://apps.apple.com/us/a
 
 
 
-### 补充：关于DigitalOcean VPS的说明
+## 补充：关于DigitalOcean VPS的说明
 
 本人目前一直在用 DigitalOcean，其流量和计费方式为：
 
@@ -382,9 +382,9 @@ Platform Support Specialist
 
 
 
-## 2. V2Ray 
+# 二、V2Ray 的搭建
 
-### (1) V2Ray介绍
+## 1. V2Ray介绍
 
 类似影梭代理方式，有个叫 V2Ray 也可以关注下，教程 [V2Ray 配置指南](https://toutyrater.github.io/)。
 
@@ -406,7 +406,7 @@ V2Ray 跟 Shadowsocks 有什么区别？
 
 - [V2Ray搭建教程：小白图解版 | 翻个墙翻个墙](https://fangeqiang.com/2030.html)
 
-### (2) 客户端介绍
+## 2. 客户端介绍
 
 V2Ray服务器搭建完成后，就可以在本地设备中安装客户端进行连接了。下面我们分别介绍 V2Ray 的各平台客户端的下载和使用，包括：
 
@@ -425,8 +425,8 @@ V2Ray Mac客户端
 
 ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190124153425.png)
 
-## 3. 实现路由器科学上网
 
+# 三、实现路由器科学上网
 
 
 参考：

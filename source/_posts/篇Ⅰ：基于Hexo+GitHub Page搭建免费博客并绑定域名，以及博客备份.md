@@ -1,21 +1,23 @@
 ---
-title: 篇Ⅰ：基于Hexo+GitHub Page搭建博客，绑定域名及备份
+title: 篇Ⅰ：基于Hexo+GitHub Page搭建免费博客并绑定域名，以及博客备份
 date: 2019-02-14 20:01:08
 categories: Blog
 tags: [Blog,GitHub,Hexo] 
 ---
 
-## 前言
+基于 Hexo+GitHub Page 搭建免费博客并绑定域名，以及博客备份。<!-- more -->
+
+# 写在前面
 
 这里引用阮一峰老师网络日志里说的，对于喜欢写博客的人，会经历三个阶段：
 
-> 第一阶段，刚接触 Blog，觉得很新鲜，试着选择一个免费空间来写。
->
-> 第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。
->
-> 第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。
+``` 
+第一阶段，刚接触 Blog，觉得很新鲜，试着选择一个免费空间来写。
+第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。
+第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。
+```
 
-大多数博客作者，都停留在第一和第二阶段，因为第三阶段不太容易到达：你很难找到俯首听命、愿意为你管理服务器的人。<!-- more -->
+大多数博客作者，都停留在第一和第二阶段，因为第三阶段不太容易到达：你很难找到俯首听命、愿意为你管理服务器的人。
 
 但是其实该情况早已改变，很多程序员早已在 [GitHub](https://github.com/) 网站上搭建 Blog。他们既拥有绝对管理权，又享受 GitHub 带来的便利——不管何时何地，只要向主机提交 commit，就能发布新文章。更妙的是，这一切还是免费的，GitHub 提供无限流量，世界各地都有理想的访问速度。
 
@@ -34,7 +36,7 @@ tags: [Blog,GitHub,Hexo]
 
 
 
-## 1. 博客搭建
+# 一、博客搭建
 
 在搭建过程之前，先了解下 npm。
 
@@ -56,19 +58,19 @@ npm install express	# 本地安装
 npm install express -g   # 全局安装
 ```
 
-*本地安装：*
+本地安装：
 
 > 将安装包放在 ./node_modules 下（运行 npm 命令时所在的目录），如果没有 node_modules 目录，会在当前执行 npm 命令的目录下生成 node_modules 目录。可以通过 require() 来引入本地安装的包。
 >
 
-*全局安装：*
+全局安装：
 
 > 将安装包放在 /usr/local 下或者你 node 的安装目录。可以直接在命令行里使用。
 >
 
 如果你希望具备两者功能，则需要在两个地方安装它或使用 npm link。
 
-### 1.1 搭建步骤 
+## 1. 搭建步骤 
 
 **(1) 第一步：Github Pages** 
 
@@ -163,7 +165,7 @@ hexo d -g  #生成并上传
 
 然后编译、发布、预览就可以看到效果了！
 
-### 1.2 域名绑定
+## 2. 域名绑定
 
 不绑定域名肯定也是可以的，就用默认的 xxx.github.io 来访问，如果想更个性一点，想拥有一个属于自己的域名，那也是 OK 的。
 
@@ -216,7 +218,7 @@ hexo d -g  #生成并上传
 
 参考资料：[使用hexo+github搭建免费个人博客详细教程](http://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html)  
 
-#### 域名绑定个人实操
+## 3. 域名绑定个人实践
 
 (1) 域名注册和解析
 
@@ -257,19 +259,19 @@ SSL 证书如何安装和部署指引：[SSL 证书 证书安装指引 - 腾讯�
 >
 > 设置操作：打开仓库的Settings，找到 GitHub Pages 项，找到 Enforce HTTPS，打上勾即可。
 
-### 1.3 问题汇总 
+## 4. 问题汇总 
 
 **问题 1：** 执行 hexo deploy 命令，README 文件就消失，有什么解决方法吗？
 
 在 Hexo 目录下的 source 目录下新建一个 `README.md`文件，修改 Hexo 目录下的配置文件`_config.yml`，将`skip_render`参数的值设置为上。即 `skip_render: README.md`保存退出即可。使用 hexo d 命令就不会渲染 README.md 这个文件了。
 
-*参考资料：[怎么用hexo上传一个README.md到github?](https://www.zhihu.com/question/28058973)* 
+参考资料：[怎么用hexo上传一个README.md到github?](https://www.zhihu.com/question/28058973) 
 
 
 
-## 2. 博客备份 
+# 二、博客备份 
 
-### 2.1 备份详解
+## 1. 备份详解
 
 博客搭建完毕，就可以通过 `https://strivebo.github.io` 类似这样的格式访问了。如果要绑定了域名就可以使用域名访问了。
 
@@ -315,7 +317,7 @@ git push origin backup:backup
 
 - [.npmignore文件的干嘛的](http://front-ender.me/architecture/npmignore.html) 
 
-### 2.2 备份实战
+## 2. 备份实战
 
 本人 GitHub 博客那个仓库设置的是 master 为默认分支；另外我本机安装版本为 Git v2.15.0，nodejs v9.4.0。
 
@@ -348,8 +350,4 @@ git push origin backup:backup
 
 ---
 
-*update：2018-01-29 v1.1*
-
-*update：2019-02-13 标题及部分内容和文字表达处修改*
-
-*update：2019-02-14 增加了「域名绑定个人实操」小节内容；标题由「基于Hexo+GitHub Page搭建博客及备份笔记」改为「「（Ⅰ）基于Hexo+GitHub Page搭建博客，绑定域名及备份」」* 
+*update：2019-07-21*

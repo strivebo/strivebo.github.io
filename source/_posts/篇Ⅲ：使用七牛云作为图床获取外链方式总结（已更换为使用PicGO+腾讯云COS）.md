@@ -5,28 +5,26 @@ categories: Blog
 tags: [Blog,PicGo,腾讯云] 
 ---
 
-# 1. 图床的选择
+使用七牛云作为图床获取外链方式总结。注：已更换为使用 腾讯云 COS 做图床，上传工具使用的 PicGo。<!-- more -->
 
-## (1) 什么是图床？
+# 一、图床的选择
 
-很多技术人写作都有在用 Markdown 轻量级标记语言进行博客写作，这种写作让我们不用像使用 Word 那么麻烦调整排版和格式，而只需专心写作照样完成排版的一种写作方式。但是，基本所有支持 Markdown 本地写作工具都只能采用导入本地图片引用的方式，对于一篇需要大量图片阐述的文章，或者是文章发布于网络后图片丢失问题，这不得不是经常要面对的问题。<!-- more -->
+## 1. 什么是图床？
+
+很多技术人写作都有在用 Markdown 轻量级标记语言进行博客写作，这种写作让我们不用像使用 Word 那么麻烦调整排版和格式，而只需专心写作照样完成排版的一种写作方式。但是，基本所有支持 Markdown 本地写作工具都只能采用导入本地图片引用的方式，对于一篇需要大量图片阐述的文章，或者是文章发布于网络后图片丢失问题，这不得不是经常要面对的问题。
 
 那么有什么比较好的解决方式吗？哈哈，有的。很多人采用的图片寄存于网络，用服务厂商作为图片存储的地方，大家称为图床。好了，那像 CSDN 博客、简书平台不是都可以做到图片存储吗？是的，在这些平台写文章的时候可以通过上传图片然后得到一个图片网络地址，但当图片数量多，一张一张上传，这也是非常麻烦，另外，也是担心万一人家平台做防盗链呢（不了解防盗链话自行谷歌下~）。其实我们想要图床功能，有很多专业的服务商免费提供一定容量和流量可以让我们方便干这些事情，比如七牛云。
 
-## (2) 图床种类
+## 2. 图床种类
 
 谷歌搜索下图床能搜到很多图床网站，列举一些供参考使用：
 
 - [极简图床](https://jiantuku.com/#/)
-
   默认公共图床使用 sm.ms、微博图床，可以自定义支持七牛，界面简洁美观，支持 [Chrome 插件](https://chrome.google.com/webstore/detail/heebflcbemenefckkgfnnklbhdbdkagg)，注册后还可以同步上传历史。
-
 - [路过图床](https://imgchr.com/)
 - [Qchan图床](http://tuchuang.org/)
 - [小贱贱图床](http://pic.xiaojianjian.net/)
-- [SM.MS](https://sm.ms/)
-
-  [SM.MS](https://sm.ms/) 是由 V2EX @[Showfom](https://www.v2ex.com/member/Showfom) 自建的，无外链限制，无流量限制的图床，支持 HTTPS，速度不错，已经运行两年多了。简易的在线图床工具
+- [SM.MS](https://sm.ms/) - SM.MS 由 V2EX @[Showfom](https://www.v2ex.com/member/Showfom) 自建的，无外链限制，无流量限制的图床，支持 HTTPS，速度不错。
 - [微博图床](http://weibo.com/minipublish)
 
 
@@ -66,11 +64,11 @@ Web：
 
 
 
-# 2. 七牛云图床使用
+# 二、七牛云图床使用
 
 关于七牛云的介绍：七牛是一个云存储服务商，注册并实名认证之后，你将免费享有 10GB 存储空间，每月 10GB 下载流量、100 万次 GET 请求、 10 万次 PUT/DELETE 请求。七牛的定位不是像百度云一样的网盘 ，也不是同坚果云一般的同步云 ，而是 CDN，让你在浏览网页的时候最快的接收到页面中的图片、音频等文件，所以非常适合个人、企业用户用来储存站点资源。对于个人博主来说，你可以把博客中的图片、音频、视频等媒体上传到七牛，在博客中引用；也可以将站点需要加载的 CSS、JS 等文件上传到七牛，以加速网站。
 
-## (1) 最原始上传
+## 1. 最原始上传
 
 ①到 [七牛云](https://www.qiniu.com/) 网站注册；
 
@@ -111,37 +109,38 @@ Web：
 
    官方有个「开发者工具」页面，提供一些工具进行上传，包括后面讲的 [qshell](https://developer.qiniu.com/sdk#official-tool )， 其中有个「QSunSync」的 Windows 版本图片同步上传客户端。
 
-## (2) 七牛云插件上传：简单
+## 2. 七牛云插件上传：简单
 
-- 浏览器插件 ~~[qiniu upload files](https://chrome.google.com/webstore/detail/qiniu-upload-files/emmfkgdgapbjphdolealbojmcmnphdcc)~~
-  > 七牛云插件，像使用桌面系统一样管理你的七牛云空间；支持拖拽上传，批量操作，文件处理等功能
-  >
-  > 如何操作：https://www.jianshu.com/p/44d818f781a7
+浏览器插件 ~~[qiniu upload files](https://chrome.google.com/webstore/detail/qiniu-upload-files/emmfkgdgapbjphdolealbojmcmnphdcc)~~
+> 七牛云插件，像使用桌面系统一样管理你的七牛云空间；支持拖拽上传，批量操作，文件处理等功能
+>
+> 如何操作：https://www.jianshu.com/p/44d818f781a7
 
-- 还可以利用在线「极简图床」工具，默认使用的为公共图床 sm.ms，但是也可以自定义的，自定义图床为七牛云图床，方法如下：
+还可以利用在线「极简图床」工具，默认使用的为公共图床 sm.ms，但是也可以自定义的，自定义图床为七牛云图床，方法如下：
 
-  > 在最前面有关七牛云的注册等等操作，前面已经讲了，不絮叨了，之后：
-  >
-  > 1. 在“个人面板”->“密钥管理”中查看 AccessKey/SecretKey；
-  >
-  > 2. 在储存空间的“空间概览”里，记住这里的“测试域名”；
-  >
-  > 3. 在「极简图床」上配置上刚才七牛储存的“空间名称”、“AccessKey”、“SecretKey”、“域名”后，保存。然后就可以上传到自己专属的七牛空间上了。
-  >
-  > “AccessKey”、“SecretKey”：在“个人面板”->“密钥管理”中查看AccessKey/SecretKey；
-  >
-  > “域名”：在储存空间的“空间概览”里可以看到。
-  >
+``` 
+在最前面有关七牛云的注册等等操作，前面已经讲了，不絮叨了，之后：
+
+1. 在“个人面板”->“密钥管理”中查看 AccessKey/SecretKey；
+2. 在储存空间的“空间概览”里，记住这里的“测试域名”；
+3. 在「极简图床」上配置上刚才七牛储存的“空间名称”、“AccessKey”、“SecretKey”、“域名”后，保存。然后就可以上传到自己专属的七牛空间上了。
+
+“AccessKey”、“SecretKey”：在“个人面板”->“密钥管理”中查看AccessKey/SecretKey；
+
+“域名”：在储存空间的“空间概览”里可以看到。
+```
 
 
-## (3) 使用 dropzone 上传：方便
+
+
+## 3. 使用 dropzone 上传：方便
 
 参考文章：
 
 - [使用Dropzone和七牛云存储来优化博客图床](http://yansu.org/2015/01/10/use-dropzone-and-qiniu-to-store-blog-images.html)
 - [Mac OS 图床运用优化模式 - Microdust](http://azeril.me/blog/How-To-Use-Image-Hosting-Quickly.html)
 
-## (4) 使用命令行上传
+## 4. 使用命令行上传
 
 **(1) qshell**
 
@@ -159,13 +158,13 @@ Web：
 
 GitHub 上也有教程：[gyk001/hexo-qiniu-sync](https://github.com/gyk001/hexo-qiniu-sync)
 
-## (5) 图片优化
+## 5. 图片优化
 
 图片搜身、水印处理、自动旋正解决照片莫名其妙发生旋转：[Hexo博客(19)使用七牛云图床 | masikkk](http://masikkk.com/article/hexo-19-qiniu-cloud/)
 
 
 
-# 3. 图片上传方案选择
+# 三、图片上传方案选择
 
 由于笔者用的 Windows，并且目前对图片上传的要求不大，只要能保证方便上传图片就行，目前有考虑以下几种方式。
 
@@ -177,11 +176,13 @@ GitHub 上也有教程：[gyk001/hexo-qiniu-sync](https://github.com/gyk001/hexo
 
 4. 第四种：使用上传工具 [MPic](http://mpic.lzhaofu.cn/) 。操作步骤：
 
-   > 1. 打开文件，启动程序请点击 MPic.exe，为方便启用可点击右键发送到‘桌面快捷方式’。
-   > 2. 使用前先设置七牛云存储账号，即输入七牛云空间名、AK、SK、域名，保存；
-   > 3. 然后就可以直接拖拽图片至客户端就能上传。
-   >
-   > 说明：下载的文件中包含的 CSkin.dll 文件，它是程序的核心文件，请与 MPic.exe 文件保持在同一目录中；需要查看历史上传记录请点击“我的上传”即可查看。
+   ```
+   1. 打开文件，启动程序请点击 MPic.exe，为方便启用可点击右键发送到‘桌面快捷方式’。
+   2. 使用前先设置七牛云存储账号，即输入七牛云空间名、AK、SK、域名，保存；
+   3. 然后就可以直接拖拽图片至客户端就能上传。
+   
+   说明：下载的文件中包含的 CSkin.dll 文件，它是程序的核心文件，请与 MPic.exe 文件保持在同一目录中；需要查看历史上传记录请点击“我的上传”即可查看。
+   ```
 
 5. 第五种：①使用官网 [开发者工具页面](https://developer.qiniu.com/sdk#official-tool) 的「QSunSync」同步上传 Windows 客户端，亲测了下，没有成功，还不知道哪的问题；②或者使用官网的开发者工具页面的 qshell 工具（基于七牛 API 服务的命令行工具），教程都在官网。
 
@@ -196,9 +197,9 @@ GitHub 上也有教程：[gyk001/hexo-qiniu-sync](https://github.com/gyk001/hexo
 
 
 
-# 4. 目前使用的方法  [荐]
+# 四、目前使用的方法  [荐]
 
-## (1) 腾讯云COS
+## 1. 腾讯云 COS
 
 一开始我使用的是七牛云，但七牛云后来改了规则，测试域名使用 30 天需要绑定自己备案的域名才能继续使用，我觉得麻烦，后来知道腾讯 COS 有免费存储，于是干脆选择了腾讯 COS 做图床。
 
@@ -213,7 +214,7 @@ GitHub 上也有教程：[gyk001/hexo-qiniu-sync](https://github.com/gyk001/hexo
 
 个人用户免费额度有效时间 6 个月。不过发现站内信给我的通知，我未受此次变更影响，也就是说我还是能享受 50G 的永久免费存储空间，突然有种「早就是优势」的赶脚。
 
-## (2) 上传工具-PicGo 
+## 2. 上传工具 PicGo 
 
 使用 PicGo 工具，配置自定义的快捷键，上传图片简直不能太方便了，墙裂推荐。
 
@@ -239,11 +240,7 @@ GitHub 地址：[Molunerfinn/PicGo](https://github.com/Molunerfinn/PicGo)，如�
 
 ---
 
-*update：2018-01-31*
-
-*update：2019-02-13 部分内容和文字表达有所修改；增加了「4. 目前使用的方法  [荐]」节内容。*
-
-*update：2019-02-17 增加了利用 PicGo 使用 GitHub 作为图床的内容*  
+*update：2019-07-21*
 
 
 

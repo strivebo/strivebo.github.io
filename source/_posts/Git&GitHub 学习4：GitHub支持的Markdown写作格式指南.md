@@ -1,41 +1,39 @@
 ---
-title: GitHub支持的Markdown之文档写作指南
+title: Git&GitHub 学习4：GitHub支持的Markdown写作格式指南
 date: 2019-02-13 20:01:08
 categories: 版本控制
 tags: [Blog,Markdown,GitHub] 
 ---
 
-## GitHub支持的Markdown之文档写作指南
+GitHub 的 MarkDown 语法在标准的 Markdown 语法基础上做了扩充，称之为 GitHub Flavored Markdown，简称 GFM，GFM 在 GitHub 上有广泛应用，除了 README 文件外，issues 和 wiki 均支持 Markdown语法。<!-- more -->
 
-GitHub 的 MarkDown 语法在标准的 Markdown 语法基础上做了扩充，称之为 GitHub Flavored Markdown，简称 GFM，GFM 在 GitHub 上有广泛应用，除了 README 文件外，issues 和wiki 均支持 Markdown语法。<!-- more -->
+## 一、Markdown最常用格式
 
-### 一、Markdown最常用格式
-
-#### 0. 标题
+### 0. 标题
 
 标题是每篇文章必备而且最常用的格式。在 Markdown 中，如果想将一段文字定义为标题，只需要在这段文字前面加上 #，再在 # 后加一个空格即可。还可增加二、三、四、五、六级标题，总共六级，只需要增加 # ，增加一个 # ，标题字号相应降低一级。如图：
 
 ![](http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/2-0-%E6%A0%87%E9%A2%98.png)
 
-#### 1. 列表（有序、无序列表）
+### 1. 列表（有序、无序列表）
 
 列表格式也很常用，它可以让你的文稿变得井井有条。在 Markdown 中，你只需要在文字前面加上 - 就可以了；如果你希望是有序列表，在文字前面加上 1. 2. 3. 即可。*注：-、1.和文字之间要保留一个字符的空格。*
 
 ![](http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/2-1-%E5%88%97%E8%A1%A8.png)
 
-#### 2. 引用
+### 2. 引用
 
 如果你需要在文稿中引用一段别处的句子，那么就要用到「引用」格式。在引用文字前加上 > 并与文字保留一个字符的空格，即可。
 
 ![](http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/2-2%E5%BC%95%E7%94%A8.png)
 
-#### 3. 粗体和斜体
+### 3. 粗体和斜体
 
 Markdown 的粗体和斜体也非常简单：用两个 * 包含一段文本就是粗体的语法；用一个 * 包含一段文本就是斜体的语法；用三个 * 包含一段文本就是粗体+斜体的语法。
 
 ![](http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/2-3-%E7%B2%97%E4%BD%93%E6%96%9C%E4%BD%93.png)
 
-#### 4. 链接与图片
+### 4. 链接与图片
 
 链接：在 Markdown 中，插入链接只需要使用 `[显示文本](链接地址)` 即可。
 
@@ -45,13 +43,13 @@ Markdown 的粗体和斜体也非常简单：用两个 * 包含一段文本就�
 
 ![](http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/2-4%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%9B%BE%E7%89%87.png)
 
-#### 5. 分割线
+### 5. 分割线
 
 分割线的语法只需要另起一行，连续输入三个星号 *** 即可分割两段文字内容。如图：
 
 ![](http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/2-5-%E5%88%86%E5%89%B2%E7%BA%BF.png)
 
-#### 6. 表格
+### 6. 表格
 
 当你需要在 Markdown 文稿中键入表格，示例如下：
 
@@ -59,15 +57,15 @@ Markdown 的粗体和斜体也非常简单：用两个 * 包含一段文本就�
 
 
 
-### 二、Markdown还可以做什么？
+## 二、Markdown还可以做什么？
 
-#### 1. 代码高亮
+### 1. 代码高亮
 
 ![](http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/1-1%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE.png)
 
 
 
-#### 2. 制作待办事项To-do List
+### 2. 制作待办事项To-do List
 
 待办事项和清单在日常工作、生活中经常被使用。在 Markdown 中，只需要在待办的事项文本或者清单文本前加上 - [ ]、- [x] 即可。
 
@@ -79,9 +77,9 @@ Markdown 的粗体和斜体也非常简单：用两个 * 包含一段文本就�
 
 
 
-#### 3. 高效绘制 流程图、序列图、甘特图、表格
+### 3. 高效绘制 流程图、序列图、甘特图、表格
 
-##### 流程图：
+#### 流程图：
 
 在 Markdown 中，一段流程图语法以 “\` 开头，以 “` 结尾。
 
@@ -108,11 +106,11 @@ Markdown 的粗体和斜体也非常简单：用两个 * 包含一段文本就�
 
 ![](http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/+++.png)
 
-##### 序列图：
+#### 序列图：
 
 ![](http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/%E5%BA%8F%E5%88%97%E5%9B%BE.png)
 
-##### 甘特图：
+#### 甘特图：
 
 我们在工作中用甘特图作计划进度表、项目进度表再合适不过了。与流程图一样，Markdown 中，甘特图的语法也是以 “\` 开头，以 “` 结尾。
 
@@ -120,23 +118,23 @@ Markdown 的粗体和斜体也非常简单：用两个 * 包含一段文本就�
 
 ![](http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/%E7%94%98%E7%89%B9%E5%9B%BE.png)
 
-##### 表格：
+#### 表格：
 
 ![](http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/1-3%E8%A1%A8%E6%A0%BC.png)
 
 
 
-#### 4. 书写数学公式（注：GitHub不支持）
+### 4. 书写数学公式（注：GitHub不支持）
 
 ![](http://note.youdao.com/iyoudao/wp-content/uploads/2016/09/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F.png)
 
 
 
-### 三、补充：GitHub支持的Markdown
+## 三、补充：GitHub支持的Markdown
 
 一、二节 Markdown 语法格式以及图片链接都是摘自有道云笔记官方的 Markdown 指南。大部分 Markdown 写作平台应该基本都能支持的上面的语法 ，部分不支持再参考下面的内容。
 
-#### 1. 目录索引
+### 1. 目录索引
 
 使用 `[TOC]`自动生成目录，即不支持如下格式生成目录：
 
@@ -176,7 +174,7 @@ Markdown 的粗体和斜体也非常简单：用两个 * 包含一段文本就�
 > 另外该项目还支持把 LaTex 转换为 GitHub 支持的形式，赞。
 
 
-#### 2. 返回顶部
+### 2. 返回顶部
 
 ①如返回到文章开头的标题：`GitHub支持的Markdown的语法使用指南`，直接使用 Markdown 方式：
 
@@ -205,7 +203,7 @@ Markdown 的粗体和斜体也非常简单：用两个 * 包含一段文本就�
 
 
 
-#### 3. 定义锚点实现页面随处跳转
+### 3. 定义锚点实现页面随处跳转
 
 锚点（英文名：anchor）：是网页制作中超级链接的一种，又叫命名锚记。命名锚记像一个迅速定位器一样是一种页面内的超级链接，运用相当普遍。
 
@@ -253,7 +251,7 @@ GitHub 是支持可以这样做的。这样话，假设想要在页面 B 处返�
 
 然后 A 处想要返回到 B 处来，形式类似。前面小节关于目录索引、返回顶部实质也是利用的锚记。
 
-#### 4. 代码折叠
+### 4. 代码折叠
 
 折腾效果，使用格式：
 
@@ -300,17 +298,17 @@ public class Hello{
 
 *注：`<details>`为 HTML5 标签，与`<summary>`配合使用可以为 details 定义标题。标题是可见的，用户点击标题时，会显示出 details。*
 
-#### 5. LaTex数学公式（GitHub不支持）
+### 5. LaTex数学公式（GitHub不支持）
 
 在前面有提到该项目：[CyC2018/GFM-Converter](https://github.com/CyC2018/GFM-Converter) 代码，可以支持把 LaTex 书写的数学公式转换为 GitHub 支持的形式。另外，推荐下这个软件：[Mathpix](https://mathpix.com/)，可以将方程式截图转为 LaTex 格式。
 
-#### 6. 文字高亮（GitHub不支持）
+### 6. 文字高亮（GitHub不支持）
 
 文字高亮显示，有道云笔记、Typora 支持，格式：`==需要高亮的文字==`。有道云笔记效果：
 
 ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190127205122.png)
 
-#### 7. 文字下划线（GitHub不支持）
+### 7. 文字下划线（GitHub不支持）
 
 ①为文字添加下划线，格式：`++需要下划线的文字++`，有道云笔记支持，Typora、GitHub 不支持。有道云笔记效果：
 
@@ -318,11 +316,11 @@ public class Hello{
 
 ②为文字添加下划线，格式：`<u>需要下划线的文字</u>`，有道云笔记、Typora 支持，GitHub 不支持。
 
-#### 8. 文字添加删除线
+### 8. 文字添加删除线
 
 为文字添加删除线，格式：`~~需要添加删除线的文字~~`。效果：~~需要添加删除线的文字~~。
 
-#### 9. GitHub支持的表情符号
+### 9. GitHub支持的表情符号
 
 每个表情的符号码，可以查询 GitHub 官方网页：<http://www.emoji-cheat-sheet.com>
 
@@ -335,8 +333,4 @@ public class Hello{
 - GitHub：[guodongxiaren/README](https://github.com/guodongxiaren/README#%E6%A8%AA%E7%BA%BF)
 - [【简明版】有道云笔记Markdown指南](http://note.youdao.com/iyoudao/?p=2411)
 - [【进阶版】有道云笔记Markdown指南](http://note.youdao.com/iyoudao/?p=2445)
-
-
-
-
 

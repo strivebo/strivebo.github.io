@@ -1,9 +1,11 @@
 ---
-title: 篇Ⅱ：NexT主题的优化定制修改指南
+title: 篇Ⅱ：NexT主题的配置和优化指南
 date: 2019-02-17 20:01:08
 categories: Blog
 tags: [NexT,Blog] 
 ---
+
+NexT 主题的配置和优化指南。<!-- more -->
 
 ## 写在前面
 
@@ -15,7 +17,7 @@ tags: [NexT,Blog]
 
 - 官网：[Themes | Hexo](https://hexo.io/themes/)
 - GitHub：[Themes · hexojs](https://github.com/hexojs/hexo/wiki/Themes )
-- 知乎：[有哪些好看的 Hexo 主题？](https://www.zhihu.com/question/24422335) <!-- more -->
+- 知乎：[有哪些好看的 Hexo 主题？](https://www.zhihu.com/question/24422335) 
 
 本人使用主题为 NexT v5.1.4。搭建过程各个软件和工具的版本信息如下：
 
