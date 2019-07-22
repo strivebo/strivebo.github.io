@@ -18,7 +18,7 @@ comments: false
 
 ### 联系我
 
-欢迎与我交流和学习，一起进步。企鹅号：857686499，也欢迎关注公号「一个程序员的随想」： 
+欢迎与我交流和学习，一起进步。企鹅：ODU3Njg2NDk5，也欢迎关注公号「一个程序员的随想」： 
 
 ![](./img/wechat-180x180.jpg)
 
@@ -28,7 +28,8 @@ comments: false
 - 爱读书，保持着阅读的习惯
 - 爱运动，享受酣畅淋漓的感觉，是健康的保障，也是释压的好方式
 - 爱音乐，喜欢听周杰伦，他陪伴了我的中学时代
-- 希望未来能在摄影、剪辑方面有进步，拍拍 Vlog，为生活添加色彩
+
+- 希望未来能在摄影、剪辑方面有进步，尝玩 Vlog，为生活添加色彩
 - ......
 
 
@@ -39,7 +40,7 @@ comments: false
 技术栈：
 
 - 前端：HTM、CSS、JavaScript、jQuery
-- 后端 ：Java、JSP、Servlet、Spring、Mybatis、Linux、Redis、Docker、版本控制(SVN/Git) 等
+- 后端 ：Java、JSP、Servlet、Spring、MyBatis、Linux、Redis、Docker、版本控制(SVN/Git) 等
 - 人工智能：Python、深度学习、计算机视觉
 
 社区/平台：
