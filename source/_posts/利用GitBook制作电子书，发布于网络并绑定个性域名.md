@@ -9,6 +9,8 @@ tags: [Blog,GitBook,GitHub]
 
 # 一、制作电子书
 
+## 0. GitBook介绍
+
 [GitBook](https://github.com/GitbookIO/gitbook) 是一个使用 GitHub/Git 和 Markdown 来制作电子书的命令行工具（Node.js 库）。另外，有一个网站 [http://gitbook.com](http://link.zhihu.com/?target=http%3A//gitbook.com) 可以帮助用户更好的使用 Gitbook，它是使用 GitBook 格式创建和托管图书的在线平台。它提供托管，协作功能和易于使用的编辑器。Gitbook 与 [http://gitbook.com](http://link.zhihu.com/?target=http%3A//gitbook.com) 的关系类似 Git 和 GitHub，一个是工具，另一个是基于工具创建的网站。
 
 > 注：GitBook 平台在今年的 4 月 9 日发布了新的版本 v2。新的版本官网已经变成 [`www.gitbook.com`](https://www.gitbook.com/?t=11) （旧的地址为 [`legacy.gitbook.com`](https://legacy.gitbook.com/) ）。新旧版本有很多的不一样，网上很多资料都是针对旧版。 比如新版不再支持把每本书作为一个 `Git Repository`  来进行版本管理。更多 v2 的重大改变可以看 [这里](https://docs.gitbook.com/v2-changes/important-differences)。
@@ -240,7 +242,7 @@ Gitbook 默认带有 5 个插件：
 
 以上所有的步骤都是在本地进行的，如果需要实现电子书的版本管理，或者把电子书发布到网络上，还可以通过 Git 命令将本地的项目托管到 GitBook.com 上。
 
-首先进入 [GitBook.com](https://www.gitbook.com/) 注册一个账号，选择“Create an organization”创建一个 Organization。另外，从官网可以看到：
+首先进入 [GitBook.com](https://www.gitbook.com/) 注册一个账号(本人使用的 Google 账号登录)，选择“Create an organization”创建一个 Organization。另外，从官网可以看到：
 
 ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190219145307.png)
 
@@ -273,11 +275,11 @@ Gitbook 默认带有 5 个插件：
 
 # 三、绑定域名
 
-虽然 GitBook 上的所有的图书都可以通过地址 `http://{OrganizationUr}.gitbooks.io/{Gitbook Ur}/` 访问， 但我们有时候还是希望将图书绑定我们自己的域名上。
+虽然 GitBook 上的所有的图书都可以通过地址 `http://{Organization}.gitbooks.io/{Gitbookn}/` 访问， 但我们有时候还是希望将图书绑定我们自己的域名上。
 
 如何做呢？以腾讯云操作如下：
 
-第一步，GitBook 的网站上进入你的电子书的，打开 “Domains” –> “Custom Domain” 设置你的个性域名，比如我设置了一个二级域名 `javaee.strivebo.com`；
+第一步，GitBook 的网站上进入你的电子书的，打开 “Domains” –> “Custom Domain” 设置你的个性域名，比如我设置了一个二级域名为：`javaee.strivebo.com`；
 
 第二步，进入腾讯云 [云解析](https://console.qcloud.com/cns/domains)，如下操作，选择一级域名，点击「分配其子域名至项目」：
 
@@ -294,5 +296,28 @@ Gitbook 默认带有 5 个插件：
 第四步，就是等待域名解析记录在全球范围内生效，然后就可以地址栏输入 `javaee.strivebo.com` 阅读图书了。等待的时候不是固定的，如果你等待了很久还是不能访问，不妨翻墙试一下。
 
 > 注意：在添加 CNAME 解析的时候记录值，记得后面 `.io` 还有一个 `.`，如果你不加，这里在添加完解析会默认给加上。
+
+===========================
+
+Update 2019-7-26 这里更新下内容：
+
+在第三步，设置解析的域名，官方目前给出的是，解析到：
+
+```
+Add this CNAME record to your domain by visiting your DNS provider or registrar.
+CNAME  hosting.gitbook.com
+```
+
+即解析到 `hosting.gitbook.com`。
+
+如果你新建了多个组织用来制作多本免费的在线电子书，并且都各自绑定域名，注意，域名解析那都是设置为解析到这个。
+
+另外有一点注意，域名解析那里设置的二级域名，**在 GitBook 网站的 Custom Domain 那也是要设置同样的二级域名，**否则在检查 DNS 解析会提示该错误：
+
+``` 
+The domain is missing a CNAME record pointing to hosting.gitbook.com or the changes haven't propagated yet.
+```
+
+关于域名解析，可以使用 nslookup 命令看看（windows 下可用）。简单使用，输入：nslookup，然后输入网址。
 
 参考：[云解析 子域名分项目管理 - 操作指南 - 文档平台 - 腾讯云](https://cloud.tencent.com/document/product/302/7800)
