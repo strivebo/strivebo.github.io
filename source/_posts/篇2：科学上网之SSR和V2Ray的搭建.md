@@ -11,7 +11,7 @@ tags: [科学上网]
 
 可以先看我写的一篇总结：【篇1：科学上网总结】，该文有记录如何搭建影梭，可以当做先了解下相关知识也可以。
 
-## 1. 第一步：安装脚本
+## Step01：安装脚本
 
 ### 安装脚本1
 
@@ -56,14 +56,14 @@ $ wget --no-check-certificate https://freed.ga/github/shadowsocksR.sh; bash shad
 
 一键更换内核脚本（Vultr 需先执行此脚本）
 
-``` xml
+``` 
 wget -N --no-check-certificate https://freed.ga/kernel/ruisu.sh &&
 bash ruisu.sh
 ```
 
 脚本安装需要 1-3 分钟，耐心等待服务器重启，服务器重启之后，重新连接继续安装就行了。
 
-``` xml
+``` 
 wget -N --no-check-certificate https://github.com/91yun/serverspeeder/raw/master/serverspeeder.sh && bash serverspeeder.sh
 
 # 下面这个是备用脚本：
@@ -141,11 +141,11 @@ BBR加速脚本：[VPS服务器Google BBR一键安装脚本](https://ssr.tools/1
 
 
 
-## 2. 第二步：谷歌BBR加速
+## Step02：谷歌BBR加速
 
 ### BBR加速脚本1
 
-``` xml
+``` 
 yum -y install wget
 
 wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
@@ -175,7 +175,7 @@ chmod +x bbr.sh
 >
 > 加速脚本安装，先运行如下命令：
 >
-> ``` xml
+> ``` 
 > wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
 > ```
 > 使用脚本后会出现如下选项：
@@ -194,7 +194,7 @@ chmod +x bbr.sh
 
 
 
-## 3. 第二步：或安装锐速加速
+## Step02：或安装锐速加速
 
 1、安装锐速需降级系统内核，而安装 Google BBR 则需升级系统内核，故两者不能同时安装。
 
@@ -202,7 +202,7 @@ chmod +x bbr.sh
 
 执行下面命令：
 
-``` xml
+``` 
 uname -r
 ```
 
@@ -230,13 +230,13 @@ uname -r
 
 1、首先更换内核，执行下面命令：
 
-``` xml
+``` 
 yum install net-tools -y && wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/0oVicero0/serverSpeeder_Install/master/appex.sh && bash appex.sh install
 ```
 
 等待内核更换完毕后系统会自动重启并断开连接。系统重启后，会断开连接。等待 1~2 分钟服务器即可重启完毕，我们重新连接服务器再次连接服务器，输入下面安装命令：
 
-``` xml
+``` 
 yum install net-tools -y && wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/0oVicero0/serverSpeeder_Install/master/appex.sh && bash appex.sh install
 ```
 
@@ -252,7 +252,7 @@ yum install net-tools -y && wget --no-check-certificate -O appex.sh https://raw.
 
 若你的系统选择是 CentOS6 x64，不需要更换内核，直接执行下列安装命令
 
-``` xml
+``` 
 wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/0oVicero0/serverSpeeder_Install/master/appex.sh && bash appex.sh install '2.6.32-642.el6.x86_64'
 ```
 
@@ -298,11 +298,9 @@ Shadowrocket 下载（需切换到美区下载）：<https://apps.apple.com/us/a
 也可以考虑下 Google Cloud，有信用卡可以薅下该羊毛：
 
 - [谷歌云免费搭建一年SSR服务器]([https://freeleox.github.io/2018/11/02/Google%20Cloud%20SSR/](https://freeleox.github.io/2018/11/02/Google Cloud SSR/))
-
 - [10分钟教你用 Google Cloud Platform 搭建自己的VPN](https://elephantnose.github.io/2018/09/24/10%E5%88%86%E9%92%9F%E6%95%99%E4%BD%A0%E7%94%A8%20Google%20Cloud%20Platform%20%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84VPN/)
-
 - [Google Cloud Platform免费申请&一键搭建SSR & BBR加速教程](https://www.wmsoho.com/google-cloud-platform-ssr-bbr-tutorial/)
-
+  
   > Google 云服务平台对新用户赠送 300 美元，可以免费使用 1 年。并且到期后如果不打算续费，也不会额外收取费用 （像亚马逊AWS就直接扣你费用）。
   >
   > 如果还想继续用，直接新注册个账号，免费 (现在需要新卡了)。用来搭 SS 的话, 最低配置的机型 $5/月, 出口大陆流量 1T 以内为 0.23$/1G，算下来每个月可用 80 多 G 的流量，足够用了, 当然你还可以顺便搭个网站之类的。
@@ -313,7 +311,14 @@ Shadowrocket 下载（需切换到美区下载）：<https://apps.apple.com/us/a
 
 ## 补充：关于DigitalOcean VPS的说明
 
-本人目前一直在用 DigitalOcean，其流量和计费方式为：
+本人目前一直在用 DigitalOcean。如果你也打算使用这家 VPS，可以考虑使用我这个分[链接](https://m.do.co/c/632db6a2a3e4)注册。下面是官网给出的：
+
+```
+Give $50, Get $25
+Everyone you refer gets $50 in credit over 30 days. Once they’ve spent $25 with us, you'll get $25. There is no limit to the amount of credit you can earn through referrals.
+```
+
+下面是关于 DigitalOcean 流量和计费方式的问题：
 
 **（1）流量**
 
@@ -378,7 +383,7 @@ Platform Support Specialist
 
 直接给了我账户 10$，DigitalOcean 真是牛逼。哈哈，总算可以删除了。
 
-注：这里多说下我的「经验教训」，如果你是第一次使用，可以使用通过链接（这个网上搜下，我搜到的是这个：<https://try.digitalocean.com/virtual-private-servers/>）注册可以获得对新用户的 100 美刀，但有效期时间 60 天，然后你付款 5 美刀定金就可以使用了 digitalocean 了，但是这个时候如果你还有 digitalocean 的优惠码就不能使用了。所以如果你有优惠码的话，就不要通过那个链接注册，直接进入官网注册账户就好，这样才可以使用优惠码。
+注：这里多说下我的「经验教训」，如果你是第一次使用，可以使用通过链接（这个网上搜下，我搜到的是这个：<https://try.digitalocean.com/virtual-private-servers/>）注册可以获得对新用户的 100 美刀，但有效期时间 60 天，然后你付款 5 美刀定金就可以使用了 digitalocean 了，但是这个时候如果你要是还有 digitalocean 的优惠码，就不能使用了。所以如果你有优惠码的话，就不要通过那个链接注册，直接进入官网注册账户就好，这样才可以使用优惠码。
 
 
 
@@ -440,4 +445,4 @@ V2Ray Mac客户端
 
 ---
 
-*update：2019-04-12 内容有修改*
+*update：2019-04-12*
