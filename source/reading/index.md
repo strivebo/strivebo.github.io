@@ -9,7 +9,7 @@ comments: true
 
 <i class="fa fa-book" style="font-size:18px;color:#FF8247;"></i> **学习笔记：** 
 
-（1）自制《Java后端升级打怪》学习笔记系列，不断更新：[在线阅读](https://javaee.strivebo.com/)
+（1）自制《Java后端打怪升级》学习笔记系列，不断更新：[在线阅读](https://javaee.strivebo.com/)
 
 
 

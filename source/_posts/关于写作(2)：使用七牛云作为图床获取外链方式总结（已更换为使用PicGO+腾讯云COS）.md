@@ -1,5 +1,5 @@
 ---
-title: 篇Ⅲ：使用七牛云作为图床获取外链方式总结（已更换为使用PicGO+腾讯云COS）
+title: 关于写作(2)：使用七牛云作为图床获取外链方式总结（已更换为使用PicGO+腾讯云COS）
 date: 2019-02-13 20:01:08
 categories: Blog
 tags: [Blog,PicGo,腾讯云] 
