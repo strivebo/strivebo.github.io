@@ -111,7 +111,7 @@
 <meta property="og:image" content="https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190228153320.png">
 <meta property="og:image" content="https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190112140010.png">
 <meta property="og:image" content="https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190124153425.png">
-<meta property="og:updated_time" content="2019-09-23T03:26:18.271Z">
+<meta property="og:updated_time" content="2019-09-23T11:49:16.953Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="篇2：科学上网之SSR和V2Ray的搭建">
 <meta name="twitter:description" content="该文主要记录 Shadowsocks/ShadowsocksR 和 V2Ray 的搭建过程要点。">
@@ -485,7 +485,7 @@
                   <span class="post-meta-item-text">Words: </span>
                 
                 <span title="Words">
-                  5,261 字
+                  5,286 字
                 </span>
               
 
@@ -525,14 +525,14 @@
         <p>该文主要记录 Shadowsocks/ShadowsocksR 和 V2Ray 的搭建过程要点。<a id="more"></a></p>
 <h1 id="一、SS-或-SSR-的搭建"><a href="#一、SS-或-SSR-的搭建" class="headerlink" title="一、SS 或 SSR 的搭建"></a>一、SS 或 SSR 的搭建</h1><p>可以先看我写的一篇总结：【篇1：科学上网总结】，该文有记录如何搭建影梭，可以当做先了解下相关知识也可以。</p>
 <h2 id="Step01：安装脚本"><a href="#Step01：安装脚本" class="headerlink" title="Step01：安装脚本"></a>Step01：安装脚本</h2><h3 id="安装脚本1"><a href="#安装脚本1" class="headerlink" title="安装脚本1"></a>安装脚本1</h3><p>参考：<a href="https://github.com/XX-net/XX-Net/issues/6506" target="_blank" rel="noopener">自己搭建ss/ssr服务器教程（适合初学者，最低2.5美元/月）</a></p>
-<p>注：以下操作都是在 CentOS 系统下进行的。当然以防万一，建议大家选择 <code>CentOS 6</code>，看网上有人说 <code>CentOS 7</code> 默认的防火墙可能会干扰 SSR 的正常连接。</p>
+<p>注：以下操作都是在 CentOS 系统下进行的。当然以防万一，建议大家选择 <code>CentOS 6</code>，看网上有人说 <code>CentOS 7</code> 默认的防火墙可能会干扰 SSR 的正常连接。【注：如果使用的 Ubuntu 系统也是一样的，不同的可能也就是安装存在安装 wget 的不同，Ubuntu 下使用的 apt-get 命令】</p>
 <p>购买好了 VPS，则可以开始搭建了。首先我们需要远程连接上你的 VPS，这里可以使用 Putty、XShell 等客户端工具，也可以使用 Git Bash 下的 ssh 命令（但记得要先配置 SSH，这个就不多赘述了）。</p>
 <p>命令：<code>ssh -p xx user@ip</code>，xx 为 端口号    user 为用户名   ip 为要登陆的 ip。</p>
 <p>使用 Git Bash 连接 VPS 的命令：<code>ssh -p 22 root@ip</code>或<code>ssh root@ip</code>，其中“ip”替换成 VPS 的 ip，按回车键，然后复制粘贴密码，按回车键即可登录。粘贴密码时有可能不显示密码，但不影响。</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">yum -y install wget</span><br><span class="line"></span><br><span class="line">wget -N --no-check-certificate https://softs.fun/Bash/ssr.sh &amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh</span><br><span class="line"></span><br><span class="line"># 下面是备用脚本：</span><br><span class="line"></span><br><span class="line">yum -y install wget</span><br><span class="line"></span><br><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh &amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">yum -y install wget</span><br><span class="line"></span><br><span class="line">wget -N --no-check-certificate https://softs.fun/Bash/ssr.sh &amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh</span><br><span class="line"></span><br><span class="line"># 下面是备用脚本：</span><br><span class="line"></span><br><span class="line">yum -y install wget</span><br><span class="line"></span><br><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh &amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh</span><br></pre></td></tr></table></figure>
 <p>要是想要查看或重新设置输入：<code>bash ssr.sh</code></p>
 <blockquote>
-<p><em>PS：亲测，第一个脚本文件已经不可用了，第二个还能使用，以防下次第二个也不正常使用，于是我下载下来了，以及下面的 BBR 加速脚本也给下载了，放在 tools 文件夹下的【脚本备份】目录下。</em> </p>
+<p>PS：亲测，第一个脚本文件已经不可用了，第二个还能使用，以防下次第二个也不正常使用，于是我下载下来了，以及下文提到的 BBR 加速脚本也给下载了。</p>
 </blockquote>
 <h3 id="或者安装脚本2"><a href="#或者安装脚本2" class="headerlink" title="或者安装脚本2"></a>或者安装脚本2</h3><p>参考：<a href="https://segmentfault.com/a/1190000015699248" target="_blank" rel="noopener">Vultr最简单的梯子搭建SS教程，只需30分钟，畅游互联网世界</a></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ yum install wget -y</span><br><span class="line">$ wget --no-check-certificate https://freed.ga/github/shadowsocksR.sh; bash shadowsocksR.sh</span><br></pre></td></tr></table></figure>
@@ -575,7 +575,7 @@
 <li><a href="https://github.com/cg3s/forum/wiki/%E5%BD%93%E5%89%8D%E7%BD%91%E7%BB%9C%E7%8E%AF%E5%A2%83%EF%BC%8CSS%E5%8F%8ASSR%E8%AF%A5%E6%80%8E%E4%B9%88%E9%85%8D%E7%BD%AE%E5%8D%8F%E8%AE%AE%E6%B7%B7%E6%B7%86%E6%89%8D%E6%98%AF%E6%9C%80%E4%BD%B3%EF%BC%9F" target="_blank" rel="noopener">当前网络环境，SS及SSR该怎么配置协议混淆才是最佳？ · cg3s/forum Wiki</a></li>
 <li><a href="https://my.oschina.net/niithub/blog/1812936" target="_blank" rel="noopener">ShadowsocksR 推荐协议混淆设置 - 开源中国</a></li>
 </ul>
-<h2 id="Step02：谷歌BBR加速"><a href="#Step02：谷歌BBR加速" class="headerlink" title="Step02：谷歌BBR加速"></a>Step02：谷歌BBR加速</h2><h3 id="BBR加速脚本1"><a href="#BBR加速脚本1" class="headerlink" title="BBR加速脚本1"></a>BBR加速脚本1</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">yum -y install wget</span><br><span class="line"></span><br><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh</span><br><span class="line"></span><br><span class="line">chmod +x bbr.sh</span><br><span class="line"></span><br><span class="line">./bbr.sh</span><br></pre></td></tr></table></figure>
+<h2 id="Step02：谷歌BBR加速"><a href="#Step02：谷歌BBR加速" class="headerlink" title="Step02：谷歌BBR加速"></a>Step02：谷歌BBR加速</h2><h3 id="BBR加速脚本1"><a href="#BBR加速脚本1" class="headerlink" title="BBR加速脚本1"></a>BBR加速脚本1</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum -y install wget</span><br><span class="line"></span><br><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</span><br></pre></td></tr></table></figure>
 <p>把上面整个代码复制后粘贴进去，不动的时候按回车，然后耐心等待，最后重启 VPS 服务器即可。重启命令：<code>reboot</code></p>
 <p><em>关于什么是 BBR 加速，看这篇文章了解下：<a href="https://www.moidea.info/archives/445.html" target="_blank" rel="noopener">SSR开启Google的BBR内核脚本加速TCP（附BBR一键安装脚本）</a></em></p>
 <blockquote>
@@ -588,10 +588,13 @@
 <blockquote>
 <p>支持系统：<code>Centos 6+</code>/<code>Debian 8+</code>/<code>Ubuntu 14+</code></p>
 <p>加速脚本安装，先运行如下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; wget -N --no-check-certificate &quot;https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh&quot; &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate &quot;https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh&quot; &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>&gt;</p>
+<blockquote>
 <p>使用脚本后会出现如下选项：</p>
 <p><img src="https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190217004302.png" alt></p>
-<p>根据自己需求操作，重启后再使用<code>./tcp.sh</code>命令接着操作 —&gt; 按 3或4 使用 BBR 加速 —&gt; 基于前面介绍的方法判断是否开启 BBR 加速，比如输入命令：<code>lsmod|grep bbr</code>，如果出现 tcp_bbr 字样表示bbr已安装并启动成功。</p>
+<p>根据自己需求操作，重启后再使用<code>./tcp.sh</code>命令接着操作 —&gt; 按 4 或 5 使用 BBR 加速 —&gt; 基于前面介绍的方法判断是否开启 BBR 加速，比如输入命令：<code>lsmod|grep bbr</code>，如果出现 tcp_bbr 字样表示bbr已安装并启动成功。</p>
 <p>关于什么是「魔改版 BBR」解释下：<a href="https://www.moerats.com/archives/190/" target="_blank" rel="noopener">魔改Google BBR一键安装脚本，比正常版BBR强</a>  —&gt; 本方法出自于<code>hostloc</code>论坛大佬<code>Yankee</code>发布的<code>BBR</code>魔改，并由<code>Vicer</code>博主制作的一键包。魔改基本就是修改<code>BBR</code>源码，调整参数，使其更强劲。</p>
 <p>PS：如果在删除内核环节出现这样一张图</p>
 <p><img src="https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190217004340.png" alt></p>
