@@ -1,0 +1,1799 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+<!-- 添加DaoVoice-->
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "a597e548"
+    });
+  daovoice('update');
+  </script>
+
+<!-- end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next2.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon2-32x32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon2-16x16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo2.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="GitHub,Git,版本控制,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Jaybo's Blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="GitHub 使用指南。">
+<meta name="keywords" content="GitHub,Git,版本控制">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git&amp;GitHub 学习2：GitHub使用">
+<meta property="og:url" content="http://yoursite.com/2019/02/13/Git&GitHub 学习2：GitHub使用/index.html">
+<meta property="og:site_name" content="Jaybo&#39;s Blog">
+<meta property="og:description" content="GitHub 使用指南。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190127214003.png">
+<meta property="og:image" content="https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190127214816.png">
+<meta property="og:image" content="https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190303114615.png">
+<meta property="og:image" content="https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190303115918.png">
+<meta property="og:image" content="https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190309121245.png">
+<meta property="og:image" content="https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190127215817.png">
+<meta property="og:image" content="https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190131161941.png">
+<meta property="og:updated_time" content="2019-09-20T10:45:01.470Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git&amp;GitHub 学习2：GitHub使用">
+<meta name="twitter:description" content="GitHub 使用指南。">
+<meta name="twitter:image" content="https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190127214003.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"copyright":true,"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/02/13/Git&GitHub 学习2：GitHub使用/">
+
+
+
+
+
+<!-- 网页加载条 -->
+<!--<script src="https://neveryu.github.io/js/src/pace.min.js"></script>-->
+
+
+  <title>Git&GitHub 学习2：GitHub使用 | Jaybo's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?bdca14b99b0b7f832576340bab4558d8";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+	<!--在右上角或者左上角实现fork me on github-->
+	<!-- 这个为右上角，蓝色 -->
+    <a href="https://github.com/strivebo/strivebo.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+	
+	<header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jaybo's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">斜杠青年</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-阅读">
+          <a href="/reading" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
+            
+            阅读
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-生活">
+          <a href="/life" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-life-ring"></i> <br>
+            
+            生活
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-留言">
+          <a href="/message" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-comments"></i> <br>
+            
+            留言
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-简历">
+          <a href="http://resume.strivebo.com/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-file"></i> <br>
+            
+            简历
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/13/Git&GitHub 学习2：GitHub使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jaybo">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jaybo's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Git&GitHub 学习2：GitHub使用</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-13T21:08:54+08:00">
+                2019-02-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/版本控制/" itemprop="url" rel="index">
+                    <span itemprop="name">版本控制</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+				
+                  <i class="fa fa-comment-o"></i>
+                </span>
+				<span class="post-meta-item-text">Comments：</span>
+                <a href="/2019/02/13/Git&GitHub 学习2：GitHub使用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/13/Git&GitHub 学习2：GitHub使用/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/02/13/Git&GitHub 学习2：GitHub使用/" class="leancloud_visitors" data-flag-title="Git&GitHub 学习2：GitHub使用">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words: </span>
+                
+                <span title="Words">
+                  5,812 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time≈ </span>
+                
+                <span title="Reading time">
+                  23 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>GitHub 使用指南。<a id="more"></a></p>
+<h1 id="一、GitHub-使用技巧"><a href="#一、GitHub-使用技巧" class="headerlink" title="一、GitHub 使用技巧"></a>一、GitHub 使用技巧</h1><h2 id="1-突破GitHub单个大文件上传限制"><a href="#1-突破GitHub单个大文件上传限制" class="headerlink" title="1. 突破GitHub单个大文件上传限制"></a>1. 突破GitHub单个大文件上传限制</h2><p>GitHub 上新建的仓库容量大小限制在 1G，单个文件不能超过 100M，有 50M 的文件，就会警告了。 可通过以下命令查找超过 100M 的文件：<code>find ./ -type f -size +102400k</code>。 想要突破 GitHub 的限制，支持单个文件超出 100M，可以使用  <a href="https://github.com/git-lfs/git-lfs" target="_blank" rel="noopener">Git LFS</a>。 </p>
+<p>参考：<a href="https://blog.csdn.net/tyro_java/article/details/53440666" target="_blank" rel="noopener">突破github的100M单个大文件上传限制 </a></p>
+<h2 id="2-Git只Clone仓库指定文件或文件夹"><a href="#2-Git只Clone仓库指定文件或文件夹" class="headerlink" title="2. Git只Clone仓库指定文件或文件夹"></a>2. Git只Clone仓库指定文件或文件夹</h2><p>步骤总结如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git init <span class="tag">&lt;<span class="name">repo</span>&gt;</span> 	#新建仓库并初始化</span><br><span class="line">cd <span class="tag">&lt;<span class="name">repo</span>&gt;</span> 	#切换到该仓库目录</span><br><span class="line">git remote add origin <span class="tag">&lt;<span class="name">url</span>&gt;</span>		#拉取remote的all objects信息，url为仓库地址</span><br><span class="line">git config core.sparsecheckout true		#设置允许克隆子目录，即开启sparse clone</span><br><span class="line">echo "参考论*" &gt;&gt; .git/info/sparse-checkout	#设置需要pull的目录，*表示所有，!表示匹配相反的</span><br><span class="line">git pull --depth=1 origin master	#将origin端指定目录下的文件pull到本地</span><br></pre></td></tr></table></figure>
+<p>通过本人亲自实践，有几点说的：</p>
+<ol>
+<li><p>像这步命令<code>echo &quot;参考论&quot; &gt;&gt; .git/info/sparse-checkouth</code>会在<code>.git/info/</code>目录下生成<code>sparse-checkout</code>无后缀文件，打开看到内容可以看到设置为了<code>参考论</code>，即会下载匹配<code>参考论</code>的目录下所有文件。也可以修改为别的，比如修改诸如为<code>参考论文/files/101</code>，匹配<code>参考论文/files/101</code>文件或文件夹？。</p>
+</li>
+<li><p>通过实践，发现其实不管如何设置下载指定的文件或文件夹，其实它都是有下载整个仓库容量大小，正如知乎<a href="https://www.zhihu.com/question/21114773/answer/34943423" target="_blank" rel="noopener">宫玖的回答 - 知乎</a>，@依云指出：</p>
+<blockquote>
+<p>你一定没有亲自去尝试这个功能。「checkout」!=「clone/fetch」。实际上整个仓库还是会全部拖回本地，只是检出的时候不检出别的目录而已。</p>
+</blockquote>
+</li>
+<li><p><code>git pull --depth=1 origin master</code> ：depth 用于指定克隆深度，为 1 即表示只克隆最近一次 commit，可以不加，否则可能出现问题。补充： <a href="https://mozillazg.com/2016/01/git-revert-depth-1.html" target="_blank" rel="noopener">git clone 时使用了 –depth 后，如何再重新拉取全部的历史</a>。</p>
+</li>
+</ol>
+<p>PS：后来发现，其实直接打开想要下载的文件，在右上角可以直接鼠标右键点击<code>Raw</code>选择链接另存为即可下载。或是使用浏览器插件【<a href="https://chrome.google.com/webstore/detail/gitzip-for-github/ffabmkklhbepgcgfonabamgnfafbdlkn" target="_blank" rel="noopener">GitZip for github</a> 】可以非常方便下载，推荐。</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://blog.csdn.net/qq_36560161/article/details/78260532" target="_blank" rel="noopener">git clone克隆或下载一个仓库单个文件夹</a></li>
+<li><a href="http://www.cnblogs.com/juking/p/7223669.html" target="_blank" rel="noopener">git只clone仓库中指定子目录和指定文件的实现</a></li>
+</ul>
+<h2 id="3-利用GitHub进行多人协作开发"><a href="#3-利用GitHub进行多人协作开发" class="headerlink" title="3. 利用GitHub进行多人协作开发"></a>3. 利用GitHub进行多人协作开发</h2><h3 id="1-开发并且提交代码"><a href="#1-开发并且提交代码" class="headerlink" title="(1) 开发并且提交代码"></a>(1) 开发并且提交代码</h3><p>首先要从 GitHub 上 clone 自己仓库代码到本地，你需要执行如下命令：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 如果没有配置ssh，可以 git clone https://github.com/strivebo/git-practice.git</span><br><span class="line">git clone git@github.com:strivebo/git-practice.git</span><br></pre></td></tr></table></figure>
+<p>然后代码下载到本地了，修改代码，然后可以提交代码，命令如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .	# 表示提交所有改动，指定提交某个文件的改动，则可 git add hello.txt</span><br><span class="line">git commit  -m '修改原因，相关说明信息'</span><br></pre></td></tr></table></figure>
+<p>执行<code>git commit</code>之后，只是提交到了本机的仓库，而不是 GitHub 上你账号的仓库。你需要执行 push 命令，把 commit 提交到服务器。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># git push #直接到远程默认仓库，或者下面这个：</span><br><span class="line">git push orgin master #push到名为orgin的远程仓库的指定分支master</span><br></pre></td></tr></table></figure>
+<p>这样就完成了修改远程仓库代码了。</p>
+<h3 id="2-多人协作开发"><a href="#2-多人协作开发" class="headerlink" title="(2) 多人协作开发"></a>(2) 多人协作开发</h3><p>Q：假如想要进行多人协作开发。比如要对 xiaoming 的名为 git-test 的仓库贡献自己写的代码，比如说添加新功能，怎么操作呢？</p>
+<blockquote>
+<p>A：首先你需要 fork 一份 xiaoming 的 git-test 仓库到自己 GitHub 仓库，这个时候这个仓库就是你的了，再 clone 到本地磁盘，然后按上小节流程操作就可以完成对自己 fork 来的远程 git-test 仓库的代码修改工作。</p>
+<p>然后可以发起 pull request 给 xiaoming 请求合并代码就行，随即 xiaoming 本人就会看到你写的代码，如果他觉得不错，没问题，他就可以进行合并了。（关于如何发起 pull request，请点击本小节参考资料查阅，有截图~）</p>
+</blockquote>
+<p>但这里的合作开发会有一个问题，如何与 xiaoming 的仓库代码保持同步？</p>
+<p>因为在自己做开发的过程中，难免会遇到“Fork”的项目已经有了新的更新，这时当然是希望自己仓库中的代码也能同步进行更新。可是，你本地仓库所连接的远程仓库的是你自己的 GitHub 仓库，而不是原作者的仓库。 <strong>解决方法其实很简单，为你的本地仓库再添加一个远程仓库源。</strong> 步骤如下：</p>
+<p>①先查看当前项目所连接的远程仓库：<code>git remote -v</code>，一般情况可以看到目前连接了自己的远程仓库，截图我就略了；</p>
+<p>②然后添加源作者 xiaoming 的远程仓库连接：<code>git remote add upstream git@github.com:xiaoming/git-test.git</code></p>
+<p>这个命令什么意思呢？就是对本地仓库再关联一个远程连接，名称为 upstream，地址为<code>git@github.com:xiaoming/test.git</code>（如果要取消该关联，使用这个命令：<code>git remote rm upstream</code>）</p>
+<p>③</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">（1）从原仓库获取最新版本到本地</span><br><span class="line">git fetch upstream master</span><br><span class="line"></span><br><span class="line">（2）保证当前位于 master 分支上</span><br><span class="line">git checkout master</span><br><span class="line"></span><br><span class="line">（3）将最新版本整合到本地 master 分支上</span><br><span class="line">git merge upstream/master</span><br><span class="line"></span><br><span class="line">（4）将更新发送到自己的 GitHub 仓库里</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<p>或者①②③步可以用： <code>git pull upstream master</code> 这条命令替代，不过这样不太安全，因为你 fetch（获取）之后可以通过：<code>git log --oneline --graph --decorate --all</code>来查看更新的情况，再决定是否 merge（整合）到一起。</p>
+<p><img src="https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190127214003.png" alt></p>
+<p>如上操作完毕，这样自己 fork 过来的仓库代码就和原作者仓库代码保证一致了。</p>
+<p>也可参考该文：<a href="https://blog.csdn.net/qq1332479771/article/details/56087333" target="_blank" rel="noopener">github上fork了别人的项目后，再同步更新别人的提交</a>，该文第二种方法即上面讲的方式，命令如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git remote -v </span><br><span class="line">git remote add upstream git@github.com:xxx/xxx.git</span><br><span class="line">git fetch upstream</span><br><span class="line">git merge upstream/master</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<p>参考资料：</p>
+<ul>
+<li><a href="https://www.jianshu.com/p/8c69d1021d98" target="_blank" rel="noopener">如何利用 Git 与 GitHub 进行多人协作开发</a></li>
+<li><a href="https://gist.github.com/suziewong/4378619#gistcomment-1873334" target="_blank" rel="noopener">github的多人协作</a></li>
+</ul>
+<h2 id="4-同一台电脑配置多个Git账号"><a href="#4-同一台电脑配置多个Git账号" class="headerlink" title="4. 同一台电脑配置多个Git账号"></a>4. 同一台电脑配置多个Git账号</h2><p>在日常使用 GitHub 作为仓库使用的时候，有时可能会遇到这样的一些情况：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. 有两个 github 账号，一台电脑怎么同时连接这两个账号进行维护呢？</span><br><span class="line">2. 自己用一个 github 账号，平时用来更新自己的一些资料；公司使用的 gitlab（也是 git 的衍生产品）</span><br></pre></td></tr></table></figure>
+<p>SSH Key 的配置：</p>
+<ol>
+<li><p><code>Windows</code> 下打开 <code>Git Bash</code>，创建 <code>SSH Key</code>，按提示输入密码，可以不填密码一路回车</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C "注释" 	#如：ssh-keygen -t rsa -C “123456@qq.com”</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成另外一个账号新的 SSH keys</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C "注释"	#如：ssh-keygen -t rsa -C "123456@sina.com"</span><br></pre></td></tr></table></figure>
+<p>平时我们都是直接回车，默认生成 <code>id_rsa</code> 和 <code>id_rsa.pub</code>。这里特别需要注意，出现提示输入文件名的时候(<code>Enter file in which to save the key (\~/.ssh/id_rsa): id_rsa_new</code>)要输入与默认配置不一样的文件名，比如：我这里填的是 <code>id_rsa_new</code>。</p>
+<p>其实也可以一个命令操作，是使用 -f 参数指定文件名：<code>ssh-keygen -t rsa -C &quot;注释&quot; -f id_rsa_new&quot;</code></p>
+</li>
+<li><p>配置 <code>C:\Users\用户名\.ssh\config</code> 文件。在 <code>.ssh</code>文件夹下新建 config 文件（无后缀名），修改如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#github</span><br><span class="line">Host github.com</span><br><span class="line">HostName github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line">#github2</span><br><span class="line">Host second.github.com</span><br><span class="line">HostName github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa_new</span><br></pre></td></tr></table></figure>
+<p><em>注：令不同 Host 实际映射到同一<code>HostName</code>，但密钥文件不同。Host 前缀可自定义。</em></p>
+<p>它们具体的含义如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#Host myhost（这里是自定义的host简称，以后连接远程服务器就可以用命令ssh myhost）[注意下面有缩进]</span><br><span class="line">#User 登录用户名(如：git)</span><br><span class="line">#HostName 主机名可用ip也可以是域名(如:github.com或者bitbucket.org)</span><br><span class="line">#Port 服务器open-ssh端口（默认：22,默认时一般不写此行）</span><br><span class="line">#IdentityFile 证书文件路径（如~/.ssh/id_rsa_*)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>测试：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br><span class="line">Hi xiaoming! You've successfully authenticated, but GitHub does not provide shell access.</span><br><span class="line"></span><br><span class="line">$ ssh -T git@second.github.com</span><br><span class="line">Hi zhangsan!  You've successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>解决方案总结为：</p>
+<ol>
+<li>生成私钥/公钥，密钥文件命名避免重复</li>
+<li>设置不同 Host 对应同一 HostName 但密钥不同</li>
+<li>取消 git 全局用户名/邮箱设置，为每个仓库独立设置用户名/邮箱</li>
+</ol>
+<p>如何取消 Git 全局用户名/邮箱设置，如下：</p>
+<ol>
+<li><p>使用 <code>git config --list</code> 查看当前配置</p>
+<p>如果你之前在设置本地仓库和 <code>github</code> 连接的时候设置过 <code>user.name</code> 和 <code>user.email</code>, 那么你必须首先清楚掉该设置，因为不清楚掉该设置，两个账号在提交资料的时候，验证肯定冲突（只能设置一个全局的<code>user.name</code> 和 <code>user.email</code>，而你现在有两个账号就对应两个不同的）。</p>
+</li>
+<li><p>取消 global</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset user.name</span><br><span class="line">git config --global --unset user.email</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置每个项目 repo 的自己的 user.email</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config  user.email "xxxx@xx.com"</span><br><span class="line">git config  user.name "suzie"</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>或者直接直接编辑电脑<code>.gitconfig</code> 文件（Windows 系统在<code>C:\Users\用户名\.gitconfig</code>目录），把 <code>name</code> 和 <code>email</code> 都去掉，从而取消全局用户/邮箱设置。</p>
+<p>参考资料：</p>
+<ul>
+<li><a href="https://www.jianshu.com/p/3fc93c16ad2d" target="_blank" rel="noopener">一台电脑绑定两个github帐号教程</a></li>
+<li><a href="https://github.com/jawil/notes/issues/2" target="_blank" rel="noopener">同一台电脑配置多个git账号</a></li>
+<li><a href="https://blog.csdn.net/jifaliwo123/article/details/79126785" target="_blank" rel="noopener">一台电脑绑定两个git帐号(GitHub和GitLab)</a></li>
+</ul>
+<h2 id="5-Git配置多个SSH-key？为什么？"><a href="#5-Git配置多个SSH-key？为什么？" class="headerlink" title="5. Git配置多个SSH-key？为什么？"></a>5. Git配置多个SSH-key？为什么？</h2><p>背景：当有多个 git 账号时，比如：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a. 一个 gitee，用于公司内部的工作开发；</span><br><span class="line">b. 一个 github，用于自己进行一些开发活动；</span><br></pre></td></tr></table></figure>
+<p>操作步骤：</p>
+<p>①生成一个公司用的 SSH-Key</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C 'xxxxx@company.com' -f ~/.ssh/gitee_id_rsa</span><br></pre></td></tr></table></figure>
+<p>②生成一个 github 用的SSH-Key</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C 'xxxxx@qq.com' -f ~/.ssh/github_id_rsa</span><br></pre></td></tr></table></figure>
+<p>③在 ~/.ssh 目录下新建一个config文件，添加如下内容（其中Host和HostName填写git服务器的域名，IdentityFile指定私钥的路径）</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># gitee</span><br><span class="line">Host gitee.com</span><br><span class="line">HostName gitee.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/gitee_id_rsa</span><br><span class="line"></span><br><span class="line">#github</span><br><span class="line">Host github.com</span><br><span class="line">HostName github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/github_id_rsa</span><br></pre></td></tr></table></figure>
+<p>④用ssh命令分别测试</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@gitee.com</span><br><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>参考资料：</p>
+<ul>
+<li><a href="https://gitee.com/help/articles/4229#github" target="_blank" rel="noopener">Git配置多个SSH-Key</a></li>
+<li><a href="https://blog.csdn.net/yimingsilence/article/details/79980135" target="_blank" rel="noopener">一台电脑配置多个ssh key（不同的多个邮箱ssh key，多git账号，智能选择对应的ssh key）</a></li>
+<li><a href="https://www.jianshu.com/p/f7f4142a1556" target="_blank" rel="noopener">管理git生成的多个ssh key</a></li>
+</ul>
+<h2 id="6-如何将GitHub已有的项目转移到组织仓库中去"><a href="#6-如何将GitHub已有的项目转移到组织仓库中去" class="headerlink" title="6. 如何将GitHub已有的项目转移到组织仓库中去"></a>6. 如何将GitHub已有的项目转移到组织仓库中去</h2><p>打开仓库，点击 setting，拉到最下面，点击 Transfer，会看到要求输入如下：</p>
+<p><img src="https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190127214816.png" alt></p>
+<p>在这里分别输入要转移的项目名称，第二行输入组织名。输入完毕之后点击<code>I understand transfer this repository</code>。</p>
+<p>参考资料：<a href="https://blog.csdn.net/u011328417/article/details/74584487" target="_blank" rel="noopener">github如何将已有的项目转移到组织仓库中去</a></p>
+<h2 id="7-如何在GitHub上添加协议？"><a href="#7-如何在GitHub上添加协议？" class="headerlink" title="7. 如何在GitHub上添加协议？"></a>7. 如何在GitHub上添加协议？</h2><p>①进入你的“代码仓库”，点击”Create new file”，这时 GitHub 的新页面上，有一个空格让你填入文件名称。</p>
+<p>②在输入框输入文件名”LICENSE”，这里输入框的右侧会出现包含所有开源协议的列表，选择合适的开源协议，选择你需要的协议；</p>
+<p>③点击“Commit new file”，这时你添加的开源协议就在代码仓库的菜单中了。</p>
+<p>参考：<a href="https://www.jianshu.com/p/e4d6e6a05f14" target="_blank" rel="noopener">如何在github上添加协议</a></p>
+<h2 id="8-保持码云Gitee和GitHub同步更新？"><a href="#8-保持码云Gitee和GitHub同步更新？" class="headerlink" title="8. 保持码云Gitee和GitHub同步更新？"></a>8. 保持码云Gitee和GitHub同步更新？</h2><p>使用 GitHub 时，国内的用户经常遇到的问题是访问速度太慢，有时候还会出现无法连接的情况（原因你懂的）。如果我们希望体验 Git 飞一般的速度，可以使用国内的 Git 托管服务——<a href="https://gitee.com/" target="_blank" rel="noopener">码云</a>（<a href="https://gitee.com/" target="_blank" rel="noopener">gitee.com</a>）。和 GitHub 相比，码云也提供免费的 Git 仓库。此外，还集成了代码质量检测、项目演示等功能。对于团队协作开发，码云还提供了项目管理、代码托管、文档管理的服务，5 人以下小团队免费。</p>
+<p>使用码云和使用 GitHub 类似，在此不赘述了。下面主要讲的是从 GitHub 上 clone 下来的仓库如何与 Gitee 保持同步更新，操作如下：</p>
+<p>切换到本地仓库目录，先使用命令：<code>git remote -v</code> 查看是否关联了远程仓库。如果显示如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br><span class="line">origin    git@github.com:michaelliao/learngit.git (fetch)</span><br><span class="line">origin    git@github.com:michaelliao/learngit.git (push)</span><br></pre></td></tr></table></figure>
+<p>说明本地库已经关联了<code>origin</code>的远程库，并且，该远程库指向 GitHub。我们可以关联一个远程仓库并指向 Gitee，这样本地库就既关联 GitHub，又关联码云。</p>
+<p>PS：使用多个远程库时，我们要注意，Git 给远程库起的默认名称是<code>origin</code>，如果有多个远程库，我们需要用不同的名称来标识不同的远程库。</p>
+<p>接下来，我们再关联码云远程仓库：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add gitee git@gitee.com:liaoxuefeng/learngit.git</span><br></pre></td></tr></table></figure>
+<p>注意：远程库的名称叫<code>gitee</code>，不叫<code>origin</code>。</p>
+<p>现在，我们用<code>git remote -v</code>查看远程库信息，可以看到两个远程库：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br><span class="line">gitee    git@gitee.com:liaoxuefeng/learngit.git (fetch)</span><br><span class="line">gitee    git@gitee.com:liaoxuefeng/learngit.git (push)</span><br><span class="line">github    git@github.com:michaelliao/learngit.git (fetch)</span><br><span class="line">github    git@github.com:michaelliao/learngit.git (push)</span><br></pre></td></tr></table></figure>
+<p>如果要推送到 GitHub，使用命令：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push github master</span><br></pre></td></tr></table></figure>
+<p>如果要推送到码云，使用命令：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push gitee master</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：本人用的同一个 ssh-key 的情况下，在提交代码使用简短命令：<code>git push</code>时候貌似只提交到了 GitHub 远程仓库；若要提交到 Gitee，则再需<code>git push gitee master</code>。</p>
+</blockquote>
+<p>参考：<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00150154460073692d151e784de4d718c67ce836f72c7c4000" target="_blank" rel="noopener">使用码云 - 廖雪峰的官方网站</a></p>
+<h2 id="9-如何正确接收-GitHub-的消息邮件"><a href="#9-如何正确接收-GitHub-的消息邮件" class="headerlink" title="9. 如何正确接收 GitHub 的消息邮件"></a>9. 如何正确接收 GitHub 的消息邮件</h2><p>参考：<a href="https://github.com/cssmagic/blog/issues/49" target="_blank" rel="noopener">如何正确接收 GitHub 的消息邮件</a> </p>
+<h2 id="10-精准分享关键代码"><a href="#10-精准分享关键代码" class="headerlink" title="10. 精准分享关键代码"></a>10. 精准分享关键代码</h2><p>比如你有一个文件里的某一行代码写得非常酷炫或者关键，想分享一下。可以在 url 后面加上，比如，点击下面这 个 url：<a href="https://github.com/AlloyTeam/AlloyTouch/blob/master/alloy_touch.js#L240" target="_blank" rel="noopener">https://github.com/AlloyTeam/AlloyTouch/blob/master/alloy_touch.js#L240</a>，你便会跳到 <code>alloy_touch.js</code> 的第 240 行。如果是想分享多行代码，也很简单：url 后面加上 <code>#L</code> 开始行号 <code>-L</code> 结束行号，比如，AlloyTouch 的运动缓动和逆向缓动函数如下面代码段所示：<a href="https://github.com/AlloyTeam/AlloyTouch/blob/master/alloy_touch.js#L39-L45" target="_blank" rel="noopener">https://github.com/AlloyTeam/AlloyTouch/blob/master/alloy_touch.js#L39-L45</a>，其实也不用记忆你直接在网址后面操作，GitHub 自动会帮你生成 url。比如你点击 39 行，url 变成了：<a href="https://github.com/AlloyTeam/AlloyTouch/blob/master/alloy_touch.js#L39" target="_blank" rel="noopener">https://github.com/AlloyTeam/AlloyTouch/blob/master/alloy_touch.js#L39</a>，再按住 shift 点击 45 行，url 变成了：<a href="https://github.com/AlloyTeam/AlloyTouch/blob/master/alloy_touch.js#L39-L45" target="_blank" rel="noopener">https://github.com/AlloyTeam/AlloyTouch/blob/master/alloy_touch.js#L39-L45</a>，然后你这个 url 就可以复制分享出去了，点击这个 url 的人自动会跳到 39 行，并且 39-45 行高亮。</p>
+<p><img src="https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190303114615.png" alt></p>
+<h2 id="11-通过提交的msg自动关闭issues"><a href="#11-通过提交的msg自动关闭issues" class="headerlink" title="11. 通过提交的msg自动关闭issues"></a>11. 通过提交的msg自动关闭issues</h2><p>比如有人提交了个 issues <a href="https://github.com/AlloyTeam/AlloyTouch/issues/6" target="_blank" rel="noopener">https://github.com/AlloyTeam/AlloyTouch/issues/6</a>，然后你去主干上改代码，改完之后提交填 msg 的时候，填入：<code>fix https://github.com/AlloyTeam/AlloyTouch/issues/6</code>，这个 issues 会自动被关闭。当然不仅仅是 fix 这个关键字。下面这些关键字也可以：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">close</span><br><span class="line">closes</span><br><span class="line">closed</span><br><span class="line">fixes</span><br><span class="line">fixed</span><br><span class="line">resolve</span><br><span class="line">resolves</span><br><span class="line">resolved</span><br></pre></td></tr></table></figure>
+<h2 id="12-gitattributes设置项目语言"><a href="#12-gitattributes设置项目语言" class="headerlink" title="12. gitattributes设置项目语言"></a>12. gitattributes设置项目语言</h2><p>GitHub 会根据相关文件代码的数量来自动识别你这个项目哪个语言代码项目。这就带来了一个问题，比如 AlloyTouch 最开始被识别成 HTML 项目，因为 HTML 例子比 JS 文件多。怎么办呢？gitattributes 来帮助你搞定。在项目的根目录下添加如下 <code>.gitattributes</code> 文件便可，里面的：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*.html linguist-language=JavaScript</span><br></pre></td></tr></table></figure>
+<p>主要意思是把所有 html 文件后缀的代码识别成 js 文件。</p>
+<h2 id="13-查看自己项目的访问数据"><a href="#13-查看自己项目的访问数据" class="headerlink" title="13. 查看自己项目的访问数据"></a>13. 查看自己项目的访问数据</h2><p>在自己的项目下，点击 Insights，然后再点击 Traffic，里面有 Referring sites 和 Popular content 的详细数据和排名。如：Referring sites</p>
+<p><img src="https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190303115918.png" alt></p>
+<p>其中 Referring sites 代表大家都是从什么网站来到你的项目的，Popular content 代表大家经常看你项目的哪些文件。</p>
+<h2 id="14-trending排行榜"><a href="#14-trending排行榜" class="headerlink" title="14. trending排行榜"></a>14. trending排行榜</h2><p>来看看怎么查看某类型语言的每日排行榜。比如 JavaSrcipt 每日排行榜：</p>
+<ul>
+<li>JavaScript：<a href="https://github.com/trending/javascript?since=daily" target="_blank" rel="noopener">https://github.com/trending/javascript?since=daily</a></li>
+<li>Java：<a href="https://github.com/trending/java?since=daily" target="_blank" rel="noopener">https://github.com/trending/java?since=daily</a></li>
+<li>Python：<a href="https://github.com/trending/python?since=daily" target="_blank" rel="noopener">https://github.com/trending/python?since=daily</a></li>
+</ul>
+<p>GitHub 推荐：<a href="https://github.com/explore" target="_blank" rel="noopener">https://github.com/explore</a></p>
+<h2 id="15-使用GitHub-release发布应用"><a href="#15-使用GitHub-release发布应用" class="headerlink" title="15. 使用GitHub release发布应用"></a>15. 使用GitHub release发布应用</h2><p>(1) 创建release</p>
+<ol>
+<li><p>在 repo 的主页上，点击 release，进入 release 界面 </p>
+</li>
+<li><p>在 release 界面点选 create a new release </p>
+</li>
+<li><p>填写相关信息，上传文件 </p>
+<p><img src="https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190309121245.png" alt></p>
+<ol>
+<li><p>publish release </p>
+</li>
+<li><p>通过 GitHub 官方提供的 api 可访问我们的 release 信息：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/repos/:owner/:repo/releases/:id</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+<p>参考：<a href="https://blog.csdn.net/Eggy2015/article/details/52138751" target="_blank" rel="noopener">github release 功能的使用及问题解决 </a></p>
+<h1 id="二、GitHub项目美化"><a href="#二、GitHub项目美化" class="headerlink" title="二、GitHub项目美化"></a>二、GitHub项目美化</h1><h2 id="1-GitHub项目徽章的添加和设置"><a href="#1-GitHub项目徽章的添加和设置" class="headerlink" title="1. GitHub项目徽章的添加和设置"></a>1. GitHub项目徽章的添加和设置</h2><p>GitHub 项目的 README.md 中可以添加徽章（Badge）对项目进行标记和说明，这些好看的小图标不仅简洁美观，而且还包含了清晰易读的信息。</p>
+<p>徽标主要由图片和对应的链接（当然，你可以不填）组成，徽标图片的话一般由左半部分的名称和右半部分的值组成。</p>
+<p><img src="https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190127215817.png" alt></p>
+<p>GitHub 徽标的官方网站是：<a href="https://link.juejin.im/?target=http%3A%2F%2Fshields.io%2F" target="_blank" rel="noopener">shields.io/</a>，我们可以在官网预览绝大部分的徽标样式，然后选择自己喜欢的（当然首先需要适用于自己的目标项目）徽标，添加到自己的项目文档中去。</p>
+<p>参考资料：</p>
+<ul>
+<li><a href="https://shikieiki.github.io/2017/03/01/%E4%B8%BA%E4%BD%A0%E7%9A%84Github%E7%94%9F%E6%88%90%E6%BC%82%E4%BA%AE%E7%9A%84%E5%BE%BD%E7%AB%A0%E5%92%8C%E8%BF%9B%E5%BA%A6%E6%9D%A1/" target="_blank" rel="noopener">为你的Github README生成漂亮的徽章和进度条</a></li>
+<li><a href="https://juejin.im/entry/5907fa59570c3500582d326c" target="_blank" rel="noopener">GitHub 项目徽章的添加和设置</a></li>
+</ul>
+<h2 id="2-为GitHub项目添加表情"><a href="#2-为GitHub项目添加表情" class="headerlink" title="2. 为GitHub项目添加表情"></a>2. 为GitHub项目添加表情</h2><p>GitHub 支持的表情，官网查询：<a href="https://www.webfx.com/tools/emoji-cheat-sheet/" target="_blank" rel="noopener">https://www.webfx.com/tools/emoji-cheat-sheet/</a></p>
+<p>格式，如：<code>:blush:</code>，显示为:blush:</p>
+<h1 id="三、GitHub使用细节"><a href="#三、GitHub使用细节" class="headerlink" title="三、GitHub使用细节"></a>三、GitHub使用细节</h1><h2 id="1-本地查看远程分支"><a href="#1-本地查看远程分支" class="headerlink" title="1. 本地查看远程分支"></a>1. 本地查看远程分支</h2><p>git clone 默认会把远程仓库整个给 clone下来，但只会在本地默认创建一个 master 分支，如果远程还有其他的分支，此时用 <code>git branch -a</code> 查看所有分支。</p>
+<h2 id="2-GitHub支持多种协议"><a href="#2-GitHub支持多种协议" class="headerlink" title="2. GitHub支持多种协议"></a>2. GitHub支持多种协议</h2><p>GitHub 给出的地址不止一个，除了 <code>git@github.com:xiaoming/test.git</code> 这个地址，还可以使用<code>https://github.com/xiaoming/test.git</code>  这样的地址。实际上，Git 支持多种协议，默认的 <code>git://</code> 使用ssh，但也可以使用 https 等其他协议。</p>
+<p>使用 https 除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放 http 端口的公司内部就无法使用 ssh 协议而只能用 https。</p>
+<h2 id="3-设置默认被推送的分支"><a href="#3-设置默认被推送的分支" class="headerlink" title="3. 设置默认被推送的分支"></a>3. 设置默认被推送的分支</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin test #设置默认被推送的分支</span><br><span class="line">git push	#这个时候我推送的远程分支应该是 origin/test</span><br></pre></td></tr></table></figure>
+<p>查看<code>git push</code>关联的远程分支：<code>git branch -v</code>。</p>
+<h2 id="4-ssh-keygen命令"><a href="#4-ssh-keygen命令" class="headerlink" title="4. ssh-keygen命令"></a>4. ssh-keygen命令</h2><p>ssh-keygen 命令用于为“ssh”生成、管理和转换认证密钥，它支持 RSA 和 DSA 两种认证密钥。语法：<code>ssh-keygen(选项)</code></p>
+<p>参数：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">-b：指定密钥长度；</span><br><span class="line">-e：读取openssh的私钥或者公钥文件；</span><br><span class="line">-C：添加注释；</span><br><span class="line">-f：指定用来保存密钥的文件名；</span><br><span class="line">-i：读取未加密的ssh-v2兼容的私钥/公钥文件，然后在标准输出设备上显示openssh兼容的私钥/公钥；</span><br><span class="line">-l：显示公钥文件的指纹数据；</span><br><span class="line">-N：提供一个新密语；</span><br><span class="line">-P：提供（旧）密语；</span><br><span class="line">-q：静默模式；</span><br><span class="line">-t：指定要创建的密钥类型。</span><br></pre></td></tr></table></figure>
+<p>如：<code>ssh-keygen -t rsa -C &quot;123456@qq.com&quot;</code></p>
+<h2 id="5-Git忽略提交-gitignore文件"><a href="#5-Git忽略提交-gitignore文件" class="headerlink" title="5. Git忽略提交(.gitignore文件)"></a>5. Git忽略提交(.gitignore文件)</h2><p>在使用 Git 的过程中，我们喜欢有的文件比如日志，临时文件，编译的中间文件等不要提交到代码仓库，这时就要设置相应的忽略规则，来忽略这些文件的提交。简单来说一个场景：在你使用<code>git add .</code>的时候，遇到了把你不想提交的文件也添加到了缓存中去的情况，比如项目的本地配置信息，如果你上传到 Git 中去其他人 pull 下来的时候就会和他本地的配置有冲突，所以这样的个性化配置文件我们一般不把它推送到 GIt 服务器中，但是又为了偷懒每次添加缓存的时候都想用<code>git add .</code>而不是手动一个一个文件添加，该怎么办呢？很简单，Git 为我们提供了一个<code>.gitignore</code>文件只要在这个文件中申明那些文件你不希望添加到 Git 中去，这样当你使用<code>git add .</code>的时候这些文件就会被自动忽略掉。</p>
+<p>对于经常使用 Git 的朋友来说，<code>.gitignore</code>配置一定不会陌生。这种方式通过在项目的某个文件夹下定义<code>.gitignore</code>文件，在该文件中定义相应的忽略规则，来管理当前文件夹下的文件的 Git 提交行为。<code>.gitignore</code>文件是可以提交到公有仓库中，这就为该项目下的所有开发者都共享一套定义好的忽略规则。在<code>.gitingore</code>文件中，遵循相应的语法，在每一行指定一个忽略规则。如：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*.log</span><br><span class="line">*.temp</span><br><span class="line">/vendor</span><br></pre></td></tr></table></figure>
+<p>参考：<a href="https://www.cnblogs.com/kevingrace/p/5690241.html" target="_blank" rel="noopener">Git忽略提交规则 - .gitignore配置运维总结</a></p>
+<h2 id="6-如何在README-md中嵌入一个Gist？"><a href="#6-如何在README-md中嵌入一个Gist？" class="headerlink" title="6. 如何在README.md中嵌入一个Gist？"></a>6. 如何在README.md中嵌入一个Gist？</h2><p>适用于 GitHub 的网页，通过 Jekyll，使用 Markdown 中的脚本标记，然后由 Jekyll 处理。因为 Markdown支持 html，所以可以直接使用&lt; script&gt;标签嵌入 Gist。</p>
+<p>只需复制 GitHub 提供的 Gist 的嵌入网址，示例，复制以下内容并粘贴到 Markdown 文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt; script src =“https://gist.github.com/nisrulz/11c0d63428b108f10c83.js”&gt;&lt; / script&gt;</span><br></pre></td></tr></table></figure>
+<p>这样能看到想要的结果。注：以上使用的 Jekyll 方式，亲测，如果是直接嵌入 README.md 文件是不行的，因为 GitHub为了安全性都不能引入自定义的 JS 和 CSS。</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/11622509/github-how-to-embed-a-gist-into-readme-md" target="_blank" rel="noopener">Github: How to embed a gist into README.md? - Stack Overflow</a></li>
+<li><a href="https://codeday.me/bug/20171022/88303.html" target="_blank" rel="noopener">Github：如何在README.md中嵌入一个gist？</a></li>
+<li><a href="https://stackoverflow.com/questions/51956361/custom-css-file-for-readme-md-in-a-github-repo" target="_blank" rel="noopener">Custom css file for readme.md in a Github repo - Stack Overflow</a></li>
+</ul>
+<h2 id="7-其他网页上面嵌入个人的GitHub仓库？"><a href="#7-其他网页上面嵌入个人的GitHub仓库？" class="headerlink" title="7. 其他网页上面嵌入个人的GitHub仓库？"></a>7. 其他网页上面嵌入个人的GitHub仓库？</h2><p>是否想在其他网页上面嵌入自己的 GitHub 仓库页面，有个 star 或 fork 按钮，如下图：</p>
+<p><img src="https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190131161941.png" alt></p>
+<p>可以这样写：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">"https://ghbtns.com/github-btn.html?user=strivebo&amp;amp;repo=websites-and-tools&amp;amp;type=watch&amp;amp;count=true&amp;amp;size=large"</span> <span class="attr">allowtransparency</span>=<span class="string">"true"</span> <span class="attr">frameborder</span>=<span class="string">"0"</span> <span class="attr">scrolling</span>=<span class="string">"0"</span> <span class="attr">width</span>=<span class="string">"156px"</span> <span class="attr">height</span>=<span class="string">"30px"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">"https://ghbtns.com/github-btn.html?user=strivebo&amp;amp;repo=websites-and-tools&amp;amp;type=fork&amp;amp;count=true&amp;amp;size=large"</span> <span class="attr">allowtransparency</span>=<span class="string">"true"</span> <span class="attr">frameborder</span>=<span class="string">"0"</span> <span class="attr">scrolling</span>=<span class="string">"0"</span> <span class="attr">width</span>=<span class="string">"156px"</span> <span class="attr">height</span>=<span class="string">"30px"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>把 user 和 repo 改成你自己的就可以了。注：亲测，GitHub 网站页面暂不支持。</p>
+<h2 id="8-GitHub快捷方式"><a href="#8-GitHub快捷方式" class="headerlink" title="8. GitHub快捷方式"></a>8. GitHub快捷方式</h2><ul>
+<li>issue 中输入冒号 <code>:</code> 添加表情</li>
+<li>任意界面 <code>shift + ？</code>显示快捷键</li>
+<li>issue 中选中文字，R 键快速引用</li>
+</ul>
+<h1 id="参考及推荐资料"><a href="#参考及推荐资料" class="headerlink" title="参考及推荐资料"></a>参考及推荐资料</h1><ul>
+<li><a href="https://github.com/waylau/github-help" target="_blank" rel="noopener">waylau/github-help</a></li>
+<li><a href="http://wiki.jikexueyuan.com/project/github-secret/" target="_blank" rel="noopener">GitHub 秘籍-极客学院Wiki</a></li>
+<li><a href="http://www.cnblogs.com/iamzhanglei/p/6177961.html" target="_blank" rel="noopener">你必须收藏的Github技巧  - 博客园</a></li>
+</ul>
+<hr>
+<p><em>update：2019-07-21</em> </p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>觉得文章对您有帮助请我喝杯咖啡吧^_^</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/uploads/award_wx_400x400.png" alt="Jaybo 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+		<!-- 版权声明方式，暂时先注释掉
+		
+			<div>    
+			  
+			  <ul class="post-copyright">
+				 <li class="post-copyright-link">
+				  <strong>本文作者：</strong>
+				  <a href="/" title="欢迎访问 Jaybo 的个人博客">Jaybo</a>
+				</li>
+				<li class="post-copyright-link">
+				  <strong>本文标题：</strong>
+				  <a href="http://yoursite.com/2019/02/13/Git&GitHub 学习2：GitHub使用/" title="Git&GitHub 学习2：GitHub使用">Git&GitHub 学习2：GitHub使用</a>
+				</li>
+				<li class="post-copyright-link">
+				  <strong>本文链接：</strong>
+				  <a href="http://yoursite.com/2019/02/13/Git&GitHub 学习2：GitHub使用/" title="Git&GitHub 学习2：GitHub使用">http://yoursite.com/2019/02/13/Git&GitHub 学习2：GitHub使用/</a>
+				</li>
+				<li class="post-copyright-date">
+					<strong>发布时间：</strong>2019年2月13日 - 21时02分
+				</li>  
+				<li class="post-copyright-license">
+				  <strong>版权声明： </strong>
+				  本文由 Jaybo 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="license" target="_blank">保留署名-非商业性使用-禁止演绎 4.0-国际许可协议</a> </br>转载请保留以上声明信息！
+				</li>
+			  </ul>
+			
+			</div>
+		-->
+      
+        <div class="post-tags">
+          
+            <a href="/tags/GitHub/" rel="tag"><i class="fa fa-tag"></i> GitHub</a>
+          
+            <a href="/tags/Git/" rel="tag"><i class="fa fa-tag"></i> Git</a>
+          
+            <a href="/tags/版本控制/" rel="tag"><i class="fa fa-tag"></i> 版本控制</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/13/关于写作(3)：Typora写作指南（图床采用：PicGo+腾讯云COS）/" rel="next" title="关于写作(3)：Typora写作指南（图床采用：PicGo+腾讯云COS）">
+                <i class="fa fa-chevron-left"></i> 关于写作(3)：Typora写作指南（图床采用：PicGo+腾讯云COS）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/13/Git&GitHub 学习3：GitHub学生包申请/" rel="prev" title="Git&GitHub 学习3：GitHub学生包申请">
+                Git&GitHub 学习3：GitHub学生包申请 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+		
+
+  <aside id="sidebar" class="sidebar">
+    
+	
+	<div>
+		<!-- 左侧菜单与头像之间插入音乐播放 -->
+	</div>
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+		
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="Jaybo">
+            
+              <p class="site-author-name" itemprop="name">Jaybo</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+					<! --增加的下面这行 -->
+                     
+                    <a href="https://github.com/strivebo" target="_blank" title="GitHub &rarr; https://github.com/strivebo">
+                      
+                        <i class="fa fa-fw fa-github-square"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+					<! --增加的下面这行 -->
+                     
+                    <a href="https://blog.csdn.net/u012195214" target="_blank" title="CSDN &rarr; https://blog.csdn.net/u012195214">
+                      
+                        <i class="fa fa-fw fa-pie-chart"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+					<! --增加的下面这行 -->
+                     
+                    <a href="https://juejin.im/user/59efef14f265da431a426511" target="_blank" title="掘金 &rarr; https://juejin.im/user/59efef14f265da431a426511">
+                      
+                        <i class="fa fa-fw fa-bandcamp"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+					<! --增加的下面这行 -->
+                     
+                    <a href="mailto:ishuzb@foxmail.com" target="_blank" title="邮箱 &rarr; mailto:ishuzb@foxmail.com">
+                      
+                        <i class="fa fa-fw fa-envelope"></i></a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+		  
+		  <! --增加的下面这部分，知识共享协议 -->
+		  
+             <div class="cc-license motion-element" itemprop="license"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="external nofollow noopener noreferrer" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a></div>
+          
+		  
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                推荐阅读
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.ruanyifeng.com/home.html" title="阮一峰" target="_blank">阮一峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://coolshell.cn/" title="左耳朵耗子(陈皓)" target="_blank">左耳朵耗子(陈皓)</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.liaoxuefeng.com/" title="廖雪峰" target="_blank">廖雪峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.runoob.com/" title="菜鸟教程" target="_blank">菜鸟教程</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://strivebo.com/categories/Blog" title="建站日志" target="_blank">建站日志</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+		
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、GitHub-使用技巧"><span class="nav-text">一、GitHub 使用技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-突破GitHub单个大文件上传限制"><span class="nav-text">1. 突破GitHub单个大文件上传限制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Git只Clone仓库指定文件或文件夹"><span class="nav-text">2. Git只Clone仓库指定文件或文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-利用GitHub进行多人协作开发"><span class="nav-text">3. 利用GitHub进行多人协作开发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-开发并且提交代码"><span class="nav-text">(1) 开发并且提交代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-多人协作开发"><span class="nav-text">(2) 多人协作开发</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-同一台电脑配置多个Git账号"><span class="nav-text">4. 同一台电脑配置多个Git账号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Git配置多个SSH-key？为什么？"><span class="nav-text">5. Git配置多个SSH-key？为什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-如何将GitHub已有的项目转移到组织仓库中去"><span class="nav-text">6. 如何将GitHub已有的项目转移到组织仓库中去</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-如何在GitHub上添加协议？"><span class="nav-text">7. 如何在GitHub上添加协议？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-保持码云Gitee和GitHub同步更新？"><span class="nav-text">8. 保持码云Gitee和GitHub同步更新？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-如何正确接收-GitHub-的消息邮件"><span class="nav-text">9. 如何正确接收 GitHub 的消息邮件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-精准分享关键代码"><span class="nav-text">10. 精准分享关键代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-通过提交的msg自动关闭issues"><span class="nav-text">11. 通过提交的msg自动关闭issues</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-gitattributes设置项目语言"><span class="nav-text">12. gitattributes设置项目语言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-查看自己项目的访问数据"><span class="nav-text">13. 查看自己项目的访问数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-trending排行榜"><span class="nav-text">14. trending排行榜</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-使用GitHub-release发布应用"><span class="nav-text">15. 使用GitHub release发布应用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、GitHub项目美化"><span class="nav-text">二、GitHub项目美化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-GitHub项目徽章的添加和设置"><span class="nav-text">1. GitHub项目徽章的添加和设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-为GitHub项目添加表情"><span class="nav-text">2. 为GitHub项目添加表情</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、GitHub使用细节"><span class="nav-text">三、GitHub使用细节</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-本地查看远程分支"><span class="nav-text">1. 本地查看远程分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-GitHub支持多种协议"><span class="nav-text">2. GitHub支持多种协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-设置默认被推送的分支"><span class="nav-text">3. 设置默认被推送的分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-ssh-keygen命令"><span class="nav-text">4. ssh-keygen命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Git忽略提交-gitignore文件"><span class="nav-text">5. Git忽略提交(.gitignore文件)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-如何在README-md中嵌入一个Gist？"><span class="nav-text">6. 如何在README.md中嵌入一个Gist？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-其他网页上面嵌入个人的GitHub仓库？"><span class="nav-text">7. 其他网页上面嵌入个人的GitHub仓库？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-GitHub快捷方式"><span class="nav-text">8. GitHub快捷方式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考及推荐资料"><span class="nav-text">参考及推荐资料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<div class="copyright"><font color="black" face="STLiti">Copyright &nbsp;</font><font color="black">&copy;</font> <font color="black" face="STLiti">2017 - </font><font color="black" face="STLiti"><span itemprop="copyrightYear">2019</span></font>
+  <span class="with-love" id="animate" style="font-size: 13px">
+    <!-- <i class="fa fa-user"></i> -->
+	<!-- <i class="fa fa-star"></i> -->
+	<i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder" style="font-family:STLiti;color:black;">Jaybo . All Rights Reserved.</span>
+
+  
+</div>
+
+<!--此处为建站时间 -->
+  <script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("04/17/2017 20:01:01");
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML =dnum+"&thinsp;天"; 
+        document.getElementById("times").innerHTML = hnum + "&thinsp;时" + mnum + "&thinsp;分" + snum + "&thinsp;秒"; 
+    } 
+  setInterval("createtime()",250);
+  </script>
+
+<!-- end -->
+
+
+
+
+
+
+	
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <font color="DarkSlateGray" face="STLiti"><span class="site-uv" title="访问人数">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次
+    </span><span class="post-meta-divider">|</span></font>
+    <font color="DarkSlateGray" face="STLiti">
+    <span title="总字数"><i class="fa fa-edit"></i>&ensp;<span class="post-count">65.4k</span>字,</span>
+    <span id="timeDate" title="网站运行时间">载入天数...</span><span id="times" title="网站运行时间">载入时分秒...</span><span class="post-meta-divider">|</span>
+    </font>
+  
+
+  
+    <font color="DarkSlateGray" face="STLiti"><span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次
+    </span></font>
+  
+</div>
+
+
+
+
+
+
+
+
+		<!--版权等自定义↓-->
+		
+		<div style="font-family:Courier New;display:inline-block;height:20px;line-height:20px;color:black">
+			Powered by <a target="_blank" href="https://hexo.io/zh-cn/index.html">Hexo</a>,Theme by 
+			<a target="_blank" href="https://github.com/iissnan/hexo-theme-next/tree/v5.1.4">NexT.Gemini.v5.1.4</a>. Hosted by <a target="_blank" href="https://pages.github.com/">GitHub Page</a>
+        </div>
+		
+		<!--备案等自定义↓-->
+		<!--
+		<div style="font-family:STLiti;display:inline-block;height:20px;line-height:20px;">
+        <a target="_blank" href="" ><img src="/images/gov.png" style="float:left;"/>赣公网安备 xxxxxxxxxxxx号</a>
+        <span class="post-meta-divider" style="color: #555;">|</span><span><a href="http://www.miitbeian.gov.cn" target="_blank">赣ICP备xxxxx号</a></sapn>
+        </div> -->
+		
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: true,
+        appId: 'MhbxUrTu9FJ0T1iq1HupHO29-gzGzoHsz',
+        appKey: 'PMMgr6Xmfk6n1aKfuKzLwe5p',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("MhbxUrTu9FJ0T1iq1HupHO29-gzGzoHsz", "PMMgr6Xmfk6n1aKfuKzLwe5p");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>
+
+<!-- 页面点击小红心 --> 
+<!--<script type="text/javascript" src="/js/src/love.js"></script>-->
