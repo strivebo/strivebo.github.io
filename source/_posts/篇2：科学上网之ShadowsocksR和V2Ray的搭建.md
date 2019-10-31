@@ -1,5 +1,5 @@
 ---
-title: 篇2：科学上网之SSR和V2Ray的搭建
+title: 篇2：科学上网之ShadowsocksR和V2Ray的搭建
 date: 2019-02-12 20:01:08
 categories: 程序人生
 tags: [科学上网]
@@ -17,7 +17,7 @@ tags: [科学上网]
 
 参考：[自己搭建ss/ssr服务器教程（适合初学者，最低2.5美元/月）](https://github.com/XX-net/XX-Net/issues/6506)
 
-注：以下操作都是在 CentOS 系统下进行的。当然以防万一，建议大家选择 `CentOS 6`，看网上有人说 `CentOS 7` 默认的防火墙可能会干扰 SSR 的正常连接。
+注：以下操作都是在 CentOS 系统下进行的。当然以防万一，建议大家选择 `CentOS 6`，看网上有人说 `CentOS 7` 默认的防火墙可能会干扰 SSR 的正常连接。【注：如果使用的 Ubuntu 系统也是一样的，不同的可能也就是安装存在安装 wget 的不同，Ubuntu 下使用的 apt-get 命令】
 
 购买好了 VPS，则可以开始搭建了。首先我们需要远程连接上你的 VPS，这里可以使用 Putty、XShell 等客户端工具，也可以使用 Git Bash 下的 ssh 命令（但记得要先配置 SSH，这个就不多赘述了）。
 
@@ -25,7 +25,7 @@ tags: [科学上网]
 
 使用 Git Bash 连接 VPS 的命令：`ssh -p 22 root@ip`或`ssh root@ip`，其中“ip”替换成 VPS 的 ip，按回车键，然后复制粘贴密码，按回车键即可登录。粘贴密码时有可能不显示密码，但不影响。
 
-``` xml
+``` 
 yum -y install wget
 
 wget -N --no-check-certificate https://softs.fun/Bash/ssr.sh && chmod +x ssr.sh && bash ssr.sh
@@ -39,7 +39,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/dou
 
 要是想要查看或重新设置输入：`bash ssr.sh`
 
-> *PS：亲测，第一个脚本文件已经不可用了，第二个还能使用，以防下次第二个也不正常使用，于是我下载下来了，以及下面的 BBR 加速脚本也给下载了，放在 tools 文件夹下的【脚本备份】目录下。* 
+> PS：亲测，第一个脚本文件已经不可用了，第二个还能使用，以防下次第二个也不正常使用，于是我下载下来了，以及下文提到的 BBR 加速脚本也给下载了。
 
 ### 或者安装脚本2
 
@@ -148,11 +148,7 @@ BBR加速脚本：[VPS服务器Google BBR一键安装脚本](https://ssr.tools/1
 ``` 
 yum -y install wget
 
-wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
-
-chmod +x bbr.sh
-
-./bbr.sh
+wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 ```
 
 把上面整个代码复制后粘贴进去，不动的时候按回车，然后耐心等待，最后重启 VPS 服务器即可。重启命令：`reboot`
@@ -176,13 +172,13 @@ chmod +x bbr.sh
 > 加速脚本安装，先运行如下命令：
 >
 > ``` 
-> wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
+wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
 > ```
 > 使用脚本后会出现如下选项：
 >
 > ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190217004302.png)
 >
-> 根据自己需求操作，重启后再使用`./tcp.sh`命令接着操作 —> 按 3或4 使用 BBR 加速 ---> 基于前面介绍的方法判断是否开启 BBR 加速，比如输入命令：`lsmod|grep bbr`，如果出现 tcp_bbr 字样表示bbr已安装并启动成功。
+> 根据自己需求操作，重启后再使用`./tcp.sh`命令接着操作 —> 按 4 或 5 使用 BBR 加速 ---> 基于前面介绍的方法判断是否开启 BBR 加速，比如输入命令：`lsmod|grep bbr`，如果出现 tcp_bbr 字样表示bbr已安装并启动成功。
 >
 > 关于什么是「魔改版 BBR」解释下：[魔改Google BBR一键安装脚本，比正常版BBR强](https://www.moerats.com/archives/190/)  —> 本方法出自于`hostloc`论坛大佬`Yankee`发布的`BBR`魔改，并由`Vicer`博主制作的一键包。魔改基本就是修改`BBR`源码，调整参数，使其更强劲。
 >
@@ -197,7 +193,6 @@ chmod +x bbr.sh
 ## Step02：或安装锐速加速
 
 1、安装锐速需降级系统内核，而安装 Google BBR 则需升级系统内核，故两者不能同时安装。
-
 2、安装锐速需降级系统内核，有可能造成系统不稳定，故不建议将其应用在重要的生产环境中。
 
 执行下面命令：
@@ -220,7 +215,7 @@ uname -r
 
 这种输出结果说明我们的服务器已经安装 Google BBR 拥塞控制算法，此时已经无法继续安装锐速。
 
-### 1. 若系统为 CentOS7 x64，安装锐速加速
+### 1. 若系统为 CentOS7 x64，如何安装锐速加速
 
 如下图：
 
@@ -248,7 +243,7 @@ yum install net-tools -y && wget --no-check-certificate -O appex.sh https://raw.
 
 ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20190605201410.png)
 
-### 2. 若系统为 CentOS6 x64，安装锐速加速
+### 2. 若系统为 CentOS6 x64，如何安装锐速加速
 
 若你的系统选择是 CentOS6 x64，不需要更换内核，直接执行下列安装命令
 
@@ -269,7 +264,6 @@ wget --no-check-certificate -O appex.sh https://raw.githubusercontent.com/0oVice
 ##  各平台影梭下载
 
 1、各平台 Shadowsocks 客户端下载地址：[Shadowsocks - Clients](https://shadowsocks.org/en/download/clients.html)
-
 2、SSR Mac 客户端下载：[SSR MAC客户端ShadowsocksX-NG-R下载、安装及使用教程](https://ssr.tools/164)
 
 > Shadowsocks 的 MAC 客户端，主要有两个版本：ShadowsocksX 和 ShadowsocksX-NG，其中ShadowsocksX-NG 为ShadowsocksX 的最新版本 。**目前这两个版本仅支持 SS 原版，不支持 SSR 的混淆功能。** 
@@ -297,21 +291,29 @@ Shadowrocket 下载（需切换到美区下载）：<https://apps.apple.com/us/a
 
 也可以考虑下 Google Cloud，有信用卡可以薅下该羊毛：
 
-- [谷歌云免费搭建一年SSR服务器]([https://freeleox.github.io/2018/11/02/Google%20Cloud%20SSR/](https://freeleox.github.io/2018/11/02/Google Cloud SSR/))
-- [10分钟教你用 Google Cloud Platform 搭建自己的VPN](https://elephantnose.github.io/2018/09/24/10%E5%88%86%E9%92%9F%E6%95%99%E4%BD%A0%E7%94%A8%20Google%20Cloud%20Platform%20%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84VPN/)
-- [Google Cloud Platform免费申请&一键搭建SSR & BBR加速教程](https://www.wmsoho.com/google-cloud-platform-ssr-bbr-tutorial/)
+- 【1】[谷歌云免费搭建一年SSR服务器](https://freeleox.github.io/2018/11/02/Google%20Cloud%20SSR/) 
+- 【2】[10分钟教你用 Google Cloud Platform 搭建自己的VPN](https://elephantnose.github.io/2018/09/24/10%E5%88%86%E9%92%9F%E6%95%99%E4%BD%A0%E7%94%A8%20Google%20Cloud%20Platform%20%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84VPN/)
+- 【3】[Google Cloud Platform免费申请&一键搭建SSR & BBR加速教程](https://www.wmsoho.com/google-cloud-platform-ssr-bbr-tutorial/)
   
   > Google 云服务平台对新用户赠送 300 美元，可以免费使用 1 年。并且到期后如果不打算续费，也不会额外收取费用 （像亚马逊AWS就直接扣你费用）。
   >
   > 如果还想继续用，直接新注册个账号，免费 (现在需要新卡了)。用来搭 SS 的话, 最低配置的机型 $5/月, 出口大陆流量 1T 以内为 0.23$/1G，算下来每个月可用 80 多 G 的流量，足够用了, 当然你还可以顺便搭个网站之类的。
   >
   > 注意：需要用到信用卡!!!
+  
+- 【4】[Google Cloud Platform免费申请&一键搭建SSR & BBR加速](https://allen-feng.github.io/2019/04/24/190424_Google-Cloud-Platform免费申请-一键搭建SSR-BBR加速/)
 
+本人按照【2】搭建，但注意，我看别得文章，在创建防火墙规则的时候“协议和端口”选择“全部运行”就行，并且可以不用进行“负载均衡”配置。
 
+最后就是登陆服务器进行搭建 SSR，为了方便，建议使用 SSH 方式登陆。注意，想要 SSH 方式登录前先配置静态服务器静态 IP，如何配置，参考【4】中操作。配置完成，还需要修改一处，修改参考[用SSH工具XShell连接谷歌云 root用户或普通用户]( https://blog.csdn.net/datadev_sh/article/details/79593360 )，这里也有个地方注意，就是重启服务器，如果发现最后还是登陆不进，请使用 `sudo service sshd restart` 该命令重启试试。注：SSH 客户端推荐 MobaXterm 这个软件。搭建的主要步骤如下：
+
+1、创建防火墙规则
+2、创建实例
+3、登录服务器搭建 SSR
 
 ## 补充：关于DigitalOcean VPS的说明
 
-本人目前一直在用 DigitalOcean。如果你也打算使用这家 VPS，可以考虑使用我这个分[链接](https://m.do.co/c/632db6a2a3e4)注册。下面是官网给出的：
+本人目前一直在用 DigitalOcean。如果你也打算使用这家 VPS，可以考虑使用我这个分享[链接](https://m.do.co/c/632db6a2a3e4)注册。下面是官网给出的：
 
 ```
 Give $50, Get $25
@@ -408,7 +410,6 @@ V2Ray 跟 Shadowsocks 有什么区别？
 相关教程：
 
 - [科学上网工具 V2Ray 简介及具体搭建流程-SSR中文网](https://ssr.tools/265)
-
 - [V2Ray搭建教程：小白图解版 | 翻个墙翻个墙](https://fangeqiang.com/2030.html)
 
 ## 2. 客户端介绍
